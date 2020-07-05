@@ -51,12 +51,11 @@ with open('testinput1.csv', 'r') as input_file:
 
 #### 12.klassi 1. valik kirja 
 
-def registreerimine(õpilaneDict):
+def registreerimine(õpilaseNimi, õpilaneDict):
 #{'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1',
 # '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}}
-
     õpilaseKursused = [] #### [[P1H väga, P1H võtaks, P1H vähe], [P1Õ väga, P1õ võtaks, P1Õ vähe]]
-    õpilaseNimi = list(õpilaneDict.keys())[0]
+    #õpilaseNimi = list(õpilaneDict.keys())[0]
     ajutine = []
     korda1 = 0
     print(õpilaseNimi)
@@ -65,7 +64,16 @@ def registreerimine(õpilaneDict):
             õpilaseKursused.append(ajutine)
             ajutine = []
         korda1 += 1
-        ajutine.append(list(õpilaneDict[õpilaseNimi])[i])
+        ajutine.append(list(õpilaneDict[õpilaseNimi].values())[i])
     print(õpilaseKursused)
 
-registreerimine({'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1', '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}})
+
+'''
+country, capital = random.choice(list(klass12.items()))
+'''
+for i in range(0, len(klass12)):
+    õpilaseNimi, õpilaseDict = random.choice(list(klass12.items()))
+    registreerimine(õpilaseNimi, õpilaseDict)
+
+
+#registreerimine({'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1', '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}})
