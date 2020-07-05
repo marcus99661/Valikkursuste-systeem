@@ -13,7 +13,7 @@ temp1 = {}
 
 #{'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1', '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}}
 
-with open('testinput2.csv', 'r') as input_file:
+with open('testinput2.csv', 'r', encoding="utf-8") as input_file:
     csv_reader = reader(input_file)
     for row in csv_reader:
         #print(row)
@@ -43,15 +43,11 @@ with open('testinput2.csv', 'r') as input_file:
                 print("TEKKIS VIGA ÕPILASE ÕIGESSE SÕNASTIKKU PANEMISEL")
 
 
-#print(klass12)
-#print(klass10)
 
 
 #### 12.klassi 1. valik kirja 
 
 def registreerimine(õpilaseNimi, õpilaneDict, tegevus):
-#{'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1',
-# '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}}
     õpilaseKursused = [] #### [[P1H väga, P1H võtaks, P1H vähe], [P1Õ väga, P1õ võtaks, P1Õ vähe]]
     #õpilaseNimi = list(õpilaneDict.keys())[0]
     ajutine = []
@@ -66,6 +62,8 @@ def registreerimine(õpilaseNimi, õpilaneDict, tegevus):
     print(õpilaseKursused)
 
 
+
+
 '''
 country, capital = random.choice(list(klass12.items()))
 '''
@@ -73,6 +71,3 @@ for i in range(0, len(klass12)):
     õpilaseNimi, õpilaseDict = random.choice(list(klass12.items()))
     del klass12[õpilaseNimi]
     registreerimine(õpilaseNimi, õpilaseDict, "väga")
-
-
-#registreerimine({'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1', '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}})
