@@ -45,8 +45,8 @@ with open('testinput1.csv', 'r') as input_file:
                 print("TEKKIS VIGA ÕPILASE ÕIGESSE SÕNASTIKKU PANEMISEL")
 
 
-print(klass12)
-print(klass10)
+#print(klass12)
+#print(klass10)
 
 
 #### 12.klassi 1. valik kirja 
@@ -58,14 +58,14 @@ def registreerimine(õpilaneDict):
     õpilaseKursused = [] #### [[P1H väga, P1H võtaks, P1H vähe], [P1Õ väga, P1õ võtaks, P1Õ vähe]]
     õpilaseNimi = list(õpilaneDict.keys())[0]
     ajutine = []
+    korda1 = 0
     print(õpilaseNimi)
-    '''
-    for i in range(4, len(õpilaneDict)):
-        if i % 3 == 0:
+    for i in range(4, len(list(õpilaneDict[õpilaseNimi]))):
+        if korda1 % 3 == 0 and korda1 != 0:
             õpilaseKursused.append(ajutine)
             ajutine = []
-        ajutine.append(õpilaneDict[i])
+        korda1 += 1
+        ajutine.append(list(õpilaneDict[õpilaseNimi])[i])
     print(õpilaseKursused)
-    '''
 
 registreerimine({'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1', '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}})
