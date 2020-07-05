@@ -1,0 +1,5 @@
+Aine nimi;kohtade arv;vajalikud ained
+
+Python I;40;;
+Python II;20;Python I;
+Hispaania keel 1;30;;Hispaania keel 2, Hispaania keel 3

@@ -1,0 +1,5 @@
+P1H - periood 1 hommik
+P1Õ - periood 1 õhtu
+nimi:klass;P1Hväga;P1Hvõtaks;P1Hvähem/P1Õväga;P1Õvõtaks;P1Õvähem/P2Hväga;P2Hvõtaks;P2Hvähem/P2Õväga;P2Õvõtaks;P2Õvähem
+
+Mari:12;Python 1;Loogika;;Python 1;Astronoomia;Hispaania keel
