@@ -8,39 +8,37 @@ klass11 = {}
 klass12 = {}
 korda = 0
 formating = []
-temp = []
 temp1 = {}
 ####
 
 #{'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1', '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}}
 
-with open('testinput1.csv', 'r') as input_file:
+with open('testinput2.csv', 'r') as input_file:
     csv_reader = reader(input_file)
     for row in csv_reader:
         #print(row)
         if korda == 0:
-            formating = ''.join(row).split(",")
+            formating = row
             for i in range(len(formating)):
                 formating[i] = formating[i].replace('"', "")
             korda += 1
         else:
-            temp = ''.join(row).split(",")
-            for i in range(len(temp)):
-                temp[i] = temp[i].replace('"', "")
+            for i in range(len(row)):
+                row[i] = row[i].replace('"', "")
             
             #### Paneb õige klassi sõnastikku
-            if temp[3] == '12':
+            if row[3] == '12':
                 for i in range(len(formating)):
-                    temp1[formating[i]] = temp[i]
-                klass12[temp[2]] = temp1
-            elif temp[3] == '11':
+                    temp1[formating[i]] = row[i]
+                klass12[row[2]] = temp1
+            elif row[3] == '11':
                 for i in range(len(formating)):
-                    temp1[formating[i]] = temp[i]
-                klass11[temp[2]] = temp1
-            elif temp[3] == '10':
+                    temp1[formating[i]] = row[i]
+                klass12[row[2]] = temp1
+            elif row[3] == '10':
                 for i in range(len(formating)):
-                    temp1[formating[i]] = temp[i]
-                klass10[temp[2]] = temp1
+                    temp1[formating[i]] = row[i]
+                klass12[row[2]] = temp1
             else:
                 print("TEKKIS VIGA ÕPILASE ÕIGESSE SÕNASTIKKU PANEMISEL")
 
@@ -51,7 +49,7 @@ with open('testinput1.csv', 'r') as input_file:
 
 #### 12.klassi 1. valik kirja 
 
-def registreerimine(õpilaseNimi, õpilaneDict):
+def registreerimine(õpilaseNimi, õpilaneDict, tegevus):
 #{'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1',
 # '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}}
     õpilaseKursused = [] #### [[P1H väga, P1H võtaks, P1H vähe], [P1Õ väga, P1õ võtaks, P1Õ vähe]]
@@ -59,12 +57,12 @@ def registreerimine(õpilaseNimi, õpilaneDict):
     ajutine = []
     korda1 = 0
     print(õpilaseNimi)
-    for i in range(4, len(list(õpilaneDict[õpilaseNimi]))):
+    for i in range(4, len(list(õpilaneDict))):
         if korda1 % 3 == 0 and korda1 != 0:
             õpilaseKursused.append(ajutine)
             ajutine = []
         korda1 += 1
-        ajutine.append(list(õpilaneDict[õpilaseNimi].values())[i])
+        ajutine.append(list(õpilaneDict.values())[i])
     print(õpilaseKursused)
 
 
@@ -73,7 +71,8 @@ country, capital = random.choice(list(klass12.items()))
 '''
 for i in range(0, len(klass12)):
     õpilaseNimi, õpilaseDict = random.choice(list(klass12.items()))
-    registreerimine(õpilaseNimi, õpilaseDict)
+    del klass12[õpilaseNimi]
+    registreerimine(õpilaseNimi, õpilaseDict, "väga")
 
 
 #registreerimine({'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1', '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}})
