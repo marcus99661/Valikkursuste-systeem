@@ -42,6 +42,21 @@ with open('testinput2.csv', 'r', encoding="utf-8") as input_file:
             else:
                 print("TEKKIS VIGA ÕPILASE ÕIGESSE SÕNASTIKKU PANEMISEL")
 
+ainedList = []
+ained = {}
+temp1 = {}
+with open('ained.txt', 'r', encoding="utf-8") as ainedfail:
+    for i in ainedfail: #### {Python 2 : {"kohad" : 40, "vajalikud" = "Python 1", "lisad" : ""}}
+        ainedList = i.replace("\n", "").split(";")
+        #ained[ainedList[0]]["kohad"] = ainedList[1]
+        #ained[ainedList[0]]["kohad"] = 40
+        temp1["kohad"] = ainedList[1]
+        temp1["vajalikud"] = ainedList[3]
+        temp1["lisad"] = ainedList[4]
+        ained[ainedList[0]] = temp1
+    print(ained)
+
+
 
 
 
@@ -62,11 +77,6 @@ def registreerimine(õpilaseNimi, õpilaneDict, tegevus):
     print(õpilaseKursused)
 
 
-
-
-'''
-country, capital = random.choice(list(klass12.items()))
-'''
 for i in range(0, len(klass12)):
     õpilaseNimi, õpilaseDict = random.choice(list(klass12.items()))
     del klass12[õpilaseNimi]
