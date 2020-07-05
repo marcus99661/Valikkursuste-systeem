@@ -1,3 +1,4 @@
-Python I;40;;
-Python II;20;Python I;
+Programmeerimine keeles Python 1;40;;
+Programmeerimine keeles Python 2;20;Programmeerimine keeles Python 1;
 Hispaania keel 1;30;;Hispaania keel 2, Hispaania keel 3
+Planimeetria alused;10;;

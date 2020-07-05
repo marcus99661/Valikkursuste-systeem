@@ -1,4 +1,4 @@
-Aine nimi;kohtade arv;vajalikud ained
+Aine nimi;kohtade arv;vajalikud ained;lisaks peab võtma
 
 Python I;40;;
 Python II;20;Python I;
