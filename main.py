@@ -112,29 +112,43 @@ for i in range(0, len(klass10)):
 ained = ained_seadistamine()
 #print(ained)
 
-'''
-def registreerimine(õpilaseNimi, õpilaseKursused):
-    for i in range(0, len(õpilaseKursused)):
-        pass
-
-'''
-
 result = {}
+
 
 #### {Marcus : ['Planimeetria alused', '', '3D-modelleerimine']}
 #### [['Planimeetria alused', 'Globaliseeruv maailm', 'Ei taha'], ['Programmeerimine keeles Python 1', 'Programmeerimine keeles Python 1', 'Programmeerimine keeles Python 1'], ['3D-modelleerimine', 'Küberkaitse 1', '3D-modelleerimine'], ['Statistiline maailmapilt', 'Ei taha', 'Ei taha'], ['Loomade käitumine', 'Ei taha', 'Ei taha'], ['Majandusõpe', 'Millest ELU koosneb?', 'Majandusõpe'], ['Ettevõtlusõpe', 'Liiklusfüüsika', 'Liiklusfüüsika'], ['CAD joonestamine', 'Ei taha', 'Ei taha']]
 for i in range(0, len(klass12_seadistatud)):
+    temp2 = []
     klass12_seadistatud_temp = klass12_seadistatud
     õpilaseNimi, õpilaseKursused = random.choice(list(klass12_seadistatud_temp.items()))
     del klass12_seadistatud_temp[õpilaseNimi]
-    #registreerimine(õpilaseNimi, õpilaseKursused)
     for i in range(0, len(õpilaseKursused)):
-        pass
-        #print(õpilaseKursused[i][0])
-        if ained[õpilaseKursused[i][0]]['kohtiVõetud'] <  int(ained[õpilaseKursused[i][0]]['kohad']):
-            print("vastu võetud")
+        temp2 = result.get(õpilaseNimi, [])
+        result[õpilaseNimi] = temp2
+        if õpilaseKursused[i][0] == "Ei taha": ### EI TEA KAS TÖÖTAB
+            temp2 = result.get(õpilaseNimi, [])
+            temp2.append("")
+            result[õpilaseNimi] = temp2
+        elif ained[õpilaseKursused[i][0]]['kohtiVõetud'] <  int(ained[õpilaseKursused[i][0]]['kohad']) and õpilaseKursused[i][0] not in result[õpilaseNimi]:  # 1. kui mahub 2. ei ole juba sellel kursusel 3. vajalikud on võetud (eelmine periood või eelmine aasta) 4. ei ole see periood veel midagi võetud
+            print(õpilaseNimi + " vastu võetud " + õpilaseKursused[i][0])
             ained[õpilaseKursused[i][0]]['kohtiVõetud'] += 1
             #print(ained[õpilaseKursused[i][0]])
             ained[õpilaseKursused[i][0]]['vastuVõetud'].append(õpilaseNimi)
             #print(ained[õpilaseKursused[i][0]])
             print(ained)
+            ########
+            temp2 = result.get(õpilaseNimi, [])
+            temp2.append(õpilaseKursused[i][0])
+            result[õpilaseNimi] = temp2
+            #print(result)
+            ########
+            if ained[õpilaseKursused[i][0]]['lisad'] != '':
+                for j in range(0, len(ained[õpilaseKursused[i][0]]['lisad'].split(","))):
+                    temp2 = result.get(õpilaseNimi, [])
+                    temp2.append(ained[õpilaseKursused[i][0]]['lisad'].split(",")[j]) #### LISAD KURSUSED TULEB PANNA ÕIGESSE KOHTA
+                    result[õpilaseNimi] = temp2
+                    #print(result)
+        else:
+            temp2 = result.get(õpilaseNimi, [])
+            temp2.append("")
+            result[õpilaseNimi] = temp2
