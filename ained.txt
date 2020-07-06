@@ -4,4 +4,4 @@ Hispaania keel 1;30;2;;Hispaania keel 2,Hispaania keel 3
 Hispaania keel 2;30;4;;
 Hispaania keel 3;30;6;;
 Planimeetria alused;10;1;;
-3D-modelleerimine;20;3;;
+3D-modelleerimine;20;3;Joonestamine;
