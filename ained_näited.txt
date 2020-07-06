@@ -1,5 +1,14 @@
-Aine nimi;kohtade arv;vajalikud ained;lisaks peab võtma
+Aine nimi;kohtade arv;periood;vajalikud ained;lisaks peab võtma
+PERIOODID
+1 - 2. hommik
+2 - 2. õhtu
+3 - 3. hommik
+4 - 3. õhtu
+5 - 4. hommik
+6 - 4. õhtu
+7 - 5. hommik
+8 - 5. õhtu
 
-Python I;40;;
-Python II;20;Python I;
+Python I;40;1;;
+Python II;20;;Python I;
 Hispaania keel 1;30;;Hispaania keel 2, Hispaania keel 3
