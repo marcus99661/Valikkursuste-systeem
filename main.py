@@ -126,6 +126,11 @@ resultList = {} ####{Marcus : ['Planimeetria alused', '3D-modelleerimine']}
 result = {} ####{Marcus : {1 : 'Planimeetria alused', 2 : '', 3 : '3D-modelleerimine'}}
 tempSõnastik = {}
 
+def võrdlemine(a, b):
+    for i in a:
+        if i in b:
+            return True
+    return False
 
 #### [['Planimeetria alused', 'Globaliseeruv maailm', 'Ei taha'], ['Programmeerimine keeles Python 1', 'Programmeerimine keeles Python 1', 'Programmeerimine keeles Python 1'], ['3D-modelleerimine', 'Küberkaitse 1', '3D-modelleerimine'], ['Statistiline maailmapilt', 'Ei taha', 'Ei taha'], ['Loomade käitumine', 'Ei taha', 'Ei taha'], ['Majandusõpe', 'Millest ELU koosneb?', 'Majandusõpe'], ['Ettevõtlusõpe', 'Liiklusfüüsika', 'Liiklusfüüsika'], ['CAD joonestamine', 'Ei taha', 'Ei taha']]
 #### 12. klassi 1. valik valimine
@@ -150,7 +155,8 @@ for i in range(0, len(klass12_seadistatud)):
                 if ained[hetkeneKursus]['alternatiiv'] not in resultList[õpilaseNimi]: #### õpilasel on selle kursuse alternatiiv võetud
                     if result[õpilaseNimi][int(ained[hetkeneKursus]['periood'])] == '': #### õpilasel on sellel perioodil midagi juba võetud
                         if ained[hetkeneKursus]['eeldusaine'] == '' or all(elem in resultList[õpilaseNimi] for elem in ained[hetkeneKursus]['eeldusaine'].split(",")): ##### kontrollib kas õpilane on see aasta võtnud eeldusained
-                            if ained[hetkeneKursus]['üksEeldusaine'] == '' or ained[hetkeneKursus]['üksEeldusaine'] in resultList[õpilaseNimi]:
+                            #if ained[hetkeneKursus]['üksEeldusaine'] == '' or ained[hetkeneKursus]['üksEeldusaine'] in resultList[õpilaseNimi]:
+                            if ained[hetkeneKursus]['üksEeldusaine'] == '' or võrdlemine(ained[hetkeneKursus]['üksEeldusaine'].split(","), resultList[õpilaseNimi]):
                                 print(õpilaseNimi + " vastu võetud " + hetkeneKursus)
                                 ained[hetkeneKursus]['kohtiVõetud'] += 1
                                 ained[hetkeneKursus]['vastuVõetud'].append(õpilaseNimi)
