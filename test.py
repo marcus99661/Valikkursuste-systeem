@@ -18,11 +18,17 @@ with open('ained.txt', 'r', encoding="utf-8") as ainedfail:
             print(ained)
         #print(ained)
 '''
-test = "tere,tere2,tere1"
-test1 = "tere,tere1"
+a = "tere,tere2,tere1".split()
+b = "tere1".split()
 #if test1.split(",").sort() in test.split(",").sort():
 #    print("jah")
 
-if all(elem in test for elem in test1):
+any_in = any(i in b for i in a)
+print(any_in)
+any_in = lambda a, b: bool(set(a).intersection(b))
+print(any_in)
+'''
+if test1 in test.split():
     print("jah")
 print(test.split())
+'''
