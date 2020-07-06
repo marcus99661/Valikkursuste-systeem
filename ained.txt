@@ -1,4 +1,7 @@
 Programmeerimine keeles Python 1;40;;
 Programmeerimine keeles Python 2;20;Programmeerimine keeles Python 1;
 Hispaania keel 1;30;;Hispaania keel 2, Hispaania keel 3
+Hispaania keel 2;30;;
+Hispaania keel 3;30;;
 Planimeetria alused;10;;
+3D-modelleerimine;20;;

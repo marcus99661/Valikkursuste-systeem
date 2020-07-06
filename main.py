@@ -45,10 +45,11 @@ def grupeerimine():
                     klass12[row[2]] = temp1
                 else:
                     print("TEKKIS VIGA ÕPILASE ÕIGESSE SÕNASTIKKU PANEMISEL")
+                temp1 = {}
     return klass10, klass11, klass12
 
 klass10, klass11, klass12 = grupeerimine()
-
+print(klass12)
 ained = {}
 def ained_seadistamine():
     ainedList = []
@@ -129,25 +130,33 @@ for i in range(0, len(klass12_seadistatud)):
             temp2 = result.get(õpilaseNimi, [])
             temp2.append("")
             result[õpilaseNimi] = temp2
-        elif ained[õpilaseKursused[i][0]]['kohtiVõetud'] <  int(ained[õpilaseKursused[i][0]]['kohad']) and õpilaseKursused[i][0] not in result[õpilaseNimi]:  # 1. kui mahub 2. ei ole juba sellel kursusel 3. vajalikud on võetud (eelmine periood või eelmine aasta) 4. ei ole see periood veel midagi võetud
-            print(õpilaseNimi + " vastu võetud " + õpilaseKursused[i][0])
-            ained[õpilaseKursused[i][0]]['kohtiVõetud'] += 1
-            #print(ained[õpilaseKursused[i][0]])
-            ained[õpilaseKursused[i][0]]['vastuVõetud'].append(õpilaseNimi)
-            #print(ained[õpilaseKursused[i][0]])
-            print(ained)
-            ########
-            temp2 = result.get(õpilaseNimi, [])
-            temp2.append(õpilaseKursused[i][0])
-            result[õpilaseNimi] = temp2
-            #print(result)
-            ########
-            if ained[õpilaseKursused[i][0]]['lisad'] != '':
-                for j in range(0, len(ained[õpilaseKursused[i][0]]['lisad'].split(","))):
+        elif ained[õpilaseKursused[i][0]]['kohtiVõetud'] <  int(ained[õpilaseKursused[i][0]]['kohad']) and õpilaseKursused[i][0] not in result[õpilaseNimi] and len(result[õpilaseNimi]) < i+1:  # 1. kui mahub 2. ei ole juba sellel kursusel 3. vajalikud on võetud (eelmine periood või eelmine aasta) 4. ei ole see periood veel midagi võetud
+            if õpilaseKursused[i][0] not in result[õpilaseNimi]:
+                if len(result[õpilaseNimi]) < i+1:
+                    print(õpilaseNimi + " vastu võetud " + õpilaseKursused[i][0])
+                    ained[õpilaseKursused[i][0]]['kohtiVõetud'] += 1
+                    #print(ained[õpilaseKursused[i][0]])
+                    ained[õpilaseKursused[i][0]]['vastuVõetud'].append(õpilaseNimi)
+                    #print(ained[õpilaseKursused[i][0]])
+                    #print(ained)
+                    ########
                     temp2 = result.get(õpilaseNimi, [])
-                    temp2.append(ained[õpilaseKursused[i][0]]['lisad'].split(",")[j]) #### LISAD KURSUSED TULEB PANNA ÕIGESSE KOHTA
+                    temp2.append(õpilaseKursused[i][0])
                     result[õpilaseNimi] = temp2
                     #print(result)
+                    ########
+                    if ained[õpilaseKursused[i][0]]['lisad'] != '': #### TÖÖTAB ÕIGESTI AINULT KUI KURSUSE LISAD ON JÄRJESTIKKU. TULEKS ÄRA MUUTA
+                        for j in range(0, len(ained[õpilaseKursused[i][0]]['lisad'].split(","))):
+                            print(õpilaseNimi + " vastu võetud " + ained[õpilaseKursused[i][0]]['lisad'].split(",")[j])
+                            ained[ained[õpilaseKursused[i][0]]['lisad'].split(",")[j]]['vastuVõetud'].append(õpilaseNimi)
+                            temp2 = result.get(õpilaseNimi, [])
+                            temp2.append(ained[õpilaseKursused[i][0]]['lisad'].split(",")[j]) #### LISAD KURSUSED TULEB PANNA ÕIGESSE KOHTA
+                            result[õpilaseNimi] = temp2
+                            #print(result)
+                else:
+                    print(õpilaseNimi + " on juba sellel perioodil muule kursusele sisse saanud")
+            else:
+                print(õpilaseNimi + " on juba " + õpilaseKursused[i][0] + " kursusele sisse saanud")
         else:
             temp2 = result.get(õpilaseNimi, [])
             temp2.append("")
