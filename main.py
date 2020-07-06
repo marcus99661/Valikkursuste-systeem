@@ -4,8 +4,8 @@ from collections import OrderedDict
 #        VAJA PARANDADA
 ###################################
 # PANEB ARVATAVASTI KOKKU KUI ON MITU EELDUSAINET
-#
-#
+# OSAD KURSUSED EI OLE KÕIGILE KLASSILE
+# EELMINE AASTA ON VÕETUD EELDUSAINE
 ###################################
 
 #### {Nimi,klass : [[P1Hväga, P1Hvõtaks, P1Hvähe], [P1Õväga, P1Õvõtaks, P1Õvähe]]}
@@ -23,7 +23,7 @@ def grupeerimine():
     formating = []
     temp1 = {}
     korda = 0
-    with open('testinput2.csv', 'r', encoding="utf-8") as input_file:
+    with open('testinput2.csv', 'r', encoding="1252") as input_file:
         csv_reader = reader(input_file)
         for row in csv_reader:
             #print(row)
@@ -61,16 +61,18 @@ def ained_seadistamine():
     ainedList = []
     ained = {}
     with open('ained.txt', 'r', encoding="utf-8") as ainedfail:
-        for i in ainedfail: #### {Python 2 : {"kohad" : 40, "vajalikud" = "Python 1", "lisad" : ""}}
+        for i in ainedfail: #### {Python 2 : {"kohad" : 40, "eeldusaine" = "Python 1", "lisad" : ""}}
             temp1 = {}
             ainedList = i.replace("\n", "").split(";")
             #ained[ainedList[0]]["kohad"] = ainedList[1]
             #ained[ainedList[0]]["kohad"] = 40
-            temp1["periood"] = ainedList[2]
             temp1["kohad"] = ainedList[1]
+            temp1["alternatiiv"] = ainedList[2]
+            temp1["periood"] = ainedList[3]
             temp1["kohtiVõetud"] = 0
-            temp1["vajalikud"] = ainedList[3]
-            temp1["lisad"] = ainedList[4]
+            temp1["eeldusaine"] = ainedList[4]
+            temp1["üksEeldusaine"] = ainedList[5]
+            temp1["lisad"] = ainedList[6]
             temp1["vastuVõetud"] = []
             ained[ainedList[0]] = temp1
             #print(ained)
@@ -104,7 +106,7 @@ for i in range(0, len(klass12)):
     del klass12[õpilaseNimi]
     klass12_seadistatud[õpilaseNimi] = seadistamine(õpilaseNimi, õpilaseDict)
 
-#print(klass12_seadistatud)
+print(klass12_seadistatud)
 
 for i in range(0, len(klass11)):
     õpilaseNimi, õpilaseDict = random.choice(list(klass11.items()))
@@ -126,6 +128,7 @@ tempSõnastik = {}
 
 
 #### [['Planimeetria alused', 'Globaliseeruv maailm', 'Ei taha'], ['Programmeerimine keeles Python 1', 'Programmeerimine keeles Python 1', 'Programmeerimine keeles Python 1'], ['3D-modelleerimine', 'Küberkaitse 1', '3D-modelleerimine'], ['Statistiline maailmapilt', 'Ei taha', 'Ei taha'], ['Loomade käitumine', 'Ei taha', 'Ei taha'], ['Majandusõpe', 'Millest ELU koosneb?', 'Majandusõpe'], ['Ettevõtlusõpe', 'Liiklusfüüsika', 'Liiklusfüüsika'], ['CAD joonestamine', 'Ei taha', 'Ei taha']]
+#### 12. klassi 1. valik valimine
 for i in range(0, len(klass12_seadistatud)):
     temp2 = []
     klass12_seadistatud_temp = klass12_seadistatud
@@ -135,53 +138,56 @@ for i in range(0, len(klass12_seadistatud)):
     result[õpilaseNimi] = tempSõnastik
     print(result)
     for i in range(0, len(õpilaseKursused)):
+        hetkeneKursus = õpilaseKursused[i][0]
         temp2 = resultList.get(õpilaseNimi, [])
         resultList[õpilaseNimi] = temp2
-        if õpilaseKursused[i][0] == "Ei taha": ### EI TEA KAS TÖÖTAB
+        if hetkeneKursus == "Ei taha": ### EI TEA KAS TÖÖTAB
             temp2 = resultList.get(õpilaseNimi, [])
             temp2.append("")
             resultList[õpilaseNimi] = temp2
-        elif ained[õpilaseKursused[i][0]]['kohtiVõetud'] <  int(ained[õpilaseKursused[i][0]]['kohad']):  # 1. kui mahub 2. ei ole juba sellel kursusel 3. ei ole see periood veel midagi võetud 4. vajalikud on võetud (eelmine periood või eelmine aasta)
-            if õpilaseKursused[i][0] not in resultList[õpilaseNimi]: #### õpilasel on see kursus juba võetud
-                if ained[õpilaseKursused[i][0]]['periood'] != '': #### õpilasel on sellel perioodil midagi juba võetud
-                    if ained[õpilaseKursused[i][0]]['vajalikud'] == '' or ained[õpilaseKursused[i][0]]['vajalikud'] in resultList[õpilaseNimi]: ##### kontrollib kas õpilane on see aasta võtnud eeldusained
-                        print(õpilaseNimi + " vastu võetud " + õpilaseKursused[i][0])
-                        ained[õpilaseKursused[i][0]]['kohtiVõetud'] += 1
-                        ained[õpilaseKursused[i][0]]['vastuVõetud'].append(õpilaseNimi)
+        elif ained[hetkeneKursus]['kohtiVõetud'] <  int(ained[hetkeneKursus]['kohad']):  # 1. kui mahub 2. ei ole juba sellel kursusel 3. ei ole see periood veel midagi võetud 4. eeldusained on võetud (eelmine periood või eelmine aasta) 5. üks sama eeldusaine on võetud
+            if hetkeneKursus not in resultList[õpilaseNimi]: #### õpilasel on see kursus juba võetud
+                if ained[hetkeneKursus]['periood'] != '': #### õpilasel on sellel perioodil midagi juba võetud
+                    if ained[hetkeneKursus]['eeldusaine'] == '' or ained[hetkeneKursus]['eeldusaine'] in resultList[õpilaseNimi]: ##### kontrollib kas õpilane on see aasta võtnud eeldusained
+                        #if ained[hetkeneKursus]['üksEeldusaine'] == '' or 
+                        print(õpilaseNimi + " vastu võetud " + hetkeneKursus)
+                        ained[hetkeneKursus]['kohtiVõetud'] += 1
+                        ained[hetkeneKursus]['vastuVõetud'].append(õpilaseNimi)
                         ########
                         temp2 = resultList.get(õpilaseNimi, [])
-                        temp2.append(õpilaseKursused[i][0])
+                        temp2.append(hetkeneKursus)
                         resultList[õpilaseNimi] = temp2
                         #print(resultList)
                         ########
-                        tempSõnastik[i+1] = õpilaseKursused[i][0]
+                        tempSõnastik[i+1] = hetkeneKursus
                         result[õpilaseNimi] = tempSõnastik
                         print(result)
                         ########
-                        if ained[õpilaseKursused[i][0]]['lisad'] != '':
-                            for j in range(0, len(ained[õpilaseKursused[i][0]]['lisad'].split(","))):
-                                print(õpilaseNimi + " vastu võetud " + ained[õpilaseKursused[i][0]]['lisad'].split(",")[j])
-                                ained[ained[õpilaseKursused[i][0]]['lisad'].split(",")[j]]['vastuVõetud'].append(õpilaseNimi)
+                        if ained[hetkeneKursus]['lisad'] != '':
+                            for j in range(0, len(ained[hetkeneKursus]['lisad'].split(","))):
+                                print(õpilaseNimi + " vastu võetud " + ained[hetkeneKursus]['lisad'].split(",")[j])
+                                ained[ained[hetkeneKursus]['lisad'].split(",")[j]]['vastuVõetud'].append(õpilaseNimi)
                                 #####
                                 temp2 = resultList.get(õpilaseNimi, [])
-                                temp2.append(ained[õpilaseKursused[i][0]]['lisad'].split(",")[j])
+                                temp2.append(ained[hetkeneKursus]['lisad'].split(",")[j])
                                 resultList[õpilaseNimi] = temp2
                                 #print(resultList)
                                 #####
-                                tempSõnastik[int(ained[ained[õpilaseKursused[i][0]]['lisad'].split(",")[j]]['periood'])] = ained[õpilaseKursused[i][0]]['lisad'].split(",")[j]
+                                tempSõnastik[int(ained[ained[hetkeneKursus]['lisad'].split(",")[j]]['periood'])] = ained[hetkeneKursus]['lisad'].split(",")[j]
                                 result[õpilaseNimi] = tempSõnastik
                                 print(result)
                                 #####
                     else:
-                        print(õpilaseNimi + " ei saanud " + õpilaseKursused[i][0] + ",sest ei ole võetnud eeldusainet " + ained[õpilaseKursused[i][0]]['vajalikud'])
+                        print(õpilaseNimi + " ei saanud " + hetkeneKursus + ",sest ei ole võetnud eeldusainet " + ained[hetkeneKursus]['eeldusaine'])
                 else:
                     print(õpilaseNimi + " on juba sellel perioodil muule kursusele sisse saanud")
             else:
-                print(õpilaseNimi + " on juba " + õpilaseKursused[i][0] + " kursusele sisse saanud eelneval hetkel")
+                print(õpilaseNimi + " on juba " + hetkeneKursus + " kursusele sisse saanud eelneval hetkel")
         else:
-            pass
-            '''
-            temp2 = resultList.get(õpilaseNimi, [])
-            temp2.append("")
-            resultList[õpilaseNimi] = temp2
-            '''
+            print(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ",sest see oli juba täis")
+
+#### 11. ja 10. klassi 1. valik
+kokku11ja10 = {}
+for i in range(0, len(klass11_seadistatud.keys())):
+    #print(klass11_seadistatud[])
+    pass

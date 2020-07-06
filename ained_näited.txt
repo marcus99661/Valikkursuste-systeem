@@ -1,4 +1,4 @@
-Aine nimi;kohtade arv;periood;vajalikud ained;lisaks peab võtma
+Aine nimi;Aine alternatiivid(samad ained muul ajal, nimetatud teisiti);kohtade arv;periood;eeldusained;üks eeldusainetest ainetest vaja;lisaks peab võtma
 PERIOODID
 1 - 2. hommik
 2 - 2. õhtu

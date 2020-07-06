@@ -1,3 +1,4 @@
+'''
 ainedList = []
 korral = 0
 ained = {}
@@ -16,3 +17,12 @@ with open('ained.txt', 'r', encoding="utf-8") as ainedfail:
             korral += 1
             print(ained)
         #print(ained)
+'''
+test = "tere,tere2,tere1"
+test1 = "tere,tere1"
+#if test1.split(",").sort() in test.split(",").sort():
+#    print("jah")
+
+if all(elem in test for elem in test1):
+    print("jah")
+print(test.split())
