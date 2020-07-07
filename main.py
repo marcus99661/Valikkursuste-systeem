@@ -138,14 +138,16 @@ def võrdlemine(a, b):
     return False
 
 #### [['Planimeetria alused', 'Globaliseeruv maailm', 'Ei taha'], ['Programmeerimine keeles Python 1', 'Programmeerimine keeles Python 1', 'Programmeerimine keeles Python 1'], ['3D-modelleerimine', 'Küberkaitse 1', '3D-modelleerimine'], ['Statistiline maailmapilt', 'Ei taha', 'Ei taha'], ['Loomade käitumine', 'Ei taha', 'Ei taha'], ['Majandusõpe', 'Millest ELU koosneb?', 'Majandusõpe'], ['Ettevõtlusõpe', 'Liiklusfüüsika', 'Liiklusfüüsika'], ['CAD joonestamine', 'Ei taha', 'Ei taha']]
-def registreerimine(klass_seadistatud, valik):
+def registreerimine(klass_seadistatud, valik, result):
     for i in range(0, len(klass_seadistatud)):
         temp2 = []
+        tempSõnastik = {}
         klass_seadistatud_temp = klass_seadistatud
         õpilaseNimi, õpilaseKursused = random.choice(list(klass_seadistatud_temp.items()))
         del klass_seadistatud_temp[õpilaseNimi]
-        tempSõnastik = {k: '' for k in range(1, len(õpilaseKursused)+1)}
-        result[õpilaseNimi] = tempSõnastik
+        if õpilaseNimi not in result:
+            tempSõnastik = {k: '' for k in range(1, len(õpilaseKursused)+1)}
+            result[õpilaseNimi] = tempSõnastik
         for i in range(0, len(õpilaseKursused)):
             hetkeneKursus = õpilaseKursused[i][valik]
             temp2 = resultList.get(õpilaseNimi, [])
@@ -173,6 +175,7 @@ def registreerimine(klass_seadistatud, valik):
                                     resultList[õpilaseNimi] = temp2
                                     #print(resultList)
                                     ########
+                                    tempSõnastik = result[õpilaseNimi]
                                     tempSõnastik[i+1] = hetkeneKursus
                                     result[õpilaseNimi] = tempSõnastik
                                     #print(result)
@@ -202,8 +205,9 @@ def registreerimine(klass_seadistatud, valik):
             else:
                 print(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ", sest see oli juba täis")
     #print(result)
+    return result
 #### 12. klassi 1. valik valimine
-registreerimine(klass12_seadistatud, 0)
+result = registreerimine(klass12_seadistatud, 0,result)
 print("LÕPPETATUD 12. KLASSI 1. VALIK")
 #### 11. ja 10. klassi 1. valik
 klass12_seadistatud = copy.deepcopy(klass12_PERM)
@@ -226,7 +230,7 @@ for i in range(0, len(kokku11ja10.keys())):
     kursused = kokku11ja10[õpilaseNimi]
     del kokku11ja10[õpilaseNimi]
     kokku11ja10_segamini[õpilaseNimi] = kursused
-registreerimine(kokku11ja10_segamini, 0)
+result = registreerimine(kokku11ja10_segamini, 0,result)
 print("LÕPPETATUD 11. JA 10. KLASSI 1. VALIK")
 #### 12., 11. ja 10. klassi 2. valik
 klass12_seadistatud = copy.deepcopy(klass12_PERM)
@@ -257,7 +261,7 @@ for i in range(0, len(kokku12ja11ja10.keys())):
     del kokku12ja11ja10[õpilaseNimi]
     kokku12ja11ja10_segamini[õpilaseNimi] = kursused
 
-registreerimine(kokku12ja11ja10_segamini, 1)
+result = registreerimine(kokku12ja11ja10_segamini, 1,result)
 #print(kokku12ja11ja10_segamini)
 print("LÕPPETATUD 12., 11. ja 10. KLASSI 2. VALIK")
 #### 12., 11. ja 10. klassi 3. valik
@@ -289,7 +293,7 @@ for i in range(0, len(kokku12ja11ja10.keys())):
     del kokku12ja11ja10[õpilaseNimi]
     kokku12ja11ja10_segamini[õpilaseNimi] = kursused
     
-registreerimine(kokku12ja11ja10_segamini, 2)
+result = registreerimine(kokku12ja11ja10_segamini, 2,result)
 #print(kokku12ja11ja10_segamini)
 print("LÕPPETATUD 12., 11. ja 10. KLASSI 3. VALIK")
 
