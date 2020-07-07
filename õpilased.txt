@@ -1,2 +1,0 @@
-Mari:12/Python 1;Loogika;/Python 1;Astronoomia;Hispaania keel
-Joosep:11/Python 1; Loogika;Python 2/;Astronoomia;Hispaania keel
