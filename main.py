@@ -7,6 +7,7 @@ import copy
 # PANEB ARVATAVASTI KOKKU KUI ON MITU EELDUSAINET - PEAKS OLEMA KORRAS
 # OSAD KURSUSED EI OLE KÕIGILE KLASSILE
 # EELMINE AASTA ON VÕETUD EELDUSAINE
+# VAJA LISADA TUNNIVÄLISED KURSUSED
 ###################################
 
 #### {Nimi,klass : [[P1Hväga, P1Hvõtaks, P1Hvähe], [P1Õväga, P1Õvõtaks, P1Õvähe]]}
@@ -24,7 +25,7 @@ def grupeerimine():
     formating = []
     temp1 = {}
     korda = 0
-    with open('testinput2.csv', 'r', encoding="utf-8") as input_file:
+    with open('testinput3.csv', 'r', encoding="utf-8") as input_file:
         csv_reader = reader(input_file)
         for row in csv_reader:
             #print(row)
@@ -60,7 +61,7 @@ def grupeerimine():
     return klass10, klass11, klass12
 
 klass10, klass11, klass12 = grupeerimine()
-print(klass11)
+#print(klass11)
 ained = {}
 def ained_seadistamine():
     ainedList = []
@@ -92,7 +93,6 @@ klass10_seadistatud, klass11_seadistatud, klass12_seadistatud = {}, {}, {}
 
 def seadistamine(õpilaseNimi, õpilaneDict):
     õpilaseKursused = [] #### [[P1H väga, P1H võtaks, P1H vähe], [P1Õ väga, P1õ võtaks, P1Õ vähe]]
-    #õpilaseNimi = list(õpilaneDict.keys())[0]
     ajutine = []
     korda1 = 0
     #print(õpilaseNimi)
@@ -160,7 +160,7 @@ def registreerimine(klass_seadistatud, valik, result):
                 resultList[õpilaseNimi] = temp2
                 '''
             elif ained[hetkeneKursus]['kohtiVõetud'] <  int(ained[hetkeneKursus]['kohad']):  # 1. kui mahub 2. ei ole juba sellel kursusel 3. ei ole see periood veel midagi võetud 4. eeldusained on võetud (eelmine periood või eelmine aasta) 5. üks sama eeldusaine on võetud
-                if hetkeneKursus not in resultList[õpilaseNimi] and ained[hetkeneKursus]['alternatiiv'] not in resultList[õpilaseNimi]: #### õpilasel on see kursus juba võetud
+                if hetkeneKursus not in resultList[õpilaseNimi]: #### õpilasel on see kursus juba võetud
                     if ained[hetkeneKursus]['alternatiiv'] not in resultList[õpilaseNimi]: #### õpilasel on selle kursuse alternatiiv võetud
                         if result[õpilaseNimi][int(ained[hetkeneKursus]['periood'])] == '': #### õpilasel on sellel perioodil midagi juba võetud
                             #### TULEB LISADA EELMISE AASTA EELDUSAINED JUURDE
