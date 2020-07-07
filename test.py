@@ -1,34 +1,3 @@
-'''
-ainedList = []
-korral = 0
-ained = {}
-with open('ained.txt', 'r', encoding="utf-8") as ainedfail:
-        for i in ainedfail: #### {Python 2 : {"kohad" : 40, "vajalikud" = "Python 1", "lisad" : ""}}
-            temp1 = {}
-            ainedList = i.replace("\n", "").split(";")
-            #ained[ainedList[0]]["kohad"] = ainedList[1]
-            #ained[ainedList[0]]["kohad"] = 40
-            temp1["kohad"] = ainedList[1]
-            temp1["kohtiVõetud"] = 0
-            temp1["vajalikud"] = ainedList[2]
-            temp1["lisad"] = ainedList[3]
-            temp1["vastuVõetud"] = []
-            ained[ainedList[0]] = temp1
-            korral += 1
-            print(ained)
-        #print(ained)
-'''
-a = "tere,tere2,tere1".split()
-b = "tere1".split()
-#if test1.split(",").sort() in test.split(",").sort():
-#    print("jah")
-
-any_in = any(i in b for i in a)
-print(any_in)
-any_in = lambda a, b: bool(set(a).intersection(b))
-print(any_in)
-'''
-if test1 in test.split():
-    print("jah")
-print(test.split())
-'''
+import random
+a = {'Mairolt': {'Ajatempel': '2020/07/06 4:57:08 PM GMT +3', 'Kasutajanimi': 'hahaha@meemster.com', 'Nimi': 'Mairolt', 'Klass': '11', '2. periood hommik 1. valik': 'Keskkonnakeemia', '2. periood hommik 2. valik': 'Planimeetria alused', '2. periood hommik 3. valik': 'Geoinformaatika', '2. periood õhtu 1. valik': 'Programmeerimine keeles Python 1 õhtul', '2. periood õhtu 2. valik': 'Programmeerimine keeles Python 1 õhtul', '2. periood õhtu 3. valik': 'Astronoomia', '3. periood hommik 1. valik': 'Loomade käitumine', '3. periood hommik 2. valik': 'Küberkaitse 1', '3. periood hommik 3. valik': 'Loomade käitumine', '3. periood õhtu 1. valik': 'Ettevõtlusõpe 3. periood', '3. periood õhtu 2. valik': 'Keskkonnakeemia', '3. periood õhtu 3. valik': 'Ettevõtlusõpe 3. periood', '4. periood hommik 1. valik': 'Programmeerimine keeles Python 2', '4. periood hommik 2. valik': 'Loomade käitumine', '4. periood hommik 3. valik': 'Programmeerimine keeles Python 2', '4. periood õhtu 1. valik': 'Millest ELU koosneb?', '4. periood õhtu 2. valik': 'Majandusõpe', '4. periood õhtu 3. valik': 'Millest ELU koosneb?', '5. periood hommik 1. valik': 'Ettevõtlusõpe 5. periood', '5. periood hommik 2. valik': 'Liiklusfüüsika', '5. periood hommik 3. valik': '3D-modelleerimine', '5. periood õhtu 1. valik': 'CAD joonestamine', '5. periood õhtu 2. valik': 'Ei taha', '5. periood õhtu 3. valik': 'Ei taha', 'EI VASTA SIIA': ''}, 'test2': {'Ajatempel': '2020/07/07 3:24:04 PM GMT +3', 'Kasutajanimi': 'test2@gmail.com', 'Nimi': 'test2', 'Klass': '11', '2. periood hommik 1. valik': 'Keskkonnakeemia', '2. periood hommik 2. valik': 'Planimeetria alused', '2. periood hommik 3. valik': 'Keskkonnakeemia', '2. periood õhtu 1. valik': 'Labortöid füüsikas 10. ja 11. klassile', '2. periood õhtu 2. valik': 'Programmeerimine keeles Python 1 õhtul', '2. periood õhtu 3. valik': 'Astronoomia', '3. periood hommik 1. valik': '3D-modelleerimine', '3. periood hommik 2. valik': 'Küberkaitse 1', '3. periood hommik 3. valik': 'Loomade käitumine', '3. periood õhtu 1. valik': 'Sissejuhatus ehitusinseneeriasse', '3. periood õhtu 2. valik': 'Veebidisain', '3. periood õhtu 3. valik': 'Ettevõtlusõpe 3. periood', '4. periood hommik 1. valik': 'Loomade käitumine', '4. periood hommik 2. valik': 'Programmeerimine keeles Python 2', '4. periood hommik 3. valik': 'Programmeerimine keeles Python 2', '4. periood õhtu 1. valik': 'Millest ELU koosneb?', '4. periood õhtu 2. valik': 'Ei taha', '4. periood õhtu 3. valik': 'Ei taha', '5. periood hommik 1. valik': 'Ei taha', '5. periood hommik 2. valik': 'Globaalne keskkond', '5. periood hommik 3. valik': 'Ettevõtlusõpe 5. periood', '5. periood õhtu 1. valik': 'CAD joonestamine', '5. periood õhtu 2. valik': 'CAD joonestamine', '5. periood õhtu 3. valik': 'CAD joonestamine', 'EI VASTA SIIA': ''}}
+print(random.choice(list(a)))

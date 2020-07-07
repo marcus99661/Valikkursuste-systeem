@@ -36,6 +36,10 @@ def grupeerimine():
             else:
                 for i in range(len(row)):
                     row[i] = row[i].replace('"', "")
+                    row[i] = row[i].replace('Ãµ', "õ")
+                    row[i] = row[i].replace('Ã¤', "ä")
+                    row[i] = row[i].replace('Ã¶', "ö")
+                    row[i] = row[i].replace('Ã¼', "ü")
                 
                 #### Paneb õige klassi sõnastikku
                 if row[3] == '12':
@@ -45,18 +49,18 @@ def grupeerimine():
                 elif row[3] == '11':
                     for i in range(len(formating)):
                         temp1[formating[i]] = row[i]
-                    klass12[row[2]] = temp1
+                    klass11[row[2]] = temp1
                 elif row[3] == '10':
                     for i in range(len(formating)):
                         temp1[formating[i]] = row[i]
-                    klass12[row[2]] = temp1
+                    klass10[row[2]] = temp1
                 else:
                     print("TEKKIS VIGA ÕPILASE ÕIGESSE SÕNASTIKKU PANEMISEL")
                 temp1 = {}
     return klass10, klass11, klass12
 
 klass10, klass11, klass12 = grupeerimine()
-#print(klass12)
+print(klass11)
 ained = {}
 def ained_seadistamine():
     ainedList = []
@@ -197,49 +201,66 @@ def registreerimine(klass_seadistatud, valik):
                     print(õpilaseNimi + " on juba " + hetkeneKursus + " kursusele sisse saanud eelneval hetkel")
             else:
                 print(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ", sest see oli juba täis")
-    print(result)
+    #print(result)
 #### 12. klassi 1. valik valimine
 registreerimine(klass12_seadistatud, 0)
+print("LÕPPETATUD 12. KLASSI 1. VALIK")
 #### 11. ja 10. klassi 1. valik
 klass12_seadistatud = copy.deepcopy(klass12_PERM)
 kokku11ja10 = {} #### PANEB KÕIK 11 JA 10 KLASSI ÕPILASED SÕNASTIKKU SISSE JA HAKKAB REGISTREERIMA SUVALISES JÄRJEKORRAS
 kokku11ja10_segamini = {}
+
 for i in range(0, len(klass11_seadistatud.keys())):
-    õpilaseNimi, kursused = random.choice(list(klass11_seadistatud.items()))
+    õpilaseNimi = random.choice(list(klass11_seadistatud))
+    kursused = klass11_seadistatud[õpilaseNimi]
     del klass11_seadistatud[õpilaseNimi]
     kokku11ja10[õpilaseNimi] = kursused
 for i in range(0, len(klass10_seadistatud.keys())):
-    õpilaseNimi, kursused = random.choice(list(klass10_seadistatud.items()))
+    õpilaseNimi = random.choice(list(klass10_seadistatud))
+    kursused = klass10_seadistatud[õpilaseNimi]
     del klass10_seadistatud[õpilaseNimi]
     kokku11ja10[õpilaseNimi] = kursused
-kokku11ja10_segamini = õpilaseNimi, kursused = random.choice(list(kokku11ja10.items()))
+
+for i in range(0, len(kokku11ja10.keys())):
+    õpilaseNimi = random.choice(list(kokku11ja10))
+    kursused = kokku11ja10[õpilaseNimi]
+    del kokku11ja10[õpilaseNimi]
+    kokku11ja10_segamini[õpilaseNimi] = kursused
 registreerimine(kokku11ja10_segamini, 0)
-print(kokku11ja10_segamini)
-
+print("LÕPPETATUD 11. JA 10. KLASSI 1. VALIK")
 #### 12., 11. ja 10. klassi 2. valik
 klass12_seadistatud = copy.deepcopy(klass12_PERM)
 klass11_seadistatud = copy.deepcopy(klass11_PERM)
 klass10_seadistatud = copy.deepcopy(klass10_PERM)
-
 kokku12ja11ja10 = {}
 kokku12ja11ja10_segamini = {}
+
 for i in range(0, len(klass12_seadistatud.keys())):
-    õpilaseNimi, kursused = random.choice(list(klass12_seadistatud.items()))
+    õpilaseNimi = random.choice(list(klass12_seadistatud))
+    kursused = klass12_seadistatud[õpilaseNimi]
     del klass12_seadistatud[õpilaseNimi]
     kokku12ja11ja10[õpilaseNimi] = kursused
 for i in range(0, len(klass11_seadistatud.keys())):
-    õpilaseNimi, kursused = random.choice(list(klass11_seadistatud.items()))
+    õpilaseNimi = random.choice(list(klass11_seadistatud))
+    kursused = klass11_seadistatud[õpilaseNimi]
     del klass11_seadistatud[õpilaseNimi]
     kokku12ja11ja10[õpilaseNimi] = kursused
 for i in range(0, len(klass10_seadistatud.keys())):
-    õpilaseNimi, kursused = random.choice(list(klass10_seadistatud.items()))
+    õpilaseNimi = random.choice(list(klass10_seadistatud))
+    kursused = klass10_seadistatud[õpilaseNimi]
     del klass10_seadistatud[õpilaseNimi]
     kokku12ja11ja10[õpilaseNimi] = kursused
-kokku12ja11ja10_segamini = õpilaseNimi, kursused = random.choice(list(kokku12ja11ja10.items()))
+    
+for i in range(0, len(kokku12ja11ja10.keys())):
+    õpilaseNimi = random.choice(list(kokku12ja11ja10))
+    kursused = kokku12ja11ja10[õpilaseNimi]
+    del kokku12ja11ja10[õpilaseNimi]
+    kokku12ja11ja10_segamini[õpilaseNimi] = kursused
+
 registreerimine(kokku12ja11ja10_segamini, 1)
-print(kokku12ja11ja10_segamini)
-
-#### 12., 11. ja 10. klassi 2. valik
+#print(kokku12ja11ja10_segamini)
+print("LÕPPETATUD 12., 11. ja 10. KLASSI 2. VALIK")
+#### 12., 11. ja 10. klassi 3. valik
 klass12_seadistatud = copy.deepcopy(klass12_PERM)
 klass11_seadistatud = copy.deepcopy(klass11_PERM)
 klass10_seadistatud = copy.deepcopy(klass10_PERM)
@@ -247,20 +268,29 @@ klass10_seadistatud = copy.deepcopy(klass10_PERM)
 kokku12ja11ja10 = {}
 kokku12ja11ja10_segamini = {}
 for i in range(0, len(klass12_seadistatud.keys())):
-    õpilaseNimi, kursused = random.choice(list(klass12_seadistatud.items()))
+    õpilaseNimi = random.choice(list(klass12_seadistatud))
+    kursused = klass12_seadistatud[õpilaseNimi]
     del klass12_seadistatud[õpilaseNimi]
     kokku12ja11ja10[õpilaseNimi] = kursused
 for i in range(0, len(klass11_seadistatud.keys())):
-    õpilaseNimi, kursused = random.choice(list(klass11_seadistatud.items()))
+    õpilaseNimi = random.choice(list(klass11_seadistatud))
+    kursused = klass11_seadistatud[õpilaseNimi]
     del klass11_seadistatud[õpilaseNimi]
     kokku12ja11ja10[õpilaseNimi] = kursused
 for i in range(0, len(klass10_seadistatud.keys())):
-    õpilaseNimi, kursused = random.choice(list(klass10_seadistatud.items()))
+    õpilaseNimi = random.choice(list(klass10_seadistatud))
+    kursused = klass10_seadistatud[õpilaseNimi]
     del klass10_seadistatud[õpilaseNimi]
     kokku12ja11ja10[õpilaseNimi] = kursused
-kokku12ja11ja10_segamini = õpilaseNimi, kursused = random.choice(list(kokku12ja11ja10.items()))
+    
+for i in range(0, len(kokku12ja11ja10.keys())):
+    õpilaseNimi = random.choice(list(kokku12ja11ja10))
+    kursused = kokku12ja11ja10[õpilaseNimi]
+    del kokku12ja11ja10[õpilaseNimi]
+    kokku12ja11ja10_segamini[õpilaseNimi] = kursused
+    
 registreerimine(kokku12ja11ja10_segamini, 2)
-print(kokku12ja11ja10_segamini)
-
+#print(kokku12ja11ja10_segamini)
+print("LÕPPETATUD 12., 11. ja 10. KLASSI 3. VALIK")
 
 print(result)
