@@ -25,7 +25,7 @@ def grupeerimine():
     formating = []
     temp1 = {}
     korda = 0
-    with open('testinput3.csv', 'r', encoding="utf-8") as input_file:
+    with open('testinput4.csv', 'r', encoding="utf-8") as input_file:
         csv_reader = reader(input_file)
         for row in csv_reader:
             #print(row)
@@ -96,12 +96,13 @@ def seadistamine(õpilaseNimi, õpilaneDict):
     ajutine = []
     korda1 = 0
     #print(õpilaseNimi)
-    for i in range(4, len(list(õpilaneDict))):
+    for i in range(4, len(list(õpilaneDict))): ######################### KUI TULEB EMAIL KONTROLL VB PEAB LISAMA -1 len() LÕPPU
         if korda1 % 3 == 0 and korda1 != 0:
             õpilaseKursused.append(ajutine)
             ajutine = []
         korda1 += 1
         ajutine.append(list(õpilaneDict.values())[i])
+    õpilaseKursused.append(ajutine)
     #print(õpilaseKursused)
     return õpilaseKursused
 
@@ -146,19 +147,15 @@ def registreerimine(klass_seadistatud, valik, result):
         õpilaseNimi, õpilaseKursused = random.choice(list(klass_seadistatud_temp.items()))
         del klass_seadistatud_temp[õpilaseNimi]
         if õpilaseNimi not in result:
-            tempSõnastik = {k: '' for k in range(1, len(õpilaseKursused)+1)}
+            tempSõnastik = {k: '' for k in range(1, len(õpilaseKursused)+2)}
             result[õpilaseNimi] = tempSõnastik
         for i in range(0, len(õpilaseKursused)):
+            #print(õpilaseKursused)
             hetkeneKursus = õpilaseKursused[i][valik]
             temp2 = resultList.get(õpilaseNimi, [])
             resultList[õpilaseNimi] = temp2
             if hetkeneKursus == "Ei taha": ### EI TEA KAS TÖÖTAB
                 print(õpilaseNimi + " ei tahtnud see periood midagi")
-                '''
-                temp2 = resultList.get(õpilaseNimi, [])
-                temp2.append("")
-                resultList[õpilaseNimi] = temp2
-                '''
             elif ained[hetkeneKursus]['kohtiVõetud'] <  int(ained[hetkeneKursus]['kohad']):  # 1. kui mahub 2. ei ole juba sellel kursusel 3. ei ole see periood veel midagi võetud 4. eeldusained on võetud (eelmine periood või eelmine aasta) 5. üks sama eeldusaine on võetud
                 if hetkeneKursus not in resultList[õpilaseNimi]: #### õpilasel on see kursus juba võetud
                     if ained[hetkeneKursus]['alternatiiv'] not in resultList[õpilaseNimi]: #### õpilasel on selle kursuse alternatiiv võetud

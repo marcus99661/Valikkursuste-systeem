@@ -15,7 +15,7 @@ korda = 4
 time.sleep(3)
 def random_char(y):
        return ''.join(random.choice(string.ascii_letters) for x in range(y))
-for i in range(0, 150):
+for i in range(287, 575):
     driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[1]/input').send_keys(random_char(7)+"@fakegmail.com")
     driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[1]/input').send_keys(random.choice(nimed) + " " + str(i))
     ### klass
