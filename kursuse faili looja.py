@@ -21,15 +21,6 @@ if event == "Submit":
             for i in loetavFail:
                 print(i.replace("\n", ""))
                 ained.append(i.replace("\n", ""))
-            '''
-            with open(failiNimi, 'r', encoding="cp1257") as file: ##, encoding="utf-8"
-                data = file.readlines()
-                print(data)
-                for i in range(0, len(data)):
-                    asd = data[i].replace("\n", "")
-                    print(asd)
-                    ained.append(asd)
-            '''
             saiÕigeFaili = False
         except:
             layout = [[sg.Text('Sisestatud kursuse nimi oli vale\nSisestage kursuste faili nimi (ilma .txt lõputa)')],      
@@ -73,22 +64,6 @@ if event == "Submit":
     print("")
     #print(ained[])
     #ained = [['Programmeerimine keeles Python 1 hommikul','Programmeerimine keeles Python 1 õhtu','27','1','','',''], ['Programmeerimine keeles Python 1 hasdasdommikul','Programmeerimine keeles Pasdasdython 1 õhtu','27','1','','','']]
-    '''
-    layout = [[sg.Table(values=ainedKorras, headings=["Nimi", "Alternatiivid", "Kohad", "Periood", "Eeldusained", "Üks eeldusainetest vajalik", "Lisaks peab võtma"], max_col_width=25,
-                    #background_color='light blue',
-                    auto_size_columns=True,
-                    display_row_numbers=True,
-                    justification='right',
-                    num_rows=10,
-                    alternating_row_color='lightblue',
-                    #key='-TABLE-',
-                    row_height=35,
-                    text_color="black")],
-            [sg.Button('Muuda rida'),sg.Text('Saab muuta kursust realt: '), sg.InputText()],
-            [sg.Button('Double'), sg.Button('Change Colors')],
-    ]
-    window = sg.Window('Table', layout)
-    '''
     while True:
         layout = [[sg.Table(values=ainedKorras, headings=["Nimi", "Alternatiivid", "Kohad", "Periood", "Eeldusained", "Üks eeldusainetest vajalik", "Lisaks peab võtma"], max_col_width=25,
                         #background_color='light blue',
