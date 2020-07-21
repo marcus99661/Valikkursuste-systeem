@@ -1,0 +1,12 @@
+Programmeerimine keeles Python 1 hommikul;Programmeerimine keeles Python 1 õhtu;27;1;;;
+Programmeerimine keeles Python 1 õhtul;Programmeerimine keeles Python 1 hommikul;27;2;;;
+Programmeerimine keeles Python 2;;50;5;;Programmeerimine keeles Python 1 hommikul,Programmeerimine keeles Python 1 õhtul;
+Hispaania keel 1;;30;2;;;Hispaania keel 2,Hispaania keel 3
+Hispaania keel 2;;30;4;;;
+Hispaania keel 3;;30;6;;;
+Planimeetria alused;;30;1;;;
+3D-modelleerimine 3. periood;;35;3;;Joonestamine 2. periood,Joonestamine 4. periood;
+3D-modelleerimine 5. periood;;35;7;;Joonestamine 2. periood,Joonestamine 4. periood;
+Statistiline maailmapilt;;24;4;;;
+Loomade käitumine 4. periood;Loomade käitumine 3. periood;24;5;;;
+Loomade käitumine 3. periood;Loomade käitumine 4. periood;24;3;;;

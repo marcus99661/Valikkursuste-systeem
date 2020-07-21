@@ -1,6 +1,6 @@
 Programmeerimine keeles Python 1 hommikul;Programmeerimine keeles Python 1 õhtu;27;1;;;
 Programmeerimine keeles Python 1 õhtul;Programmeerimine keeles Python 1 hommikul;27;2;;;
-Programmeerimine keeles Python 2;;50;5;;Programmeerimine keeles Python 1 hommikul,Programmeerimine keeles Python 1 õhtul;
+Programmeerimine keeles Python 2;;27;5;;Programmeerimine keeles Python 1 hommikul,Programmeerimine keeles Python 1 õhtul;
 Hispaania keel 1;;30;2;;;Hispaania keel 2,Hispaania keel 3
 Hispaania keel 2;;30;4;;;
 Hispaania keel 3;;30;6;;;
@@ -64,7 +64,7 @@ Soome keel 3;;25;6;;;
 Õpioskused;;18;2;;;
 Ajakirjanduse alused;;31;3;;;
 Filosoofia 1;;30;3;;;
-Filosoofia 2;;30;7;;Filosoofia 1;
+Filosoofia 2;;30;7;Filosoofia 1;;
 Ladina keel 1;;18;3;;;Ladina keel 2
 Ladina keel 2;;18;5;;;
 Loovkirjutamine;;26;3;;;

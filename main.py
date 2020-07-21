@@ -4,7 +4,6 @@ from collections import OrderedDict
 import copy
 #        VAJA PARANDADA
 ###################################
-# PANEB ARVATAVASTI KOKKU KUI ON MITU EELDUSAINET - PEAKS OLEMA KORRAS
 # OSAD KURSUSED EI OLE KÕIGILE KLASSILE
 # EELMINE AASTA ON VÕETUD EELDUSAINE
 # VAJA LISADA PRAKTIKUMID
@@ -156,7 +155,6 @@ def registreerimine(klass_seadistatud, valik, result):
             resultList[õpilaseNimi] = temp2
             if hetkeneKursus == "Ei taha": ### EI TEA KAS TÖÖTAB
                 print(õpilaseNimi + " ei tahtnud see periood midagi")
-                pass
             elif ained[hetkeneKursus]['kohtiVõetud'] <  int(ained[hetkeneKursus]['kohad']):  # 1. kui mahub 2. ei ole juba sellel kursusel 3. ei ole see periood veel midagi võetud 4. eeldusained on võetud (eelmine periood või eelmine aasta) 5. üks sama eeldusaine on võetud
                 if hetkeneKursus not in resultList[õpilaseNimi]: #### õpilasel on see kursus juba võetud
                     if ained[hetkeneKursus]['alternatiiv'] not in resultList[õpilaseNimi]: #### õpilasel on selle kursuse alternatiiv võetud
@@ -171,10 +169,12 @@ def registreerimine(klass_seadistatud, valik, result):
                                     temp2 = resultList.get(õpilaseNimi, [])
                                     temp2.append(hetkeneKursus)
                                     resultList[õpilaseNimi] = temp2
+                                    #print(resultList)
                                     ########
                                     tempSõnastik = result[õpilaseNimi]
                                     tempSõnastik[i+1] = hetkeneKursus
                                     result[õpilaseNimi] = tempSõnastik
+                                    #print(result)
                                     ########
                                     if ained[hetkeneKursus]['lisad'] != '':
                                         for j in range(0, len(ained[hetkeneKursus]['lisad'].split(","))):
@@ -184,29 +184,32 @@ def registreerimine(klass_seadistatud, valik, result):
                                             temp2 = resultList.get(õpilaseNimi, [])
                                             temp2.append(ained[hetkeneKursus]['lisad'].split(",")[j])
                                             resultList[õpilaseNimi] = temp2
+                                            #print(resultList)
                                             #####
                                             tempSõnastik[int(ained[ained[hetkeneKursus]['lisad'].split(",")[j]]['periood'])] = ained[hetkeneKursus]['lisad'].split(",")[j]
                                             result[õpilaseNimi] = tempSõnastik
+                                            #print(result)
                                             #####
                             else:
-                                pass
                                 print(õpilaseNimi + " ei saanud " + hetkeneKursus + ", sest ei ole võtnud eeldusainet " + ained[hetkeneKursus]['eeldusaine'])
                         else:
-                            pass
                             print(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ", sest on juba sellel perioodil muule kursusele sisse saanud")
                     else:
-                        pass
                         print(õpilaseNimi + " on juba " + hetkeneKursus + " kursuse alternatiivile sisse eelneval hetkel")
                 else:
-                    pass
                     print(õpilaseNimi + " on juba " + hetkeneKursus + " kursusele sisse saanud eelneval hetkel")
             else:
-                pass
                 print(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ", sest see oli juba täis")
     #print(result)
     return result
 #### 12. klassi 1. valik valimine
-result = registreerimine(klass12_seadistatud, 0,result)
+klass12_segamini = {}
+for i in range(0, len(klass12_seadistatud.keys())):
+    õpilaseNimi = random.choice(list(klass12_seadistatud))
+    kursused = klass12_seadistatud[õpilaseNimi]
+    del klass12_seadistatud[õpilaseNimi]
+    klass12_segamini[õpilaseNimi] = kursused
+result = registreerimine(klass12_segamini, 0,result)
 print("LÕPPETATUD 12. KLASSI 1. VALIK")
 #### 11. ja 10. klassi 1. valik
 klass12_seadistatud = copy.deepcopy(klass12_PERM)
