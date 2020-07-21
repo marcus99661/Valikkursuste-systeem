@@ -21,6 +21,15 @@ if event == "Submit":
             for i in loetavFail:
                 print(i.replace("\n", ""))
                 ained.append(i.replace("\n", ""))
+            '''
+            with open(failiNimi, 'r', encoding="cp1257") as file: ##, encoding="utf-8"
+                data = file.readlines()
+                print(data)
+                for i in range(0, len(data)):
+                    asd = data[i].replace("\n", "")
+                    print(asd)
+                    ained.append(asd)
+            '''
             saiÕigeFaili = False
         except:
             layout = [[sg.Text('Sisestatud kursuse nimi oli vale\nSisestage kursuste faili nimi (ilma .txt lõputa)')],      
@@ -64,6 +73,7 @@ if event == "Submit":
     print("")
     #print(ained[])
     #ained = [['Programmeerimine keeles Python 1 hommikul','Programmeerimine keeles Python 1 õhtu','27','1','','',''], ['Programmeerimine keeles Python 1 hasdasdommikul','Programmeerimine keeles Pasdasdython 1 õhtu','27','1','','','']]
+    '''
     layout = [[sg.Table(values=ainedKorras, headings=["Nimi", "Alternatiivid", "Kohad", "Periood", "Eeldusained", "Üks eeldusainetest vajalik", "Lisaks peab võtma"], max_col_width=25,
                     #background_color='light blue',
                     auto_size_columns=True,
@@ -78,7 +88,22 @@ if event == "Submit":
             [sg.Button('Double'), sg.Button('Change Colors')],
     ]
     window = sg.Window('Table', layout)
+    '''
     while True:
+        layout = [[sg.Table(values=ainedKorras, headings=["Nimi", "Alternatiivid", "Kohad", "Periood", "Eeldusained", "Üks eeldusainetest vajalik", "Lisaks peab võtma"], max_col_width=25,
+                        #background_color='light blue',
+                        auto_size_columns=True,
+                        display_row_numbers=True,
+                        justification='right',
+                        num_rows=10,
+                        alternating_row_color='lightblue',
+                        #key='-TABLE-',
+                        row_height=35,
+                        text_color="black")],
+                [sg.Button('Muuda rida'),sg.Text('Saab muuta kursust realt: '), sg.InputText()],
+                [sg.Button('Double'), sg.Button('Change Colors')],
+        ]
+        window = sg.Window('Table', layout)
         event, values = window.read()
         print(event, values)
         if event == sg.WIN_CLOSED:
@@ -107,27 +132,24 @@ if event == "Submit":
                         print("Toimub muudatus")
                         for j in range(0, len(ainedKorras[rida])):
                             ainedKorras[rida][j] = values[j+1]
-                            print(ainedKorras[rida][j])               ################################################### SIIIIIIIIN VISKAB ERRORI
+                            print(ainedKorras[rida][j])
                             print(values[j+1])
                             print("")
-                        #print(ainedKorras[rida])
-                        #window.close()
-                        layout = [[sg.Table(values=ainedKorras, headings=["Nimi", "Alternatiivid", "Kohad", "Periood", "Eeldusained", "Üks eeldusainetest vajalik", "Lisaks peab võtma"], max_col_width=25,
-                                        #background_color='light blue',
-                                        auto_size_columns=True,
-                                        display_row_numbers=True,
-                                        justification='right',
-                                        num_rows=10,
-                                        alternating_row_color='lightblue',
-                                        #key='-TABLE-',
-                                        row_height=35,
-                                        text_color="black")],
-                                [sg.Button('Muuda rida'),sg.Text('Saab muuta kursust realt: '), sg.InputText()],
-                                [sg.Button('Double'), sg.Button('Change Colors')],
-                        ]
-                        window = sg.Window('Table', layout)
-                        event, values = window.read()
+                        window.close()
+                        with open(failiNimi, 'r', encoding="utf-8") as file:
+                            # read a list of lines into data
+                            data = file.readlines()
+                        
+                        print(data[rida].split(";")[3]) 
+                        
+                        
+                        # now change the 2nd line, note that you have to add a newline
+                        seperator = ";"
+                        data[rida] = seperator.join(ainedKorras[rida]) + "\n"
 
+                        # and write everything back
+                        with open(failiNimi, 'w', encoding="utf-8") as file:
+                            file.writelines(data)
 
                     elif event == "Cancel":
                         print("Ei toimu muudatus")
