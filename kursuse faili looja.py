@@ -1,9 +1,9 @@
 import PySimpleGUI as sg
 import time
 import pandas as pd
+import copy
 
 saiÕigeFaili = True
-ained = []
 
 layout = [[sg.Text('Sisestage kursuste faili nimi (ilma .txt lõputa)')],      
                  [sg.InputText()],      
@@ -17,10 +17,20 @@ if event == "Submit":
     while saiÕigeFaili:
         failiNimi = values[0] + ".txt"
         try:
+            '''
+            with open(failiNimi, "r", encoding="utf-8") as loetavFail:
+                for i in loetavFail:
+                    print(i.replace("\n", ""))
+                    ained.append(i.replace("\n", ""))
+            '''
+            with open(failiNimi, "r", encoding="utf-8") as loetavFail: ### test kas fail on olemas
+                pass
+            '''
             loetavFail = open(failiNimi, 'r', encoding="utf-8")
             for i in loetavFail:
                 print(i.replace("\n", ""))
                 ained.append(i.replace("\n", ""))
+            '''
             saiÕigeFaili = False
         except:
             layout = [[sg.Text('Sisestatud kursuse nimi oli vale\nSisestage kursuste faili nimi (ilma .txt lõputa)')],      
@@ -35,6 +45,7 @@ if event == "Submit":
             else:
                 window.close()
     ###jätk
+    '''
     ainedKorras = []
     for i in range(0, len(ained)):
         temp = []
@@ -60,11 +71,43 @@ if event == "Submit":
         else:
             temp[3] == "MÄRGITUD VALE PERIOOD"
         ainedKorras.append(temp)
+        '''
     #print(ainedKorras)
-    print("")
+    #print("")
     #print(ained[])
     #ained = [['Programmeerimine keeles Python 1 hommikul','Programmeerimine keeles Python 1 õhtu','27','1','','',''], ['Programmeerimine keeles Python 1 hasdasdommikul','Programmeerimine keeles Pasdasdython 1 õhtu','27','1','','','']]
-    while True:
+    while True: #test
+        ained = []
+        with open(failiNimi, "r", encoding="utf-8") as loetavFail:
+            for i in loetavFail:
+                print(i.replace("\n", ""))
+                ained.append(i.replace("\n", ""))
+        ainedKorras = []
+        for i in range(0, len(ained)):
+            temp = []
+            temp = ained[i].split(";")
+            #print(temp[3])
+            perioodil = temp[3]
+            if perioodil == '1':
+                temp[3] = "2. periood hommik"
+            elif perioodil == '2':
+                temp[3] = "2. periood õhtu     "
+            elif perioodil == '3':
+                temp[3] = "3. periood hommik"
+            elif perioodil == '4':
+                temp[3] = "3. periood õhtu     "
+            elif perioodil == '5':
+                temp[3] = "4. periood hommik"
+            elif perioodil == '6':
+                temp[3] = "4. periood õhtu     "
+            elif perioodil == '7':
+                temp[3] = "5. periood hommik"
+            elif perioodil == '8':
+                temp[3] = "5. periood õhtu     "
+            else:
+                temp[3] == "MÄRGITUD VALE PERIOOD"
+            ainedKorras.append(temp)
+        print(ainedKorras)
         layout = [[sg.Table(values=ainedKorras, headings=["Nimi", "Alternatiivid", "Kohad", "Periood", "Eeldusained", "Üks eeldusainetest vajalik", "Lisaks peab võtma"], max_col_width=25,
                         #background_color='light blue',
                         auto_size_columns=True,
@@ -107,32 +150,100 @@ if event == "Submit":
                         print("Toimub muudatus")
                         for j in range(0, len(ainedKorras[rida])):
                             ainedKorras[rida][j] = values[j+1]
-                            print(ainedKorras[rida][j])
-                            print(values[j+1])
-                            print("")
                         window.close()
+                        ained_temp = copy.deepcopy(ainedKorras)
                         with open(failiNimi, 'r', encoding="utf-8") as file:
                             # read a list of lines into data
                             data = file.readlines()
-                        
-                        print(data[rida].split(";")[3]) 
-                        
-                        
-                        # now change the 2nd line, note that you have to add a newline
                         seperator = ";"
-                        data[rida] = seperator.join(ainedKorras[rida]) + "\n"
+                        print(ained_temp)
+                        #ainedKorras[rida] = seperator.join(ainedKorras[rida])
+                        print(ained_temp[rida])
+                        print("ASDEEDEDEDEDEDE")
+                        print(ained_temp)
+                        if ained_temp[rida][3] == "2. periood hommik":
+                            ained_temp[rida][3] = "1"
+                            ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
+                        elif ained_temp[rida][3].replace(" ", "") == "2.perioodõhtu":
+                            ained_temp[rida][3] = "2"
+                            ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
+                        elif ained_temp[rida][3] == "3. periood hommik":
+                            ained_temp[rida][3] = "3"
+                            ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
+                        elif ained_temp[rida][3].replace(" ", "") == "2.perioodõhtu":
+                            ained_temp[rida][3] = "4"
+                            ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
+                        elif ained_temp[rida][3] == "4. periood hommik":
+                            ained_temp[rida][3] = "5"
+                            ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
+                        elif ained_temp[rida][3].replace(" ", "") == "2.perioodõhtu":
+                            ained_temp[rida][3] = "6"
+                            ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
+                        elif ained_temp[rida][3] == "5. periood hommik":
+                            ained_temp[rida][3] = "7"
+                            ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
+                        elif ained_temp[rida][3].replace(" ", "") == "2.perioodõhtu":
+                            ained_temp[rida][3] = "8"
+                            ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
+                        else:
+                            ained_temp[rida][3] = "PERIOOD VALESTI KIRJUTATUD FAILI"
+                            ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
+                        '''
+                        for i in range(0, len(ained_temp)):
+                            if ained_temp[i][3] == "2. periood hommik":
+                                ained_temp[i][3] = "1"
+                                ained_temp[i] = seperator.join(ained_temp[i]) + "\n"
+                            elif ained_temp[i][3].replace(" ", "") == "2.perioodõhtu":
+                                ained_temp[i][3] = "2"
+                                ained_temp[i] = seperator.join(ained_temp[i]) + "\n"
+                            elif ained_temp[i][3] == "3. periood hommik":
+                                ained_temp[i][3] = "3"
+                                ained_temp[i] = seperator.join(ained_temp[i]) + "\n"
+                            elif ained_temp[i][3].replace(" ", "") == "2.perioodõhtu":
+                                ained_temp[i][3] = "4"
+                                ained_temp[i] = seperator.join(ained_temp[i]) + "\n"
+                            elif ained_temp[i][3] == "4. periood hommik":
+                                ained_temp[i][3] = "5"
+                                ained_temp[i] = seperator.join(ained_temp[i]) + "\n"
+                            elif ained_temp[i][3].replace(" ", "") == "2.perioodõhtu":
+                                ained_temp[i][3] = "6"
+                                ained_temp[i] = seperator.join(ained_temp[i]) + "\n"
+                            elif ained_temp[i][3] == "5. periood hommik":
+                                ained_temp[i][3] = "7"
+                                ained_temp[i] = seperator.join(ained_temp[i]) + "\n"
+                            elif ained_temp[i][3].replace(" ", "") == "2.perioodõhtu":
+                                ained_temp[i][3] = "8"
+                                ained_temp[i] = seperator.join(ained_temp[i]) + "\n"
+                            else:
+                                ained_temp[i][3] = "PERIOOD VALESTI KIRJUTATUD FAILI"
+                                ained_temp[i] = seperator.join(ained_temp[i]) + "\n"
+                        '''
+                        # now change the 2nd line, note that you have to add a newline
+                        #seperator = ";"
+                        #data[rida] = seperator.join(ained_temp[rida]) + "\n"
+                        data[rida] = ained_temp[rida]
+                        print(data)
+                        ####[["Prog", "20"], ["Prog 2", "50"]]
+                        #### muudab
+                        #### [[Prog;20], [Prog 2;50]]
+                        ####
 
                         # and write everything back
                         with open(failiNimi, 'w', encoding="utf-8") as file:
                             file.writelines(data)
+                        print(ainedKorras)
+                        print("ASD123")
 
                     elif event == "Cancel":
                         print("Ei toimu muudatus")
                     else:
                         print("ERROR")
             except:
-                sg.popup('Peate sisestama ainult numbri')
+                sg.popup('Peate sisestama ainult numbri') ############ VISKAB MILLEGI PÄRAT SELLE ERRORI
             print(rida)
+            window.close()
+
+        ########
         if event == 'Double':
             for i in range(len(data)):
                 data.append(data[i])
