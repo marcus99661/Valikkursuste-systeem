@@ -76,7 +76,7 @@ if event == "Submit":
     #print("")
     #print(ained[])
     #ained = [['Programmeerimine keeles Python 1 hommikul','Programmeerimine keeles Python 1 õhtu','27','1','','',''], ['Programmeerimine keeles Python 1 hasdasdommikul','Programmeerimine keeles Pasdasdython 1 õhtu','27','1','','','']]
-    while True: #test
+    while True:
         ained = []
         with open(failiNimi, "r", encoding="utf-8") as loetavFail:
             for i in loetavFail:
