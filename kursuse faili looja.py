@@ -1,4 +1,4 @@
-#        VAJA PARANDADA
+#        VAJA PARANDADA/LISADA
 ###################################
 # LISADA VÕIMALUS UUSI KURSUSI LISADA - PEAKS OLEMA KORRAS
 ###################################
