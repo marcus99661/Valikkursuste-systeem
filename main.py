@@ -1,13 +1,18 @@
-import random
-from csv import reader
-from collections import OrderedDict
-import copy
 #        VAJA PARANDADA
 ###################################
 # OSAD KURSUSED EI OLE KÕIGILE KLASSILE
 # EELMINE AASTA ON VÕETUD EELDUSAINE
-# VAJA LISADA PRAKTIKUMID
+# VAJA LISADA PRAKTIKUMID/TUNNIVÄLISED
+# VAJA LUUA ÕPILASTELE OUTPUT FILE
+# VAJA LUUA ÕPETAJATELE OUTPUT FILE
+# LISADA KOMMENTAARE
+# LUUA DOKUMENT
 ###################################
+
+import random
+from csv import reader
+from collections import OrderedDict
+import copy
 
 #### {Nimi,klass : [[P1Hväga, P1Hvõtaks, P1Hvähe], [P1Õväga, P1Õvõtaks, P1Õvähe]]}
 klass10 = {}
