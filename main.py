@@ -7,18 +7,14 @@
 # VAJA LUUA ÕPETAJATELE OUTPUT FILE
 # LISADA KOMMENTAARE
 # LUUA DOKUMENT
+# LOGI FAILI LOOMINE
 ###################################
 
 import random
 from csv import reader
 from collections import OrderedDict
 import copy
-
-#### {Nimi,klass : [[P1Hväga, P1Hvõtaks, P1Hvähe], [P1Õväga, P1Õvõtaks, P1Õvähe]]}
-klass10 = {}
-klass11 = {}
-klass12 = {}
-####
+from openpyxl import Workbook
 
 #{'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1', '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}}
 
@@ -27,9 +23,10 @@ def grupeerimine():
     klass11 = {}
     klass12 = {}
     formating = []
+    õpilaseNimed = []
     temp1 = {}
     korda = 0
-    with open('testinput4.csv', 'r', encoding="utf-8") as input_file:
+    with open('testinput4.csv', 'r', encoding="utf-8") as input_file: ############### MUUDAB FAILI NIME
         csv_reader = reader(input_file)
         for row in csv_reader:
             #print(row)
@@ -47,6 +44,7 @@ def grupeerimine():
                     row[i] = row[i].replace('Ã¼', "ü")
                 
                 #### Paneb õige klassi sõnastikku
+                õpilaseNimed.append(row[2])
                 if row[3] == '12':
                     for i in range(len(formating)):
                         temp1[formating[i]] = row[i]
@@ -62,9 +60,9 @@ def grupeerimine():
                 else:
                     print("TEKKIS VIGA ÕPILASE ÕIGESSE SÕNASTIKKU PANEMISEL")
                 temp1 = {}
-    return klass10, klass11, klass12
+    return klass10, klass11, klass12, õpilaseNimed
 
-klass10, klass11, klass12 = grupeerimine()
+klass10, klass11, klass12, õpilaseNimed = grupeerimine()
 #print(klass11)
 ained = {}
 def ained_seadistamine():
@@ -305,3 +303,71 @@ result = registreerimine(kokku12ja11ja10_segamini, 2,result)
 print("LÕPPETATUD 12., 11. ja 10. KLASSI 3. VALIK")
 
 print(result)
+print("-------------------------")
+#################################### ÕPETAJA FAILI KIRJUTAMINE
+kursusedFailiJaoks = []
+õpilasteNimedFailiJaoks = []
+aed = ained.keys()
+for i in range(0, len(aed)):
+    kursusedFailiJaoks.append(list(aed)[i])
+    õpilasteNimedFailiJaoks.append(ained[list(aed)[i]]["vastuVõetud"])
+
+workbook = Workbook()
+sheet = workbook.active
+sheet["A1"] = "Kursus"
+sheet["E1"] = "Õpilased"
+seperator = ", "
+for i in range(0, len(kursusedFailiJaoks)):
+    sheet.cell(row=i+2, column=1).value = kursusedFailiJaoks[i]
+    sheet.cell(row=i+2, column=5).value = seperator.join(õpilasteNimedFailiJaoks[i])
+workbook.save(filename="õpetajateFail.xlsx")
+print("-------------------------")
+#################################### ÕPILASTE FAILI KIRJUTAMINE
+
+igaÕpilaseKursused = []
+#õpilaseNimed = []
+aed = result.keys() 
+for i in range(0, len(aed)):
+    #igaÕpilaseKursused.append(result[list(aed)[i]])
+    hetkesedKursused = []
+    for j in range(1, int(list(result[list(aed)[0]].keys())[-1])):
+        if result[list(aed)[i]].get(int(j)) == "":
+            hetkesedKursused.append("TÜHI")
+        else:
+            hetkesedKursused.append(result[list(aed)[i]].get(int(j)))
+    igaÕpilaseKursused.append(hetkesedKursused)
+
+
+workbook = Workbook()
+sheet = workbook.active
+sheet["A1"] = "Õpilane"
+sheet["B1"] = "2. periood hommik"
+sheet["C1"] = "2. periood õhtu"
+sheet["D1"] = "3. periood hommik"
+sheet["E1"] = "3. periood õhtu"
+sheet["F1"] = "4. periood hommik"
+sheet["G1"] = "4. periood õhtu"
+sheet["H1"] = "5. periood hommik"
+sheet["I1"] = "5. periood õhtu"
+
+seperator = ", "
+for i in range(0, len(igaÕpilaseKursused)):
+    '''
+    print(i)
+    print(õpilaseNimed[i])
+    print(igaÕpilaseKursused[i])
+    sheet.cell(row=i+2, column=1).value = õpilaseNimed[i]
+    sheet.cell(row=i+2, column=4).value = seperator.join(igaÕpilaseKursused[i])
+    '''
+    sheet["A" + str(i+2)] = õpilaseNimed[i]
+    sheet["B" + str(i+2)] = igaÕpilaseKursused[i][0]
+    sheet["C" + str(i+2)] = igaÕpilaseKursused[i][1]
+    sheet["D" + str(i+2)] = igaÕpilaseKursused[i][2]
+    sheet["E" + str(i+2)] = igaÕpilaseKursused[i][3]
+    sheet["F" + str(i+2)] = igaÕpilaseKursused[i][4]
+    sheet["G" + str(i+2)] = igaÕpilaseKursused[i][5]
+    sheet["H" + str(i+2)] = igaÕpilaseKursused[i][6]
+    sheet["I" + str(i+2)] = igaÕpilaseKursused[i][7]
+workbook.save(filename="õpilasteFail.xlsx")
+
+print("LÕPETATUD EDUKALT")
