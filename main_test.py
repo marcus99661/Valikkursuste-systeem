@@ -1,13 +1,16 @@
-from openpyxl import Workbook
-
-workbook = Workbook()
-sheet = workbook.active
-a = ['Programmeerimine keeles Python 1 hommikul', 'Programmeerimine keeles Python 1 õhtul', 'Programmeerimine keeles Python 2', 'Hispaania keel 1', 'Hispaania keel 2', 'Hispaania keel 3', 'Planimeetria alused', '3D-modelleerimine 3. periood', '3D-modelleerimine 5. periood', 'Statistiline maailmapilt']
-b = [['Abigail 269', 'Emily 144', 'Madison 204', 'Lauren 96', 'Isabella 427', 'Alyssa 4', 'Olivia 137', 'Madison 324', 'Alexis 370', 'Jessica 278', 'Lauren 8', 'Jessica 46', 'Kayla 252', 'Abigail 490', 'Lauren 60', 'Isabella 187', 'Emma 76', 'Brianna 47', 'Abigail 109', 'Emily 405', 'Kayla 5', 'Kayla 497', 'Samantha 488', 'Madison 14', 'Olivia 186', 'Brianna 197', 'Jessica 425'], ['Sarah 210', 'Elizabeth 476', 'Alyssa 435', 'Lauren 12', 'Elizabeth 449', 'Jessica 423', 'Isabella 426', 'Alyssa 306', 'Emily 229', 'Olivia 259', 'Ashley 453', 'Taylor 222', 'Ashley 50', 'Madison 417', 'Lauren 11', 'Jessica 44', 'Grace 351', 'Olivia 53', 'Olivia 264', 'Emily 91', 'Taylor 215', 'Jessica 32', 'Lauren 494', 'Samantha 327', 'Olivia 234', 'Sarah 315', 'Taylor 176'], ['Jessica 278', 'Lauren 8', 'Jessica 46', 'Madison 417', 'Brianna 197', 'Alyssa 4'], ['Lauren 363', 'Emily 144', 'Elizabeth 472', 'Alexis 365', 'Lauren 367', 'Madison 204', 'Emma 118', 'Elizabeth 486', 'Madison 352', 'Alexis 104', 'Isabella 244', 'Jessica 23', 'Elizabeth 516', 'Jessica 206', 'Emily 349', 'Brianna 200', 'Emma 9', 'Elizabeth 364', 'Taylor 500', 'Jessica 293', 'Grace 256', 'Ashley 283', 'Isabella 329', 'Brianna 513', 'Samantha 484', 'Abigail 291', 'Jessica 374', 'Elizabeth 10', 'Abigail 344', 'Madison 455'], ['Lauren 363', 'Emily 144', 'Elizabeth 472', 'Alexis 365', 'Lauren 367', 'Madison 204', 'Emma 118', 'Elizabeth 486', 'Madison 352', 'Alexis 104', 'Isabella 244', 'Jessica 23', 'Elizabeth 516', 'Jessica 206', 'Emily 349', 'Brianna 200', 'Emma 9', 'Elizabeth 364', 'Taylor 500', 'Jessica 293', 'Grace 256', 'Ashley 283', 'Isabella 329', 'Brianna 513', 'Samantha 484', 'Abigail 291', 'Jessica 374', 'Elizabeth 10', 'Abigail 344', 'Madison 455'], ['Lauren 363', 'Emily 144', 'Elizabeth 472', 'Alexis 365', 'Lauren 367', 'Madison 204', 'Emma 118', 'Elizabeth 486', 'Madison 352', 'Alexis 104', 'Isabella 244', 'Jessica 23', 'Elizabeth 516', 'Jessica 206', 'Emily 349', 'Brianna 200', 'Emma 9', 'Elizabeth 364', 'Taylor 500', 'Jessica 293', 'Grace 256', 'Ashley 283', 'Isabella 329', 'Brianna 513', 'Samantha 484', 'Abigail 291', 'Jessica 374', 'Elizabeth 10', 'Abigail 344', 'Madison 455'], ['Abigail 212', 'Jessica 383', 'Alyssa 233', 'Olivia 274', 'Madison 352', 'Isabella 244', 'Alyssa 493', 'Taylor 288', 'Sarah 501', 'Madison 243', 'Alyssa 304', 'Taylor 215', 'Samantha 398', 'Lauren 494', 'Elizabeth 399', 'Brianna 513', 'Lauren 56', 'Abigail 71', 'Elizabeth 284', 'Madison 162', 'Brianna 362', 'Alexis 470', 'Emma 185', 'Hannah 314', 'Grace 321', 'Grace 120', 'Hannah 165', 'Grace 263', 'Alexis 468', 'Grace 159'], ['Elizabeth 174', 'Hannah 218', 'Ashley 140', 'Grace 515', 'Grace 253', 'Isabella 63', 'Emily ,97', 'Olivia 451', 'Lauren 459'], ['Elizabeth 157', 'Grace 122', 'Grace 253', 'Jessica 147', 'Abigail 71', 'Madison 519', 'Grace 463', 'Samantha 20', 'Taylor 176', 'Samantha 27'], ['Alyssa 19', 'Taylor 151', 'Ashley 123', 'Emma 238', 'Alyssa 508', 'Alyssa 4', 'Emma 216', 'Alyssa 493', 'Abigail 108', 'Kayla 252', 'Emma 98', 'Lauren 60', 'Elizabeth 328', 'Jessica 44', 'Taylor 145', 'Alexis 343', 'Madison 444', 'Emily 152', 'Madison 415', 'Jessica 32', 'Kayla 5', 'Emma 350', 'Alexis 294', 'Brianna 179']]
-sheet["A1"] = "Kursus"
-sheet["E1"] = "Õpilased"
-seperator = ", "
-for i in range(0, len(a)):
-    sheet.cell(row=i+2, column=1).value = a[i]
-    sheet.cell(row=i+2, column=5).value = seperator.join(b[i])
-workbook.save(filename="hello_world.xlsx")
+'''
+with open("log.txt", "w") as file:
+    file.write("")
+    file.write("tere1\n")
+    file.write("tere2")
+'''
+with open("log.txt", "w") as file:
+    file.write("")
+    def test(asd):
+        print("----")
+        print(asd)
+        file.write(asd + "\n")
+    
+test("tere")
+test("tere1")
+test("tere2")

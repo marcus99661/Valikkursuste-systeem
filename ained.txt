@@ -11,7 +11,7 @@ Statistiline maailmapilt;;24;4;;;
 Loomade käitumine 4. periood;Loomade käitumine 3. periood;24;5;;;
 Loomade käitumine 3. periood;Loomade käitumine 4. periood;24;3;;;
 CAD joonestamine;;14;8;;;
-Veebidisain;;2;4;;;
+Veebidisain;;21;4;;;
 Arvutivõrkude alused;;16;6;;;
 Küberkaitse 1;;36;3;;;
 Keskkonnakeemia 2. periood;Keskkonnakeemia 3. periood;20;1;;;

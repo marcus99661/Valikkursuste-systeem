@@ -1,0 +1,392 @@
+Alyssa 4 vastu võetud Programmeerimine keeles Python 1 hommikul
+Alyssa 4 vastu võetud Õpioskused
+Alyssa 4 vastu võetud Keemilised elemendid
+Alyssa 4 vastu võetud Statistiline maailmapilt
+Alyssa 4 vastu võetud Arvutivõrkude alused
+Lauren 12 vastu võetud Orgaaniline arhitektuur
+Lauren 12 vastu võetud Programmeerimine keeles Python 1 õhtul
+Lauren 12 vastu võetud Loovkirjutamine
+Lauren 12 vastu võetud Klassikaline skulptuur
+Lauren 12 vastu võetud Inimene ja ühiskond 4. periood
+Lauren 12 vastu võetud Laboratoorsed tööd bioloogias
+Lauren 12 vastu võetud Teadusajalugu 5. periood
+Lauren 8 vastu võetud Programmeerimine keeles Python 1 hommikul
+Lauren 8 vastu võetud Inimene ja õigus
+Lauren 8 vastu võetud Küberkaitse 1
+Lauren 8 vastu võetud Keskkonnakeemia 3. periood
+Lauren 8 vastu võetud Programmeerimine keeles Python 2
+Lauren 8 vastu võetud Meditsiinikursus
+Lauren 8 vastu võetud Raamatukunst
+Lauren 8 vastu võetud Mobiilirakenduste loomine (APP Inventor)
+Taylor 6 vastu võetud Globaliseeruv maailm
+Taylor 6 vastu võetud Hiina keel 1
+Taylor 6 vastu võetud Hiina keel 2
+Taylor 6 vastu võetud Hiina keel 3
+Taylor 6 ei saanud kursusele Riigikaitse 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 vastu võetud Raamatukunst
+Taylor 6 vastu võetud Karjääriõpetus
+Olivia 1 vastu võetud Finantsmõtlemine
+Olivia 1 vastu võetud Prantsuse keel 1
+Olivia 1 vastu võetud Prantsuse keel 2
+Olivia 1 vastu võetud Prantsuse keel 3
+Olivia 1 vastu võetud Loomade käitumine 3. periood
+Olivia 1 ei saanud kursusele Fotograafia 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele Millest ELU koosneb?, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 vastu võetud Projektikirjutamisõpe
+Sarah 2 vastu võetud Orgaaniline arhitektuur
+Sarah 2 vastu võetud Meediakursus
+Sarah 2 vastu võetud Muusikaline kirjaoskus
+Sarah 2 vastu võetud Veebidisain
+Sarah 2 vastu võetud Loogika 4. periood
+Sarah 2 vastu võetud Psühholoogia alused
+Sarah 2 ei saanud Filosoofia 2, sest ei ole võtnud eeldusainet Filosoofia 1
+Sarah 2 vastu võetud Mobiilirakenduste loomine (APP Inventor)
+Kayla 13 vastu võetud Joonestamine 2. periood
+Kayla 13 vastu võetud Inimene ja õigus
+Kayla 13 vastu võetud Natuurist joonistamine
+Kayla 13 vastu võetud Vaimne tervis ja selle hoidmine
+Kayla 13 vastu võetud Praktiline kommunikatsioon
+Kayla 13 vastu võetud Majandusõpe
+Kayla 15 vastu võetud Geoinformaatika
+Kayla 15 vastu võetud Õpioskused
+Kayla 15 vastu võetud Veebidisain
+Kayla 15 vastu võetud Klassikaline skulptuur
+Kayla 15 vastu võetud Millest ELU koosneb?
+Kayla 15 vastu võetud Liiklusfüüsika
+Kayla 15 vastu võetud Teadusajalugu 5. periood
+Lauren 11 vastu võetud Värvus ja kompositsioon
+Lauren 11 vastu võetud Programmeerimine keeles Python 1 õhtul
+Lauren 11 vastu võetud Keskkonnakeemia 3. periood
+Lauren 11 vastu võetud Klassikaline skulptuur
+Lauren 11 vastu võetud Majandusõpe
+Lauren 11 vastu võetud Laboratoorsed tööd bioloogias
+Lauren 11 vastu võetud Teadusajalugu 5. periood
+Kayla 5 vastu võetud Programmeerimine keeles Python 1 hommikul
+Kayla 5 vastu võetud Astrofüüsika 3. periood
+Kayla 5 vastu võetud Statistiline maailmapilt
+Kayla 5 vastu võetud Köögifüüsika
+Kayla 5 vastu võetud Riigikaitse 1
+Kayla 5 vastu võetud CAD joonestamine
+Isabella 3 vastu võetud Keskkonnakeemia 2. periood
+Isabella 3 vastu võetud Inimene ja õigus
+Isabella 3 vastu võetud Muusikaline kirjaoskus
+Isabella 3 vastu võetud Teadusajalugu 3. periood
+Isabella 3 vastu võetud Teater Vanemuise kultuuritänavas
+Isabella 3 vastu võetud CAD joonestamine
+Elizabeth 10 vastu võetud Globaliseeruv maailm
+Elizabeth 10 vastu võetud Hispaania keel 1
+Elizabeth 10 vastu võetud Hispaania keel 2
+Elizabeth 10 vastu võetud Hispaania keel 3
+Elizabeth 10 vastu võetud Muusikaline kirjaoskus
+Elizabeth 10 ei saanud kursusele Arvutite riistvara ja lisaseadmed, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 vastu võetud Klassikaline skulptuur
+Elizabeth 10 ei saanud kursusele Riigikaitse 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 vastu võetud Teadusajalugu 5. periood
+Emma 9 vastu võetud Loominguline joonestamine 1
+Emma 9 vastu võetud Hispaania keel 1
+Emma 9 vastu võetud Hispaania keel 2
+Emma 9 vastu võetud Hispaania keel 3
+Emma 9 vastu võetud Astrofüüsika 3. periood
+Emma 9 ei saanud kursusele Fotograafia 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 vastu võetud Matemaatika ajaloo elemente ja rakendusi
+Emma 9 ei saanud kursusele Inimene ja ühiskond 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 vastu võetud Laboratoorsed tööd bioloogias
+Emma 9 vastu võetud Projektikirjutamisõpe
+Hannah 16 vastu võetud Orgaaniline arhitektuur
+Hannah 16 vastu võetud Filosoofia 1
+Hannah 16 vastu võetud Ettevõtlusõpe 3. periood
+Hannah 16 vastu võetud Kasutame füüsikat!
+Hannah 16 vastu võetud Teater Vanemuise kultuuritänavas
+Hannah 16 on juba Ettevõtlusõpe 5. periood kursuse alternatiivile sisse eelneval hetkel
+Hannah 16 vastu võetud Projektikirjutamisõpe
+Samantha 18 vastu võetud Finantsmõtlemine
+Samantha 18 vastu võetud Soome keel 1
+Samantha 18 vastu võetud Soome keel 2
+Samantha 18 vastu võetud Soome keel 3
+Samantha 18 vastu võetud Filosoofia 1
+Samantha 18 ei saanud kursusele Veebidisain, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 vastu võetud Loomade käitumine 4. periood
+Samantha 18 ei saanud kursusele Arvutivõrkude alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 vastu võetud Raamatukunst
+Madison 14 vastu võetud Programmeerimine keeles Python 1 hommikul
+Madison 14 vastu võetud Linux Raspberry Pi näitel
+Madison 14 vastu võetud Muusikaline kirjaoskus
+Madison 14 vastu võetud Statistiline maailmapilt
+Madison 14 vastu võetud Psühholoogia alused
+Madison 14 vastu võetud Raamatukunst
+Madison 14 vastu võetud CAD joonestamine
+Kayla 7 vastu võetud Finantsmõtlemine
+Kayla 7 vastu võetud Inimene ja õigus
+Kayla 7 vastu võetud Ladina keel 1
+Kayla 7 vastu võetud Ladina keel 2
+Kayla 7 vastu võetud Sissejuhatus ehitusinseneeriasse
+Kayla 7 ei saanud kursusele Joonestamine 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 vastu võetud Majandusõpe
+Kayla 7 vastu võetud Ettevõtlusõpe 5. periood
+Taylor 17 vastu võetud Geoinformaatika
+Taylor 17 vastu võetud Linux Raspberry Pi näitel
+Taylor 17 vastu võetud Ladina keel 1
+Taylor 17 vastu võetud Ladina keel 2
+Taylor 17 vastu võetud Vaimne tervis ja selle hoidmine
+Taylor 17 ei saanud kursusele Kujutav geomeetria, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 vastu võetud Meditsiinikursus
+Taylor 17 vastu võetud Raamatukunst
+Taylor 17 vastu võetud CAD joonestamine
+Kayla 15 ei saanud kursusele Meediakursus, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 15 vastu võetud Küberkaitse 1
+Kayla 15 ei saanud kursusele Fotograafia 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 15 ei saanud kursusele Loominguline joonistamine 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 15 ei saanud kursusele Arvutivõrkude alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 15 ei saanud kursusele Ettevõtlusõpe 5. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 ei saanud kursusele Programmeerimine keeles Python 1 hommikul, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 vastu võetud Õpioskused
+Hannah 16 ei saanud kursusele Astrofüüsika 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 ei saanud kursusele Sissejuhatus ehitusinseneeriasse, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 ei saanud kursusele Matemaatika ajaloo elemente ja rakendusi, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 ei saanud kursusele Psühholoogia alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 vastu võetud Globaalne keskkond
+Hannah 16 ei saanud kursusele CAD joonestamine, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 ei saanud kursusele Värvus ja kompositsioon, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 ei saanud kursusele Astronoomia, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 ei saanud kursusele Loovkirjutamine, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 ei saanud kursusele Turundus, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 ei saanud kursusele Loomade käitumine 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 ei saanud kursusele Teater Vanemuise kultuuritänavas, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 vastu võetud Ettevõtlusõpe 5. periood
+Kayla 13 vastu võetud Karjääriõpetus
+Elizabeth 10 ei saanud kursusele Labortöid füüsikas 10. ja 11. klassile, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 ei saanud kursusele Inimene ja ühiskond 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 ei saanud kursusele Kujutav geomeetria, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 ei saanud kursusele Millest ELU koosneb?, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 vastu võetud Majandusmatemaatika elemendid
+Elizabeth 10 ei saanud kursusele CAD joonestamine, sest on juba sellel perioodil muule kursusele sisse saanud
+Alyssa 4 ei saanud kursusele Joonestamine 2. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Alyssa 4 ei saanud kursusele Linux Raspberry Pi näitel, sest on juba sellel perioodil muule kursusele sisse saanud
+Alyssa 4 ei saanud kursusele Natuurist joonistamine, sest on juba sellel perioodil muule kursusele sisse saanud
+Alyssa 4 ei saanud kursusele Teadusajalugu 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Alyssa 4 vastu võetud Programmeerimine keeles Python 2
+Alyssa 4 vastu võetud CAD joonestamine
+Samantha 18 ei saanud kursusele Geoinformaatika, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 ei saanud kursusele Linux Raspberry Pi näitel, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 ei saanud kursusele Loovkirjutamine, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 ei saanud kursusele Turundus, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 ei saanud kursusele Praktiline kommunikatsioon, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 ei saanud kursusele Riigikaitse 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 ei saanud kursusele Programmeerimine keeles Java 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Loominguline joonestamine 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Õpioskused, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Keemilised elemendid, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Arvutite riistvara ja lisaseadmed, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Joonestamine 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Majandusõpe, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 vastu võetud Laboratoorsed tööd bioloogias
+Sarah 2 ei saanud kursusele Karjääriõpetus, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 ei saanud kursusele Loominguline joonestamine 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 ei saanud kursusele Hiina keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 ei saanud kursusele Keemilised elemendid, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 vastu võetud Klassikaline skulptuur
+Isabella 3 ei saanud kursusele Majandusõpe, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 vastu võetud Globaalne keskkond
+Isabella 3 ei saanud kursusele Mobiilirakenduste loomine (APP Inventor), sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 on juba Keskkonnakeemia 2. periood kursuse alternatiivile sisse eelneval hetkel
+Lauren 8 ei saanud kursusele Prantsuse keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 on juba Küberkaitse 1 kursusele sisse saanud eelneval hetkel
+Lauren 8 ei saanud kursusele Loomade käitumine 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele Teater Vanemuise kultuuritänavas, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele Globaalne keskkond, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele Teadusajalugu 5. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 ei saanud kursusele Soome keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 ei saanud kursusele Astrofüüsika 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 ei saanud kursusele Turundus, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 ei saanud kursusele Programmeerimine keeles Python 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 ei saanud kursusele Filosoofia 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Globaliseeruv maailm, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Inimene ja õigus, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Muusikaline kirjaoskus, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 vastu võetud Veebidisain
+Lauren 12 on juba Klassikaline skulptuur kursusele sisse saanud eelneval hetkel
+Lauren 12 ei saanud kursusele Millest ELU koosneb?, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Ettevõtlusõpe 5. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Keskkonnakeemia 2. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Astronoomia, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 vastu võetud Loovkirjutamine
+Taylor 6 ei saanud kursusele Sissejuhatus ehitusinseneeriasse, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 vastu võetud Praktiline kommunikatsioon
+Taylor 6 ei saanud kursusele Psühholoogia alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Ettevõtlusõpe 5. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Riigikaitse 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele Kirjandus ja film, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele Labortöid füüsikas 10. ja 11. klassile, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele Muusikaline kirjaoskus, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele Fotograafia 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 vastu võetud Kasutame füüsikat!
+Olivia 1 ei saanud kursusele Majandusõpe, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 vastu võetud Laboratoorsed tööd bioloogias
+Olivia 1 ei saanud kursusele CAD joonestamine, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Globaliseeruv maailm, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Meediakursus, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Küberkaitse 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Keskkonnakeemia 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 vastu võetud Praktiline kommunikatsioon
+Madison 14 ei saanud kursusele Teater Vanemuise kultuuritänavas, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Majandusmatemaatika elemendid, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Teadusajalugu 5. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Programmeerimine keeles Python 1 hommikul, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Programmeerimine keeles Python 1 õhtul, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Filosoofia 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Ettevõtlusõpe 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Praktiline kommunikatsioon, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Psühholoogia alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Majandusmatemaatika elemendid, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Värvus ja kompositsioon, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Meediakursus, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele 3D-modelleerimine 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Keskkonnakeemia 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Köögifüüsika, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Millest ELU koosneb?, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 on juba Raamatukunst kursusele sisse saanud eelneval hetkel
+Taylor 17 on juba CAD joonestamine kursusele sisse saanud eelneval hetkel
+Lauren 11 ei saanud kursusele Globaliseeruv maailm, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 11 ei saanud kursusele Astronoomia, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 11 vastu võetud Keemilised elemendid
+Lauren 11 ei saanud kursusele Inimene ja ühiskond 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 11 ei saanud kursusele Liiklusfüüsika, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 11 on juba Teadusajalugu 5. periood kursusele sisse saanud eelneval hetkel
+Kayla 5 ei saanud kursusele Joonestamine 2. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 5 vastu võetud Linux Raspberry Pi näitel
+Kayla 5 on juba Astrofüüsika 3. periood kursusele sisse saanud eelneval hetkel
+Kayla 5 ei saanud kursusele Fotograafia 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 5 ei saanud kursusele Majandusõpe, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 5 vastu võetud Liiklusfüüsika
+Kayla 15 ei saanud kursusele Globaliseeruv maailm, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 15 ei saanud kursusele Hiina keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 15 ei saanud kursusele Natuurist joonistamine, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 15 ei saanud kursusele Inimene ja ühiskond 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 15 ei saanud kursusele Kujutav geomeetria, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 15 on juba Millest ELU koosneb? kursusele sisse saanud eelneval hetkel
+Kayla 15 ei saanud kursusele Programmeerimine keeles Java 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 15 ei saanud kursusele Mobiilirakenduste loomine (APP Inventor), sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 ei saanud kursusele Loominguline joonestamine 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 ei saanud kursusele Soome keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 ei saanud kursusele Ajakirjanduse alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 ei saanud kursusele Teadusajalugu 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 ei saanud kursusele Loomade käitumine 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 on juba Majandusõpe kursusele sisse saanud eelneval hetkel
+Kayla 7 ei saanud kursusele Tänavakunst, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 7 vastu võetud Projektikirjutamisõpe
+Elizabeth 10 ei saanud kursusele Programmeerimine keeles Python 1 hommikul, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 ei saanud kursusele Programmeerimine keeles Python 1 õhtul, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 on juba Muusikaline kirjaoskus kursusele sisse saanud eelneval hetkel
+Elizabeth 10 ei saanud kursusele Statistiline maailmapilt, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 ei saanud kursusele Matemaatika ajaloo elemente ja rakendusi, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 ei saanud kursusele Teater Vanemuise kultuuritänavas, sest on juba sellel perioodil muule kursusele sisse saanud
+Elizabeth 10 ei saanud kursusele Riigikaitse 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Kirjandus ja film, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Lähis-Ida 20. sajandi teisest poolest tänapäevani, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Ladina keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Sissejuhatus ehitusinseneeriasse, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Loodusteadused, tehnoloogia ja ühiskond, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Inimene ja ühiskond 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Ettevõtlusõpe 5. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 2 ei saanud kursusele Riigikaitse 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 ei saanud kursusele Loominguline joonestamine 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 ei saanud kursusele Labortöid füüsikas 10. ja 11. klassile, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 on juba Filosoofia 1 kursusele sisse saanud eelneval hetkel
+Hannah 16 ei saanud kursusele Veebidisain, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 on juba Teater Vanemuise kultuuritänavas kursusele sisse saanud eelneval hetkel
+Hannah 16 ei saanud kursusele Programmeerimine keeles Java 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 16 ei saanud kursusele Karjääriõpetus, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 on juba Joonestamine 2. periood kursusele sisse saanud eelneval hetkel
+Kayla 13 ei saanud kursusele Küberkaitse 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 on juba Ettevõtlusõpe 3. periood kursuse alternatiivile sisse eelneval hetkel
+Kayla 13 ei saanud kursusele Kujutav geomeetria, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 ei saanud kursusele Riigikaitse 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 13 on juba Ettevõtlusõpe 5. periood kursusele sisse saanud eelneval hetkel
+Kayla 13 ei saanud kursusele Ajakirjanduse praktika, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Orgaaniline arhitektuur, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Hiina keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Programmeerimine keeles Java 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Turundus, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Kujutav geomeetria, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 on juba Meditsiinikursus kursusele sisse saanud eelneval hetkel
+Taylor 17 ei saanud kursusele Majandusmatemaatika elemendid, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 17 ei saanud kursusele Ajakirjanduse praktika, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Planimeetria alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Hispaania keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Ladina keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Vaimne tervis ja selle hoidmine, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Loodusteadused, tehnoloogia ja ühiskond, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Majandusõpe, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Liiklusfüüsika, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 12 ei saanud kursusele Projektikirjutamisõpe, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Meediakursus, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Astrofüüsika 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Ettevõtlusõpe 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Joonestamine 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Millest ELU koosneb?, sest on juba sellel perioodil muule kursusele sisse saanud
+Madison 14 ei saanud kursusele Mobiilirakenduste loomine (APP Inventor), sest on juba sellel perioodil muule kursusele sisse saanud
+Alyssa 4 ei saanud kursusele Planimeetria alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Alyssa 4 on juba Programmeerimine keeles Python 1 õhtul kursuse alternatiivile sisse eelneval hetkel
+Alyssa 4 ei saanud kursusele Arvutite riistvara ja lisaseadmed, sest on juba sellel perioodil muule kursusele sisse saanud
+Alyssa 4 ei saanud kursusele Joonestamine 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Alyssa 4 vastu võetud Majandusmatemaatika elemendid
+Alyssa 4 ei saanud kursusele Projektikirjutamisõpe, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele Kirjandus ja film, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele Programmeerimine keeles Python 1 õhtul, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele 3D-modelleerimine 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele Vaimne tervis ja selle hoidmine, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele Joonestamine 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 ei saanud kursusele Teater Vanemuise kultuuritänavas, sest on juba sellel perioodil muule kursusele sisse saanud
+Olivia 1 on juba Laboratoorsed tööd bioloogias kursusele sisse saanud eelneval hetkel
+Olivia 1 ei saanud kursusele Teadusajalugu 5. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 5 ei saanud kursusele Joonestamine 2. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 5 ei saanud kursusele Hispaania keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 5 on juba Astrofüüsika 3. periood kursusele sisse saanud eelneval hetkel
+Kayla 5 ei saanud kursusele Teadusajalugu 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 5 on juba Köögifüüsika kursusele sisse saanud eelneval hetkel
+Kayla 5 on juba Riigikaitse 1 kursusele sisse saanud eelneval hetkel
+Kayla 5 ei saanud kursusele Programmeerimine keeles Java 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Kayla 5 ei saanud kursusele Teadusajalugu 5. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele Planimeetria alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele Astronoomia, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele 3D-modelleerimine 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele Ettevõtlusõpe 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele Köögifüüsika, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele Inimene ja ühiskond 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele Laboratoorsed tööd bioloogias, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 8 ei saanud kursusele Karjääriõpetus, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 ei saanud kursusele Globaliseeruv maailm, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 ei saanud kursusele Soome keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 ei saanud kursusele Loomade käitumine 3. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 ei saanud kursusele Statistiline maailmapilt, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 ei saanud kursusele Joonestamine 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 ei saanud kursusele Raamatukunst, sest on juba sellel perioodil muule kursusele sisse saanud
+Isabella 3 ei saanud kursusele Riigikaitse 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 11 ei saanud kursusele Geoinformaatika, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 11 ei saanud kursusele Inimene ja õigus, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 11 on juba Teadusajalugu 3. periood kursuse alternatiivile sisse eelneval hetkel
+Lauren 11 ei saanud kursusele Kujutav geomeetria, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 11 ei saanud kursusele Arvutivõrkude alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 11 ei saanud kursusele Tänavakunst, sest on juba sellel perioodil muule kursusele sisse saanud
+Lauren 11 ei saanud kursusele Karjääriõpetus, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Loominguline joonestamine 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Hispaania keel 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Natuurist joonistamine, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Statistiline maailmapilt, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Loomade käitumine 4. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Arvutivõrkude alused, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Tänavakunst, sest on juba sellel perioodil muule kursusele sisse saanud
+Taylor 6 ei saanud kursusele Teadusajalugu 5. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 on juba Finantsmõtlemine kursusele sisse saanud eelneval hetkel
+Samantha 18 ei saanud kursusele Linux Raspberry Pi näitel, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 ei saanud kursusele Loovkirjutamine, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 ei saanud kursusele Statistiline maailmapilt, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 ei saanud kursusele Programmeerimine keeles Java 2, sest on juba sellel perioodil muule kursusele sisse saanud
+Samantha 18 vastu võetud CAD joonestamine
+Emma 9 on juba Loominguline joonestamine 1 kursusele sisse saanud eelneval hetkel
+Emma 9 ei saanud kursusele Linux Raspberry Pi näitel, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Programmeerimine keeles Java 1, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Vaimne tervis ja selle hoidmine, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Köögifüüsika, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 ei saanud kursusele Ettevõtlusõpe 5. periood, sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 9 on juba Projektikirjutamisõpe kursusele sisse saanud eelneval hetkel

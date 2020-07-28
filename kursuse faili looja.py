@@ -136,19 +136,19 @@ if event == "Submit":
                         elif ained_temp[rida][3] == "3. periood hommik":
                             ained_temp[rida][3] = "3"
                             ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
-                        elif ained_temp[rida][3].replace(" ", "") == "2.perioodõhtu":
+                        elif ained_temp[rida][3].replace(" ", "") == "3.perioodõhtu":
                             ained_temp[rida][3] = "4"
                             ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
                         elif ained_temp[rida][3] == "4. periood hommik":
                             ained_temp[rida][3] = "5"
                             ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
-                        elif ained_temp[rida][3].replace(" ", "") == "2.perioodõhtu":
+                        elif ained_temp[rida][3].replace(" ", "") == "4.perioodõhtu":
                             ained_temp[rida][3] = "6"
                             ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
                         elif ained_temp[rida][3] == "5. periood hommik":
                             ained_temp[rida][3] = "7"
                             ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
-                        elif ained_temp[rida][3].replace(" ", "") == "2.perioodõhtu":
+                        elif ained_temp[rida][3].replace(" ", "") == "5.perioodõhtu":
                             ained_temp[rida][3] = "8"
                             ained_temp[rida] = seperator.join(ained_temp[rida]) + "\n"
                         else:
