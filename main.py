@@ -26,7 +26,7 @@ def grupeerimine():
     õpilaseNimed = []
     temp1 = {}
     korda = 0
-    with open('testinput1.csv', 'r', encoding="utf-8") as input_file: ############### MUUDAB FAILI NIME
+    with open('testinput4.csv', 'r', encoding="utf-8") as input_file: ############### MUUDAB FAILI NIME
         csv_reader = reader(input_file)
         for row in csv_reader:
             #print(row)
@@ -82,6 +82,7 @@ def ained_seadistamine():
             temp1["üksEeldusaine"] = ainedList[5]
             temp1["lisad"] = ainedList[6]
             temp1["vastuVõetud"] = []
+            temp1["järjekord"] = []
             ained[ainedList[0]] = temp1
             #print(ained)
         #print(ained)
@@ -212,6 +213,11 @@ with open("log.txt", "w") as file:
                 else:
                     print(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ", sest see oli juba täis")
                     file.write(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ", sest see oli juba täis" + "\n")
+                    if len(ained[hetkeneKursus]["järjekord"]) < 10:
+                        ained[hetkeneKursus]["järjekord"].append(õpilaseNimi)
+                        print(õpilaseNimi + " lisati " + hetkeneKursus + " järjekorda") ################ LISADA KÕIK hetkeneKursus "" VAHELE ET OLEKS ILUSAM
+                        file.write(õpilaseNimi + " lisati " + hetkeneKursus + " järjekorda" + "\n")
+
         #print(result)
         return result
     #### 12. klassi 1. valik valimine
@@ -316,19 +322,23 @@ with open("log.txt", "w") as file:
     #################################### ÕPETAJA FAILI KIRJUTAMINE
     kursusedFailiJaoks = []
     õpilasteNimedFailiJaoks = []
+    järjekordFailiJaoks = []
     aed = ained.keys()
     for i in range(0, len(aed)):
         kursusedFailiJaoks.append(list(aed)[i])
         õpilasteNimedFailiJaoks.append(ained[list(aed)[i]]["vastuVõetud"])
+        järjekordFailiJaoks.append(ained[list(aed)[i]]["järjekord"])
 
     workbook = Workbook()
     sheet = workbook.active
     sheet["A1"] = "Kursus"
     sheet["E1"] = "Õpilased"
+    sheet["O1"] = "Järjekord"
     seperator = ", "
     for i in range(0, len(kursusedFailiJaoks)):
         sheet.cell(row=i+2, column=1).value = kursusedFailiJaoks[i]
         sheet.cell(row=i+2, column=5).value = seperator.join(õpilasteNimedFailiJaoks[i])
+        sheet.cell(row=i+2, column=15).value = seperator.join(järjekordFailiJaoks[i]) ########## LISADA ÕPILASTE JÄRJEKORD
     workbook.save(filename="õpetajateFail.xlsx")
     print("-------------------------")
     #################################### ÕPILASTE FAILI KIRJUTAMINE
