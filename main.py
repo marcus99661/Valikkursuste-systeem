@@ -26,7 +26,7 @@ def grupeerimine():
     õpilaseNimed = []
     temp1 = {}
     korda = 0
-    with open('testinput4.csv', 'r', encoding="utf-8") as input_file: ############### MUUDAB FAILI NIME
+    with open('testinput1.csv', 'r', encoding="utf-8") as input_file: ############### MUUDAB FAILI NIME
         csv_reader = reader(input_file)
         for row in csv_reader:
             #print(row)
@@ -199,24 +199,24 @@ with open("log.txt", "w") as file:
                                                 #print(result)
                                                 #####
                                 else:
-                                    print(õpilaseNimi + " ei saanud " + hetkeneKursus + ", sest ei ole võtnud eeldusainet " + ained[hetkeneKursus]['eeldusaine'])
-                                    file.write(õpilaseNimi + " ei saanud " + hetkeneKursus + ", sest ei ole võtnud eeldusainet " + ained[hetkeneKursus]['eeldusaine'] + "\n")
+                                    print(õpilaseNimi + ' ei saanud "' + hetkeneKursus + '", sest ei ole võtnud eeldusainet ' + ained[hetkeneKursus]['eeldusaine'])
+                                    file.write(õpilaseNimi + ' ei saanud "' + hetkeneKursus + '", sest ei ole võtnud eeldusainet ' + ained[hetkeneKursus]['eeldusaine'] + "\n")
                             else:
-                                print(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ", sest on juba sellel perioodil muule kursusele sisse saanud")
-                                file.write(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ", sest on juba sellel perioodil muule kursusele sisse saanud" + "\n")
+                                print(õpilaseNimi + ' ei saanud kursusele "' + hetkeneKursus + '", sest on juba sellel perioodil muule kursusele sisse saanud')
+                                file.write(õpilaseNimi + ' ei saanud kursusele "' + hetkeneKursus + '", sest on juba sellel perioodil muule kursusele sisse saanud' + "\n")
                         else:
-                            print(õpilaseNimi + " on juba " + hetkeneKursus + " kursuse alternatiivile sisse eelneval hetkel")
-                            file.write(õpilaseNimi + " on juba " + hetkeneKursus + " kursuse alternatiivile sisse eelneval hetkel" + "\n")
+                            print(õpilaseNimi + ' on juba "' + hetkeneKursus + '" kursuse alternatiivile sisse eelneval hetkel')
+                            file.write(õpilaseNimi + ' on juba "' + hetkeneKursus + '" kursuse alternatiivile sisse eelneval hetkel' + "\n")
                     else:
-                        print(õpilaseNimi + " on juba " + hetkeneKursus + " kursusele sisse saanud eelneval hetkel")
-                        file.write(õpilaseNimi + " on juba " + hetkeneKursus + " kursusele sisse saanud eelneval hetkel" + "\n")
+                        print(õpilaseNimi + ' on juba "' + hetkeneKursus + '" kursusele sisse saanud eelneval hetkel')
+                        file.write(õpilaseNimi + ' on juba "' + hetkeneKursus + '" kursusele sisse saanud eelneval hetkel' + "\n")
                 else:
-                    print(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ", sest see oli juba täis")
-                    file.write(õpilaseNimi + " ei saanud kursusele " + hetkeneKursus + ", sest see oli juba täis" + "\n")
+                    print(õpilaseNimi + ' ei saanud kursusele "' + hetkeneKursus + '", sest see oli juba täis')
+                    file.write(õpilaseNimi + ' ei saanud kursusele "' + hetkeneKursus + '", sest see oli juba täis' + "\n")
                     if len(ained[hetkeneKursus]["järjekord"]) < 10:
                         ained[hetkeneKursus]["järjekord"].append(õpilaseNimi)
-                        print(õpilaseNimi + " lisati " + hetkeneKursus + " järjekorda") ################ LISADA KÕIK hetkeneKursus "" VAHELE ET OLEKS ILUSAM
-                        file.write(õpilaseNimi + " lisati " + hetkeneKursus + " järjekorda" + "\n")
+                        print(õpilaseNimi + ' lisati "' + hetkeneKursus + '" järjekorda')
+                        file.write(õpilaseNimi + ' lisati "' + hetkeneKursus + '" järjekorda' + "\n")
 
         #print(result)
         return result
@@ -229,6 +229,7 @@ with open("log.txt", "w") as file:
         klass12_segamini[õpilaseNimi] = kursused
     result = registreerimine(klass12_segamini, 0,result)
     print("LÕPPETATUD 12. KLASSI 1. VALIK")
+    file.write("LÕPPETATUD 12. KLASSI 1. VALIK")
     #### 11. ja 10. klassi 1. valik
     klass12_seadistatud = copy.deepcopy(klass12_PERM)
     kokku11ja10 = {} #### PANEB KÕIK 11 JA 10 KLASSI ÕPILASED SÕNASTIKKU SISSE JA HAKKAB REGISTREERIMA SUVALISES JÄRJEKORRAS
@@ -252,6 +253,7 @@ with open("log.txt", "w") as file:
         kokku11ja10_segamini[õpilaseNimi] = kursused
     result = registreerimine(kokku11ja10_segamini, 0,result)
     print("LÕPPETATUD 11. JA 10. KLASSI 1. VALIK")
+    file.write("LÕPPETATUD 11. JA 10. KLASSI 1. VALIK")
     #### 12., 11. ja 10. klassi 2. valik
     klass12_seadistatud = copy.deepcopy(klass12_PERM)
     klass11_seadistatud = copy.deepcopy(klass11_PERM)
@@ -284,6 +286,7 @@ with open("log.txt", "w") as file:
     result = registreerimine(kokku12ja11ja10_segamini, 1,result)
     #print(kokku12ja11ja10_segamini)
     print("LÕPPETATUD 12., 11. ja 10. KLASSI 2. VALIK")
+    file.write("LÕPPETATUD 12., 11. ja 10. KLASSI 2. VALIK")
     #### 12., 11. ja 10. klassi 3. valik
     klass12_seadistatud = copy.deepcopy(klass12_PERM)
     klass11_seadistatud = copy.deepcopy(klass11_PERM)
@@ -316,6 +319,7 @@ with open("log.txt", "w") as file:
     result = registreerimine(kokku12ja11ja10_segamini, 2,result)
     #print(kokku12ja11ja10_segamini)
     print("LÕPPETATUD 12., 11. ja 10. KLASSI 3. VALIK")
+    file.write("LÕPPETATUD 12., 11. ja 10. KLASSI 3. VALIK")
 
     print(result)
     print("-------------------------")

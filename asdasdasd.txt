@@ -1,6 +1,0 @@
-Programmeerimine keeles Python 1 hommikul;Programmeerimine keeles Python 1 õhtu;27;1;;;
-Programmeerimine keeles Python 1 õhtul;Programmeerimine keeles Python 1 hommikul;27;2;;;
-Programmeerimine keeles Python 2;;50;5;;Programmeerimine keeles Python 1 hommikul,Programmeerimine keeles Python 1 õhtul;
-Hispaania keel 1;;30;2;;;Hispaania keel 2,Hispaania keel 3
-Hispaania keel 2;;30;4;;;
-Hispaania keel 3;;30;6;;;
