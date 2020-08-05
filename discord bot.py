@@ -1,5 +1,8 @@
 
 import discord
+import time
+############### VAJA TEHA ##########
+# 1. Logi fail käskudest
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -14,6 +17,9 @@ class MyClient(discord.Client):
         if message.content == 'ping':
             await message.channel.send('pong')
             #print("BOT MESSAGE: pong")
+        if message.content == 'exit':
+            await client.close()
+            #client.logout()
         print(message.author)
         print(message.author.nick)
         if message.author.name + "#" + message.author.discriminator == "marcus99661#6338":
