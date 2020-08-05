@@ -3,7 +3,7 @@
 # OSAD KURSUSED EI OLE KÕIGILE KLASSILE
 # EELMINE AASTA ON VÕETUD EELDUSAINE
 # VAJA LISADA PRAKTIKUMID/TUNNIVÄLISED
-# VAJA LUUA ÕPILASTELE OUTPUT FILE  -  TEHTUD, KUID VIGANE (ÕPILASE JÄREL ON MINGI MUU ÕPILASE KURSUSED(ÕPILASED ON NUMBRI JÄRJEKORRAS, KUID KURSUSED ON SUVALISES JÄRJEKORRAS))
+# VAJA LUUA ÕPILASTELE OUTPUT FILE  -  PEAKS OLEMA KORRAS
 # VAJA LUUA ÕPETAJATELE OUTPUT FILE  -  TEHTUD
 # LISADA KOMMENTAARE
 # LUUA DOKUMENT
@@ -26,7 +26,7 @@ def grupeerimine():
     õpilaseNimed = []
     temp1 = {}
     korda = 0
-    with open('testinput1.csv', 'r', encoding="utf-8") as input_file: ############### MUUDAB FAILI NIME
+    with open('testinput4.csv', 'r', encoding="utf-8") as input_file: # Õpilaste kursuste faili avamine
         csv_reader = reader(input_file)
         for row in csv_reader:
             #print(row)
@@ -37,14 +37,14 @@ def grupeerimine():
                 korda += 1
             else:
                 for i in range(len(row)):
-                    row[i] = row[i].replace('"', "")
+                    row[i] = row[i].replace('"', "") # Encodingu parandus
                     row[i] = row[i].replace('Ãµ', "õ")
                     row[i] = row[i].replace('Ã¤', "ä")
                     row[i] = row[i].replace('Ã¶', "ö")
                     row[i] = row[i].replace('Ã¼', "ü")
                 
                 #### Paneb õige klassi sõnastikku
-                õpilaseNimed.append(row[2])
+                õpilaseNimed.append(row[2]) # Sorteerib õpilased õigetesse klassidesse
                 if row[3] == '12':
                     for i in range(len(formating)):
                         temp1[formating[i]] = row[i]
@@ -62,10 +62,10 @@ def grupeerimine():
                 temp1 = {}
     return klass10, klass11, klass12, õpilaseNimed
 
-klass10, klass11, klass12, õpilaseNimed = grupeerimine()
+klass10, klass11, klass12, õpilaseNimed = grupeerimine() # "õpilaseNimed" ei ole hetkel vajalik/kasutuses
 #print(klass11)
 ained = {}
-def ained_seadistamine():
+def ained_seadistamine(): # Kursuste seadistamine kergeks kasutuseks
     ainedList = []
     ained = {}
     with open('ained.txt', 'r', encoding="utf-8") as ainedfail:
@@ -110,7 +110,7 @@ def seadistamine(õpilaseNimi, õpilaneDict):
     return õpilaseKursused
 
 
-for i in range(0, len(klass12)):
+for i in range(0, len(klass12)): # Õpilaste sidumine nende valitud kursustega
     õpilaseNimi, õpilaseDict = random.choice(list(klass12.items()))
     del klass12[õpilaseNimi]
     klass12_seadistatud[õpilaseNimi] = seadistamine(õpilaseNimi, õpilaseDict)
@@ -135,7 +135,7 @@ resultList = {} ####{Marcus : ['Planimeetria alused', '3D-modelleerimine']}
 result = {} ####{Marcus : {1 : 'Planimeetria alused', 2 : '', 3 : '3D-modelleerimine'}}
 tempSõnastik = {}
 
-def võrdlemine(a, b):
+def võrdlemine(a, b): 
     for i in a:
         if i in b:
             return True
@@ -152,14 +152,14 @@ with open("log.txt", "w") as file:
             õpilaseNimi, õpilaseKursused = random.choice(list(klass_seadistatud_temp.items()))
             del klass_seadistatud_temp[õpilaseNimi]
             if õpilaseNimi not in result:
-                tempSõnastik = {k: '' for k in range(1, len(õpilaseKursused)+2)}
+                tempSõnastik = {k: '' for k in range(1, len(õpilaseKursused)+1)}
                 result[õpilaseNimi] = tempSõnastik
             for i in range(0, len(õpilaseKursused)):
                 #print(õpilaseKursused)
                 hetkeneKursus = õpilaseKursused[i][valik]
                 temp2 = resultList.get(õpilaseNimi, [])
                 resultList[õpilaseNimi] = temp2
-                if hetkeneKursus == "Ei taha": ### EI TEA KAS TÖÖTAB
+                if hetkeneKursus == "Ei taha":
                     print(õpilaseNimi + " ei tahtnud see periood midagi")
                 elif ained[hetkeneKursus]['kohtiVõetud'] <  int(ained[hetkeneKursus]['kohad']):  # 1. kui mahub 2. ei ole juba sellel kursusel 3. ei ole see periood veel midagi võetud 4. eeldusained on võetud (eelmine periood või eelmine aasta) 5. üks sama eeldusaine on võetud
                     if hetkeneKursus not in resultList[õpilaseNimi]: #### õpilasel on see kursus juba võetud
@@ -232,7 +232,7 @@ with open("log.txt", "w") as file:
     file.write("LÕPPETATUD 12. KLASSI 1. VALIK")
     #### 11. ja 10. klassi 1. valik
     klass12_seadistatud = copy.deepcopy(klass12_PERM)
-    kokku11ja10 = {} #### PANEB KÕIK 11 JA 10 KLASSI ÕPILASED SÕNASTIKKU SISSE JA HAKKAB REGISTREERIMA SUVALISES JÄRJEKORRAS
+    kokku11ja10 = {} #### PANEB KÕIK 11 JA 10 KLASSI ÕPILASED ÜHTE SÕNASTIKKU SUVALISES JÄRJEKORRAS JA HAKKAB REGISTREERIMA
     kokku11ja10_segamini = {}
 
     for i in range(0, len(klass11_seadistatud.keys())):
@@ -327,11 +327,11 @@ with open("log.txt", "w") as file:
     kursusedFailiJaoks = []
     õpilasteNimedFailiJaoks = []
     järjekordFailiJaoks = []
-    aed = ained.keys()
-    for i in range(0, len(aed)):
-        kursusedFailiJaoks.append(list(aed)[i])
-        õpilasteNimedFailiJaoks.append(ained[list(aed)[i]]["vastuVõetud"])
-        järjekordFailiJaoks.append(ained[list(aed)[i]]["järjekord"])
+    resultKeys = ained.keys()
+    for i in range(0, len(resultKeys)):
+        kursusedFailiJaoks.append(list(resultKeys)[i])
+        õpilasteNimedFailiJaoks.append(ained[list(resultKeys)[i]]["vastuVõetud"])
+        järjekordFailiJaoks.append(ained[list(resultKeys)[i]]["järjekord"])
 
     workbook = Workbook()
     sheet = workbook.active
@@ -349,15 +349,15 @@ with open("log.txt", "w") as file:
 
     igaÕpilaseKursused = []
     #õpilaseNimed = []
-    aed = result.keys() 
-    for i in range(0, len(aed)):
-        #igaÕpilaseKursused.append(result[list(aed)[i]])
+    resultKeys = result.keys() 
+    for i in range(0, len(resultKeys)):
+        #igaÕpilaseKursused.append(result[list(resultKeys)[i]])
         hetkesedKursused = []
-        for j in range(1, int(list(result[list(aed)[0]].keys())[-1])):
-            if result[list(aed)[i]].get(int(j)) == "":
+        for j in range(1, int(list(result[list(resultKeys)[0]].keys())[-1])+1):
+            if result[list(resultKeys)[i]].get(int(j)) == "":
                 hetkesedKursused.append(" --- ")
             else:
-                hetkesedKursused.append(result[list(aed)[i]].get(int(j)))
+                hetkesedKursused.append(result[list(resultKeys)[i]].get(int(j)))
         igaÕpilaseKursused.append(hetkesedKursused)
 
 
@@ -374,6 +374,7 @@ with open("log.txt", "w") as file:
     sheet["I1"] = "5. periood õhtu"
 
     seperator = ", "
+    #print(igaÕpilaseKursused)
     for i in range(0, len(igaÕpilaseKursused)):
         '''
         print(i)
@@ -382,7 +383,11 @@ with open("log.txt", "w") as file:
         sheet.cell(row=i+2, column=1).value = õpilaseNimed[i]
         sheet.cell(row=i+2, column=4).value = seperator.join(igaÕpilaseKursused[i])
         '''
-        sheet["A" + str(i+2)] = õpilaseNimed[i]
+        #print(igaÕpilaseKursused[i][6])
+        #print(igaÕpilaseKursused[i])
+
+        #sheet["A" + str(i+2)] = õpilaseNimed[i]
+        sheet["A" + str(i+2)] = list(resultKeys)[i]
         sheet["B" + str(i+2)] = igaÕpilaseKursused[i][0]
         sheet["C" + str(i+2)] = igaÕpilaseKursused[i][1]
         sheet["D" + str(i+2)] = igaÕpilaseKursused[i][2]
