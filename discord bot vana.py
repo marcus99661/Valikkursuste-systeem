@@ -23,31 +23,34 @@ class MyClient(discord.Client):
         admin_prefix = "force "
         prefix = "!!!"
         ### admin commandid
-        if message.content.split(" ")[0] == admin_prefix.replace(" ", "") and message.author.name + "#" + message.author.discriminator in adminid:
-            await message.channel.send("force command")
-            sõnum = message.content.split(" ")
-            if sõnum[1] ==  "ping":
-                await message.channel.send("force pong")
-            elif sõnum[1] ==  "kursuseEemaldamine":
-                nimi = sõnum[2]
-                kursus = sõnum[3]
-                #await message.channel.send('Eemaldasin ' + nimi + ' kursuselt "' + kursus + '"')
-                await message.channel.send(kursuseEemaldamine(nimi, kursus))
-            elif sõnum[1] ==  "help":
-                await message.channel.send("")
-                '''
-                await message.channel.send("ADMINI COMMANDID:")
-                await message.channel.send("force ping - Saadab admini ping käsu")
-                await message.channel.send("force kursuseEemaldamine NIMI KURSUS - Sunnib õpilase eemaldamist kursuselt")
-                for i in range(0, 10):
-                    await message.channel.send("spam " + str(i))
-                '''
-                
-            elif sõnum[1] == "exit":
-                await message.channel.send("EXIT")
-                await client.close()
+        if message.content.split(" ")[0] == admin_prefix.replace(" ", ""):
+            if message.author.name + "#" + message.author.discriminator in adminid:
+                await message.channel.send("force command")
+                sõnum = message.content.split(" ")
+                if sõnum[1] ==  "ping":
+                    await message.channel.send("force pong")
+                elif sõnum[1] ==  "kursuseEemaldamine":
+                    nimi = sõnum[2]
+                    kursus = sõnum[3]
+                    #await message.channel.send('Eemaldasin ' + nimi + ' kursuselt "' + kursus + '"')
+                    await message.channel.send(kursuseEemaldamine(nimi, kursus))
+                elif sõnum[1] ==  "help":
+                    await message.channel.send("google.com")
+                    '''
+                    await message.channel.send("ADMINI COMMANDID:")
+                    await message.channel.send("force ping - Saadab admini ping käsu")
+                    await message.channel.send("force kursuseEemaldamine NIMI KURSUS - Sunnib õpilase eemaldamist kursuselt")
+                    for i in range(0, 10):
+                        await message.channel.send("spam " + str(i))
+                    '''
+                    
+                elif sõnum[1] == "exit":
+                    await message.channel.send("EXIT")
+                    await client.close()
+                else:
+                    await message.channel.send("Ei tunne käsku ära")
             else:
-                await message.channel.send("Ei tunne käsku ära")
+                await message.channel.send("Ei ole admini õigusi")
         #### tavalised commandid
         elif message.content.startswith(prefix):
             sõnum = message.content.split(" ")
@@ -59,7 +62,8 @@ class MyClient(discord.Client):
                 await client.close()
                 #client.logout()
         else:
-            await message.channel.send("polnud command")
+            pass
+            #await message.channel.send("polnud command")
 
         #print(message.author)
         #print(message.author.nick)
