@@ -24,17 +24,18 @@ def kursuseEemaldamine(nimi, kursus): ### Peab muutma õpetajateFailis ka, kui v
             for j in tähed:
                 #print(leht[j + str(rida)].value)
                 if leht[j + str(rida)].value == kursus:
-                    print("Leitud kursus nimega: " + kursus)
+                    print("Leitud kursus nimega: " + kursus + " õpilaste failist")
                     sheet = õpilaste.get_sheet_by_name("Sheet")
-                    sheet[j + str(rida)] = "---"
+                    sheet[j + str(rida)] = " --- "
                     õpilaste.save('õpilasteFail.xlsx')
                     break
                 elif j == tähed[-1]:
                     return "Ei leitud kursust nimega: " + kursus + ", lõpetan tegevuse"
                     #print("Ei leitud kursust nimega: " + kursus + ", lõpetan tegevuse")
+                
         elif leht.max_row == rida+1:
-            #print(leht.max_row)
-            return "Ei leitud õpilast nimega: " + nimi + ", lõpetan tegevuse"
+            print("Ei leitud õpilast nimega: " + nimi + ", lõpetan tegevuse")
+            #return "Ei leitud õpilast nimega: " + nimi + ", lõpetan tegevuse"
     õpilaste.close()
     ###############
     õpetajate = load_workbook("õpetajateFail.xlsx")
@@ -87,8 +88,10 @@ def kursuseLisamine(nimi, kursus):
                 elif periood == 8:
                     tulp = "I"
                 break
+            
     if maxÕpilasi == -1:
-        return 'Ei leidnud "' + kursus + '" kursuste hulgast'
+        print('Ei leidnud "' + kursus + '" kursuste hulgast')
+        #return 'Ei leidnud "' + kursus + '" kursuste hulgast'
     
     õpetajate = load_workbook("õpetajateFail.xlsx")
     leht = õpetajate['Sheet']
@@ -112,10 +115,12 @@ def kursuseLisamine(nimi, kursus):
                 sheet = õpilaste.get_sheet_by_name("Sheet")
                 sheet[tulp + str(rida)] = kursus ## 4. 
                 õpilaste.save('õpilasteFail.xlsx') ################### SEEE KOHT ÕLE KONTROLLIDA
+                break
             else:
-                return 'Õpilasel ' + nimi + ' on juba sellel perioodil võetud "' + leht[tulp + str(rida)].value + '"' 
+                return 'Õpilasel ' + nimi + ' on juba sellel perioodil võetud "' + leht[tulp + str(rida)].value + '"'
+            break
         elif leht.max_row == rida+1:
-            return 'Õpilast ' + nimi + ' ei leitud õpilaste nimekirjast' 
+            return 'Õpilast ' + nimi + ' ei leitud õpilaste nimekirjast'
     ###############
     õpetajate = load_workbook("õpetajateFail.xlsx")
     leht = õpetajate['Sheet']
@@ -124,16 +129,13 @@ def kursuseLisamine(nimi, kursus):
             #print(leht['A' + str(rida)].value)
             #print(leht['E' + str(rida)].value)
             õpilased = leht['E' + str(rida)].value.split(", ")
-            try:
-                õpilased.append(nimi)
-            except:
-                return "ERROR, õpilast ei leitud õpetajate failis kursuse all kirjas"
-                #print("ERROR, õpilast ei leitud õpetajate failis kursuse all kirjas")
+            õpilased.append(nimi)
             seperator = ", "
             sheet = õpilaste.get_sheet_by_name("Sheet")
             sheet['E' + str(rida)] = seperator.join(õpilased)
-            #print(seperator.join(õpilased))
+            print(seperator.join(õpilased))
             õpetajate.save('õpetajateFail.xlsx')
+            õpetajate.close()
             return 'Edukalt lisatud ' + nimi + ' kursusele "' + kursus + '"'
 
 
@@ -150,9 +152,9 @@ def kursuseLisamine(nimi, kursus):
 if __name__ == "__main__":
 
     #print(kursuseLisamine("asdasdasd", "Fotograafia 1"))
-    print(kursuseLisamine("Isabella 474", "Programmeerimine keeles Python 2"))
-    print(kursuseLisamine("asdasdasd", "Fotogasdasdraafia 1"))
+    #print(kursuseLisamine("Emily 37", "Programmeerimine keeles Python 2"))
+    #print(kursuseLisamine("asdasdasd", "Fotogasdasdraafia 1"))
     #print(kursuseEemaldamine("asdasdasd", "Fotograafia 1"))
-    #kursuseEemaldamine("Emily 445", "Fotograafia 1")
+    print(kursuseEemaldamine("Emily 37", "Programmeerimine keeles Python 2"))
     #kursuseEemaldamine("Emily 445", "Fot")
     pass
