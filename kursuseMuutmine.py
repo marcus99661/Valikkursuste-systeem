@@ -27,7 +27,7 @@ def kursuseEemaldamine(nimi, kursus): ### Peab muutma õpetajateFailis ka, kui v
                     print("Leitud kursus nimega: " + kursus + " õpilaste failist")
                     sheet = õpilaste.get_sheet_by_name("Sheet")
                     sheet[j + str(rida)] = " --- "
-                    õpilaste.save('õpilasteFail.xlsx')
+                    #õpilaste.save('õpilasteFail.xlsx')
                     break
                 elif j == tähed[-1]:
                     return "Ei leitud kursust nimega: " + kursus + ", lõpetan tegevuse"

@@ -1,2 +1,0 @@
-Python I;40;;
-Python II;20;Python I
