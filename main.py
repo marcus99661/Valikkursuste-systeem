@@ -2,7 +2,7 @@
 ###################################
 # OSAD KURSUSED EI OLE KÕIGILE KLASSILE
 # EELMINE AASTA ON VÕETUD EELDUSAINE
-# VAJA LISADA PRAKTIKUMID/TUNNIVÄLISED
+# VAJA LISADA PRAKTIKUMID/TUNNIVÄLISED (ühe valiku all, valid nii palju kui tahad)
 # VAJA LUUA ÕPILASTELE OUTPUT FILE  -  PEAKS OLEMA KORRAS
 # VAJA LUUA ÕPETAJATELE OUTPUT FILE  -  TEHTUD
 # LISADA KOMMENTAARE
@@ -63,12 +63,15 @@ def grupeerimine():
     return klass10, klass11, klass12, õpilaseNimed
 
 klass10, klass11, klass12, õpilaseNimed = grupeerimine() # "õpilaseNimed" ei ole hetkel vajalik/kasutuses
-#print(klass11)
+print(klass10)
+
+
+#klass10_PERM()
 ained = {}
 def ained_seadistamine(): # Kursuste seadistamine kergeks kasutuseks
     ainedList = []
     ained = {}
-    with open('ained.txt', 'r', encoding="utf-8") as ainedfail:
+    with open('kursused.txt', 'r', encoding="utf-8") as ainedfail:
         for i in ainedfail: #### {Python 2 : {"kohad" : 40, "eeldusaine" = "Python 1", "lisad" : ""}}
             temp1 = {}
             ainedList = i.replace("\n", "").split(";")
@@ -399,3 +402,4 @@ with open("log.txt", "w") as file:
     workbook.save(filename="õpilasteFail.xlsx")
 
     print("LÕPETATUD EDUKALT")
+

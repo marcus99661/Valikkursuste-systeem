@@ -1,0 +1,13 @@
+Bioloogia 1;;;
+Bioloogia 2;;;
+Geograafia;;Bioloogia 1
+Kirjandus;;;Inglise keel
+Inglise keel;;;Kirjandus
+Ökoloogia;;Bioloogia 1, Bioloogia 2; Geograafia
+Koorilaul;;;
+Rahvatants;;;
+Akvaristika;;;
+Näitering;;;
+Mehhatroonika ja robootika;;;
+Digitehnoloogiaga sõbraks;;;
+Keskkonnaseire ja digilahendused;;;

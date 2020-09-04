@@ -13,9 +13,16 @@ driver = webdriver.Chrome("D:\Chromedriver 2\chromedriver.exe")
 driver.get(website)
 korda = 4
 time.sleep(3)
+
 def random_char(y):
        return ''.join(random.choice(string.ascii_letters) for x in range(y))
-for i in range(268, 525):
+    
+for i in range(525):
+    
+    
+    #driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[1]/label/div/div[1]/div[1]")
+    
+
     driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[1]/input').send_keys(random_char(7)+"@fakegmail.com")
     driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[1]/input').send_keys(random.choice(nimed) + " " + str(i))
     ### klass
@@ -100,7 +107,32 @@ for i in range(268, 525):
     korda += 1
     asd25 = random.randint(1,8)
     driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[' + str(korda) + ']/div/div/div[2]/div/div/span/div/div[' + str(asd25) + ']/label').click()
+    
+    ##praktikumid
 
+    vabadPraks = [1, 2, 3, 4, 5, 6, 7, 8]
+    #driver.find_element_by_xpath("/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[1]/label/div/div[1]").click()
+    randomprotsent = random.randint(0, 10)
+    
+    while randomprotsent <= 3:
+       randomprotsent = random.randint(0, 10)
+       koht = random.choice(vabadPraks)
+       #koht = random.choice([1, 2, 3, 4, 5, 6, 7, 8])
+       vabadPraks.remove(koht)
+       driver.find_element_by_xpath("/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[" + str(koht) + "]/label/div/div[1]").click()
+       print("tehtud korra " + str(koht))
+       #time.sleep(1)
+
+    '''
+    driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[1]/label/div/div[1]")
+    driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[2]/label/div/div[1]")
+    driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[3]/label/div/div[1]")
+    driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[4]/label/div/div[1]")
+    driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[5]/label/div/div[1]")
+    driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[6]/label/div/div[1]")
+    driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[7]/label/div/div[1]")
+    driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[8]/label/div/div[1]")
+       '''
     driver.find_element_by_xpath("/html/body/div[1]/div[2]/form/div[2]/div/div[3]/div[3]/div/div").click()
     
     driver.get(website)

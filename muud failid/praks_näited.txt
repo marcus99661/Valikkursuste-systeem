@@ -1,0 +1,3 @@
+Praksi nimi; eeldusaine; üks eeldusainetest (,); samal ajal toimuvad(ei saa osaleda)
+
+Ökoloogia;;Bioloogia 1, Bioloogia 2; Geograafia
