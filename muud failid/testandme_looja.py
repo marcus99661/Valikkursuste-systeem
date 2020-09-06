@@ -24,7 +24,7 @@ for i in range(525):
     
 
     driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[1]/input').send_keys(random_char(7)+"@fakegmail.com")
-    driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[1]/input').send_keys(random.choice(nimed) + " " + str(i))
+    driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[1]/input').send_keys(random.choice(nimed) + " " + str(i+1))
     ### klass
     asd1 = random.randint(1,3)
     driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div/span/div/div[' + str(asd1) + ']/label').click()
@@ -113,7 +113,7 @@ for i in range(525):
     vabadPraks = [1, 2, 3, 4, 5, 6, 7, 8]
     #driver.find_element_by_xpath("/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[1]/label/div/div[1]").click()
     randomprotsent = random.randint(0, 10)
-    
+    '''
     while randomprotsent <= 3:
        randomprotsent = random.randint(0, 10)
        koht = random.choice(vabadPraks)
@@ -122,7 +122,8 @@ for i in range(525):
        driver.find_element_by_xpath("/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[" + str(koht) + "]/label/div/div[1]").click()
        print("tehtud korra " + str(koht))
        #time.sleep(1)
-
+    '''
+    time.sleep(7)
     '''
     driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[1]/label/div/div[1]")
     driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[2]/label/div/div[1]")

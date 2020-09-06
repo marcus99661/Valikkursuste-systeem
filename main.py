@@ -3,7 +3,8 @@
 # OSAD KURSUSED EI OLE KÕIGILE KLASSILE
 # EELMINE AASTA ON VÕETUD EELDUSAINE
 # VAJA LISADA PRAKTIKUMID/TUNNIVÄLISED (ühe valiku all, valid nii palju kui tahad)
-# VAJA LUUA ÕPILASTELE OUTPUT FILE  -  PEAKS OLEMA KORRAS
+# ÕPILASTEL KURSUSTE ÜMBERTÕSTMINE???
+# VAJA LUUA ÕPILASTELE OUTPUT FILE  -  TEHTUD
 # VAJA LUUA ÕPETAJATELE OUTPUT FILE  -  TEHTUD
 # LISADA KOMMENTAARE
 # LUUA DOKUMENT
@@ -26,7 +27,7 @@ def grupeerimine():
     õpilaseNimed = []
     temp1 = {}
     korda = 0
-    with open('testinput4.csv', 'r', encoding="utf-8") as input_file: # Õpilaste kursuste faili avamine
+    with open('testinputpraks.csv', 'r', encoding="utf-8") as input_file: # Õpilaste kursuste faili avamine
         csv_reader = reader(input_file)
         for row in csv_reader:
             #print(row)
@@ -63,7 +64,7 @@ def grupeerimine():
     return klass10, klass11, klass12, õpilaseNimed
 
 klass10, klass11, klass12, õpilaseNimed = grupeerimine() # "õpilaseNimed" ei ole hetkel vajalik/kasutuses
-print(klass10)
+#print(klass10)
 
 
 #klass10_PERM()
@@ -155,9 +156,9 @@ with open("log.txt", "w") as file:
             õpilaseNimi, õpilaseKursused = random.choice(list(klass_seadistatud_temp.items()))
             del klass_seadistatud_temp[õpilaseNimi]
             if õpilaseNimi not in result:
-                tempSõnastik = {k: '' for k in range(1, len(õpilaseKursused)+1)}
+                tempSõnastik = {k: '' for k in range(1, len(õpilaseKursused))} ## tempSõnastik = {k: '' for k in range(1, len(õpilaseKursused)+1)}
                 result[õpilaseNimi] = tempSõnastik
-            for i in range(0, len(õpilaseKursused)):
+            for i in range(0, len(õpilaseKursused)-1): ### eemaldada -1
                 #print(õpilaseKursused)
                 hetkeneKursus = õpilaseKursused[i][valik]
                 temp2 = resultList.get(õpilaseNimi, [])
@@ -231,8 +232,8 @@ with open("log.txt", "w") as file:
         del klass12_seadistatud[õpilaseNimi]
         klass12_segamini[õpilaseNimi] = kursused
     result = registreerimine(klass12_segamini, 0,result)
-    print("LÕPPETATUD 12. KLASSI 1. VALIK")
-    file.write("LÕPPETATUD 12. KLASSI 1. VALIK")
+    print("LÕPETATUD 12. KLASSI 1. VALIK")
+    file.write("LÕPETATUD 12. KLASSI 1. VALIK")
     #### 11. ja 10. klassi 1. valik
     klass12_seadistatud = copy.deepcopy(klass12_PERM)
     kokku11ja10 = {} #### PANEB KÕIK 11 JA 10 KLASSI ÕPILASED ÜHTE SÕNASTIKKU SUVALISES JÄRJEKORRAS JA HAKKAB REGISTREERIMA
@@ -255,8 +256,8 @@ with open("log.txt", "w") as file:
         del kokku11ja10[õpilaseNimi]
         kokku11ja10_segamini[õpilaseNimi] = kursused
     result = registreerimine(kokku11ja10_segamini, 0,result)
-    print("LÕPPETATUD 11. JA 10. KLASSI 1. VALIK")
-    file.write("LÕPPETATUD 11. JA 10. KLASSI 1. VALIK")
+    print("LÕPETATUD 11. JA 10. KLASSI 1. VALIK")
+    file.write("LÕPETATUD 11. JA 10. KLASSI 1. VALIK")
     #### 12., 11. ja 10. klassi 2. valik
     klass12_seadistatud = copy.deepcopy(klass12_PERM)
     klass11_seadistatud = copy.deepcopy(klass11_PERM)
@@ -288,8 +289,8 @@ with open("log.txt", "w") as file:
 
     result = registreerimine(kokku12ja11ja10_segamini, 1,result)
     #print(kokku12ja11ja10_segamini)
-    print("LÕPPETATUD 12., 11. ja 10. KLASSI 2. VALIK")
-    file.write("LÕPPETATUD 12., 11. ja 10. KLASSI 2. VALIK")
+    print("LÕPETATUD 12., 11. ja 10. KLASSI 2. VALIK")
+    file.write("LÕPETATUD 12., 11. ja 10. KLASSI 2. VALIK")
     #### 12., 11. ja 10. klassi 3. valik
     klass12_seadistatud = copy.deepcopy(klass12_PERM)
     klass11_seadistatud = copy.deepcopy(klass11_PERM)
@@ -321,8 +322,8 @@ with open("log.txt", "w") as file:
         
     result = registreerimine(kokku12ja11ja10_segamini, 2,result)
     #print(kokku12ja11ja10_segamini)
-    print("LÕPPETATUD 12., 11. ja 10. KLASSI 3. VALIK")
-    file.write("LÕPPETATUD 12., 11. ja 10. KLASSI 3. VALIK")
+    print("LÕPETATUD 12., 11. ja 10. KLASSI 3. VALIK")
+    file.write("LÕPETATUD 12., 11. ja 10. KLASSI 3. VALIK")
 
     print(result)
     print("-------------------------")
@@ -400,6 +401,80 @@ with open("log.txt", "w") as file:
         sheet["H" + str(i+2)] = igaÕpilaseKursused[i][6]
         sheet["I" + str(i+2)] = igaÕpilaseKursused[i][7]
     workbook.save(filename="õpilasteFail.xlsx")
+    print("LÕPETATUD EDUKALT ÕPILASTE KURSUSELE LISAMISE")
+    file.write("LÕPETATUD EDUKALT ÕPILASTE KURSUSELE LISAMISE")
+
+    for i in range(0, len(klass10_PERM.keys())):
+        õpilaseNimi = list(klass10_PERM)[i]
+        kursused = klass10_PERM[õpilaseNimi]
+        print("Õpilasel " + õpilaseNimi + " on võetud praktikumid: " + ', '.join(''.join(kursused[-1]).split(";")))
+        
+    klass12_seadistatud = copy.deepcopy(klass12_PERM)
+    klass11_seadistatud = copy.deepcopy(klass11_PERM)
+    klass10_seadistatud = copy.deepcopy(klass10_PERM)
+    kokku12ja11ja10 = {}
+    kokku12ja11ja10_segamini = {}
+
+    for i in range(0, len(klass12_seadistatud.keys())):
+        õpilaseNimi = random.choice(list(klass12_seadistatud))
+        kursused = klass12_seadistatud[õpilaseNimi]
+        del klass12_seadistatud[õpilaseNimi]
+        kokku12ja11ja10[õpilaseNimi] = kursused
+    for i in range(0, len(klass11_seadistatud.keys())):
+        õpilaseNimi = random.choice(list(klass11_seadistatud))
+        kursused = klass11_seadistatud[õpilaseNimi]
+        del klass11_seadistatud[õpilaseNimi]
+        kokku12ja11ja10[õpilaseNimi] = kursused
+    for i in range(0, len(klass10_seadistatud.keys())):
+        õpilaseNimi = random.choice(list(klass10_seadistatud))
+        kursused = klass10_seadistatud[õpilaseNimi]
+        del klass10_seadistatud[õpilaseNimi]
+        kokku12ja11ja10[õpilaseNimi] = kursused
+        
+    for i in range(0, len(kokku12ja11ja10.keys())):
+        õpilaseNimi = random.choice(list(kokku12ja11ja10))
+        kursused = kokku12ja11ja10[õpilaseNimi][-1]
+        del kokku12ja11ja10[õpilaseNimi]
+        kokku12ja11ja10_segamini[õpilaseNimi] = kursused
+
+    print(kokku12ja11ja10_segamini)
+    #result = registreerimine(kokku12ja11ja10_segamini, 1,result)
+
+    def praks_seadistamine(): # Kursuste seadistamine kergeks kasutuseks
+        ainedList = []
+        ained = {}
+        with open('praks.txt', 'r', encoding="utf-8") as ainedfail:
+            for i in ainedfail: #### 
+                temp1 = {}
+                ainedList = i.replace("\n", "").split(";")
+                #ained[ainedList[0]]["kohad"] = ainedList[1]
+                #ained[ainedList[0]]["kohad"] = 40
+                temp1["kohad"] = ainedList[1]
+                temp1["kohtiVõetud"] = 0
+                temp1["eeldusaine"] = ainedList[2]
+                temp1["üksEeldusaine"] = ainedList[3]
+                temp1["samalAjal"] = ainedList[4]
+                temp1["sarnased"] = ainedList[5]
+                temp1["vastuVõetud"] = []
+                temp1["järjekord"] = []
+                ained[ainedList[0]] = temp1
+                #print(ained)
+            #print(ained)
+            return ained
+
+    praks = praks_seadistamine()
+    print(praks)
+    
+    ### PRAKS REGISTREERIMINE
+
+    def praks_registreerimine(õpilaseNimi, praks, result):
+        pass
+
+
+    for i in range(0, len(kokku12ja11ja10_segamini)):
+        praks_registreerimine()
+    ###
 
     print("LÕPETATUD EDUKALT")
+    file.write("LÕPETATUD EDUKALT")
 
