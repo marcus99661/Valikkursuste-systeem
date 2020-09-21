@@ -433,7 +433,8 @@ with open("log.txt", "w") as file:
         
     for i in range(0, len(kokku12ja11ja10.keys())):
         õpilaseNimi = random.choice(list(kokku12ja11ja10))
-        kursused = kokku12ja11ja10[õpilaseNimi][-1]
+        #kursused = kokku12ja11ja10[õpilaseNimi][-1]
+        kursused = "".join(kokku12ja11ja10[õpilaseNimi][-1]).split(";")
         del kokku12ja11ja10[õpilaseNimi]
         kokku12ja11ja10_segamini[õpilaseNimi] = kursused
 
@@ -467,14 +468,45 @@ with open("log.txt", "w") as file:
     
     ### PRAKS REGISTREERIMINE
 
-    def praks_registreerimine(õpilaseNimi, praks, result):
-        pass
+    def praks_registreerimine(õpilaseNimi, suvalinePraks, result):
+        praks[suvalinePraks]["kohtiVõetud"] += 1
+        praks[suvalinePraks]["vastuVõetud"].append(õpilaseNimi)
+        
+        if õpilaseNimi in result.keys():
+            result[õpilaseNimi].append(suvalinePraks)
+        else:
+            result[õpilaseNimi] = []
+            result[õpilaseNimi].append(suvalinePraks)
+        '''
+        if result[õpilaseNimi] == "":
+            result[õpilaseNimi] = []
+            result[õpilaseNimi].append(suvalinePraks)
+        else:
+            result[õpilaseNimi].append(suvalinePraks)
+        '''
+        
+        #result[õpilaseNimi] = suvalinePraks
+        return result
+    
+    
+    praksResult = {}   #### {Marcus : ["Praksid", "Praksid 2"]}
 
-
-    for i in range(0, len(kokku12ja11ja10_segamini)):
-        praks_registreerimine()
-    ###
+    while True:
+        if len(kokku12ja11ja10_segamini) <= 0:
+            break
+        õpilaseNimi = random.choice(list(kokku12ja11ja10_segamini))
+        õpilasePraksid = kokku12ja11ja10_segamini[õpilaseNimi] ## eemaldamiseks
+        #print("Järgmine on: " + õpilaseNimi + " " + str(õpilasePraksid))
+        if õpilasePraksid == [''] or õpilasePraksid == [] or õpilasePraksid[0] == "": ### Õpilaste kellel pole prakse eemaldamine
+            del kokku12ja11ja10_segamini[õpilaseNimi]
+            continue
+        õpilaseSuvalinePraks = random.choice(list(kokku12ja11ja10_segamini[õpilaseNimi]))
+        
+        praksResult = praks_registreerimine(õpilaseNimi, õpilaseSuvalinePraks, praksResult)
+        #print(praksResult)
+        õpilasePraksid.remove(õpilaseSuvalinePraks)
+        kokku12ja11ja10_segamini[õpilaseNimi] = õpilasePraksid
+    
 
     print("LÕPETATUD EDUKALT")
     file.write("LÕPETATUD EDUKALT")
-

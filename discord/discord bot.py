@@ -3,7 +3,9 @@ import discord
 from discord import Embed
 from discord import Colour
 import time
-from kursuseMuutmine import kursuseEemaldamine
+#from kursuseMuutmine import kursuseEemaldamine
+from kursuseMuutmine import *
+from discordTOKEN import TOKEN
 ############### VAJA TEHA ##########
 # 1. Logi fail käskudest
 
@@ -83,11 +85,9 @@ with open("adminid.txt") as file:
 print(adminid)
 
 client = MyClient()
-client.run('NzM4ODA4MTg3ODIxNDkwMjM2.XyRSvg.myvR6TCXwOn8hpiC0RFoB63fva4')
+client.run(TOKEN)
+#client.run('NzM4ODA4MTg3ODIxNDkwMjM2.XyRSvg.myvR6TCXwOn8hpiC0RFoB63fva4')
 
-
-#TOKEN = 'NzM4ODA4MTg3ODIxNDkwMjM2.XyRSvg.myvR6TCXwOn8hpiC0RFoB63fva4'
-#GUILD = "marcus99661's server"
 '''
 import discord
 from discord.ext import commands
