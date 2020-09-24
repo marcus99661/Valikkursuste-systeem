@@ -507,6 +507,6 @@ with open("log.txt", "w") as file:
         õpilasePraksid.remove(õpilaseSuvalinePraks)
         kokku12ja11ja10_segamini[õpilaseNimi] = õpilasePraksid
     
-
+    print(praksResult)
     print("LÕPETATUD EDUKALT")
     file.write("LÕPETATUD EDUKALT")
