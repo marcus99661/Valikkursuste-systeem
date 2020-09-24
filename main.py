@@ -327,82 +327,6 @@ with open("log.txt", "w") as file:
 
     print(result)
     print("-------------------------")
-    #################################### ÕPETAJA FAILI KIRJUTAMINE
-    kursusedFailiJaoks = []
-    õpilasteNimedFailiJaoks = []
-    järjekordFailiJaoks = []
-    resultKeys = ained.keys()
-    for i in range(0, len(resultKeys)):
-        kursusedFailiJaoks.append(list(resultKeys)[i])
-        õpilasteNimedFailiJaoks.append(ained[list(resultKeys)[i]]["vastuVõetud"])
-        järjekordFailiJaoks.append(ained[list(resultKeys)[i]]["järjekord"])
-
-    workbook = Workbook()
-    sheet = workbook.active
-    sheet["A1"] = "Kursus"
-    sheet["E1"] = "Õpilased"
-    sheet["O1"] = "Järjekord"
-    seperator = ", "
-    for i in range(0, len(kursusedFailiJaoks)):
-        sheet.cell(row=i+2, column=1).value = kursusedFailiJaoks[i]
-        sheet.cell(row=i+2, column=5).value = seperator.join(õpilasteNimedFailiJaoks[i])
-        sheet.cell(row=i+2, column=15).value = seperator.join(järjekordFailiJaoks[i]) ########## LISADA ÕPILASTE JÄRJEKORD
-    workbook.save(filename="õpetajateFail.xlsx")
-    print("-------------------------")
-    #################################### ÕPILASTE FAILI KIRJUTAMINE
-
-    igaÕpilaseKursused = []
-    #õpilaseNimed = []
-    resultKeys = result.keys() 
-    for i in range(0, len(resultKeys)):
-        #igaÕpilaseKursused.append(result[list(resultKeys)[i]])
-        hetkesedKursused = []
-        for j in range(1, int(list(result[list(resultKeys)[0]].keys())[-1])+1):
-            if result[list(resultKeys)[i]].get(int(j)) == "":
-                hetkesedKursused.append(" --- ")
-            else:
-                hetkesedKursused.append(result[list(resultKeys)[i]].get(int(j)))
-        igaÕpilaseKursused.append(hetkesedKursused)
-
-
-    workbook = Workbook()
-    sheet = workbook.active
-    sheet["A1"] = "Õpilane"
-    sheet["B1"] = "2. periood hommik"
-    sheet["C1"] = "2. periood õhtu"
-    sheet["D1"] = "3. periood hommik"
-    sheet["E1"] = "3. periood õhtu"
-    sheet["F1"] = "4. periood hommik"
-    sheet["G1"] = "4. periood õhtu"
-    sheet["H1"] = "5. periood hommik"
-    sheet["I1"] = "5. periood õhtu"
-
-    seperator = ", "
-    #print(igaÕpilaseKursused)
-    for i in range(0, len(igaÕpilaseKursused)):
-        '''
-        print(i)
-        print(õpilaseNimed[i])
-        print(igaÕpilaseKursused[i])
-        sheet.cell(row=i+2, column=1).value = õpilaseNimed[i]
-        sheet.cell(row=i+2, column=4).value = seperator.join(igaÕpilaseKursused[i])
-        '''
-        #print(igaÕpilaseKursused[i][6])
-        #print(igaÕpilaseKursused[i])
-
-        #sheet["A" + str(i+2)] = õpilaseNimed[i]
-        sheet["A" + str(i+2)] = list(resultKeys)[i]
-        sheet["B" + str(i+2)] = igaÕpilaseKursused[i][0]
-        sheet["C" + str(i+2)] = igaÕpilaseKursused[i][1]
-        sheet["D" + str(i+2)] = igaÕpilaseKursused[i][2]
-        sheet["E" + str(i+2)] = igaÕpilaseKursused[i][3]
-        sheet["F" + str(i+2)] = igaÕpilaseKursused[i][4]
-        sheet["G" + str(i+2)] = igaÕpilaseKursused[i][5]
-        sheet["H" + str(i+2)] = igaÕpilaseKursused[i][6]
-        sheet["I" + str(i+2)] = igaÕpilaseKursused[i][7]
-    workbook.save(filename="õpilasteFail.xlsx")
-    print("LÕPETATUD EDUKALT ÕPILASTE KURSUSELE LISAMISE")
-    file.write("LÕPETATUD EDUKALT ÕPILASTE KURSUSELE LISAMISE")
 
     for i in range(0, len(klass10_PERM.keys())):
         õpilaseNimi = list(klass10_PERM)[i]
@@ -468,7 +392,7 @@ with open("log.txt", "w") as file:
     
     ### PRAKS REGISTREERIMINE
 
-    def praks_registreerimine(õpilaseNimi, suvalinePraks, result):
+    def praks_registreerimine(õpilaseNimi, suvalinePraks, result): ########## Kõik kontrollid ja järjekorda lisamine, uute testandmete loomine
         praks[suvalinePraks]["kohtiVõetud"] += 1
         praks[suvalinePraks]["vastuVõetud"].append(õpilaseNimi)
         
@@ -508,5 +432,108 @@ with open("log.txt", "w") as file:
         kokku12ja11ja10_segamini[õpilaseNimi] = õpilasePraksid
     
     print(praksResult)
+
+    #################################### ÕPETAJA FAILI KIRJUTAMINE
+    kursusedFailiJaoks = []
+    praksidFailiJaoks = []
+    õpilasteNimedFailiJaoks = []
+    praksÕpilasteNimedFailiJaoks = []
+    järjekordFailiJaoks = []
+    praksJärjekordFailiJaoks = []
+    resultKeys = ained.keys()
+    for i in range(0, len(resultKeys)):
+        kursusedFailiJaoks.append(list(resultKeys)[i])
+        õpilasteNimedFailiJaoks.append(ained[list(resultKeys)[i]]["vastuVõetud"])
+        järjekordFailiJaoks.append(ained[list(resultKeys)[i]]["järjekord"])
+    
+    for i in range(0, len(praks.keys())):
+        praksidFailiJaoks.append(list(praks.keys())[i])
+        praksÕpilasteNimedFailiJaoks.append(praks[list(praks.keys())[i]]["vastuVõetud"])
+        praksJärjekordFailiJaoks.append(praks[list(praks.keys())[i]]["järjekord"])
+
+    workbook = Workbook()
+    sheet = workbook.active
+    sheet["A1"] = "Kursus"
+    sheet["E1"] = "Õpilased"
+    sheet["O1"] = "Järjekord"
+    seperator = ", "
+    for i in range(0, len(kursusedFailiJaoks)):
+        sheet.cell(row=i+2, column=1).value = kursusedFailiJaoks[i]
+        sheet.cell(row=i+2, column=5).value = seperator.join(õpilasteNimedFailiJaoks[i])
+        sheet.cell(row=i+2, column=15).value = seperator.join(järjekordFailiJaoks[i]) ########## LISADA ÕPILASTE JÄRJEKORD
+
+    sheet.cell(row=len(kursusedFailiJaoks)+2, column=1).value = "PRAKTIKUMID:"
+    print(praksidFailiJaoks)
+    for i in range(len(kursusedFailiJaoks)+1, len(praksidFailiJaoks) + len(kursusedFailiJaoks) - 1):
+        sheet.cell(row=i+2, column=1).value = praksidFailiJaoks[i - len(kursusedFailiJaoks)+1]
+        sheet.cell(row=i+2, column=5).value = seperator.join(praksÕpilasteNimedFailiJaoks[i - len(kursusedFailiJaoks)+1])
+        sheet.cell(row=i+2, column=15).value = seperator.join(praksJärjekordFailiJaoks[i - len(kursusedFailiJaoks)+1])
+
+    workbook.save(filename="õpetajateFail.xlsx")
+    print("-------------------------")
+    #################################### ÕPILASTE FAILI KIRJUTAMINE
+
+    igaÕpilaseKursused = []
+    igaÕpilasePraksid = []
+    #õpilaseNimed = []
+    resultKeys = result.keys() 
+    for i in range(0, len(resultKeys)):
+        #igaÕpilaseKursused.append(result[list(resultKeys)[i]])
+        hetkesedKursused = []
+        for j in range(1, int(list(result[list(resultKeys)[0]].keys())[-1])+1):
+            if result[list(resultKeys)[i]].get(int(j)) == "":
+                hetkesedKursused.append(" --- ")
+            else:
+                hetkesedKursused.append(result[list(resultKeys)[i]].get(int(j)))
+        igaÕpilaseKursused.append(hetkesedKursused)
+
+    workbook = Workbook()
+    sheet = workbook.active
+    sheet["A1"] = "Õpilane"
+    sheet["B1"] = "2. periood hommik"
+    sheet["C1"] = "2. periood õhtu"
+    sheet["D1"] = "3. periood hommik"
+    sheet["E1"] = "3. periood õhtu"
+    sheet["F1"] = "4. periood hommik"
+    sheet["G1"] = "4. periood õhtu"
+    sheet["H1"] = "5. periood hommik"
+    sheet["I1"] = "5. periood õhtu"
+    sheet["J1"] = "Praktikumid ja tunnivälised kursused"
+
+    seperator = ", "
+    #print(igaÕpilaseKursused)
+    for i in range(0, len(igaÕpilaseKursused)):
+        '''
+        print(i)
+        print(õpilaseNimed[i])
+        print(igaÕpilaseKursused[i])
+        sheet.cell(row=i+2, column=1).value = õpilaseNimed[i]
+        sheet.cell(row=i+2, column=4).value = seperator.join(igaÕpilaseKursused[i])
+        '''
+        #print(igaÕpilaseKursused[i][6])
+        #print(igaÕpilaseKursused[i])
+
+        #sheet["A" + str(i+2)] = õpilaseNimed[i]
+        nimi = list(resultKeys)[i]
+        sheet["A" + str(i+2)] = nimi
+        sheet["B" + str(i+2)] = igaÕpilaseKursused[i][0]
+        sheet["C" + str(i+2)] = igaÕpilaseKursused[i][1]
+        sheet["D" + str(i+2)] = igaÕpilaseKursused[i][2]
+        sheet["E" + str(i+2)] = igaÕpilaseKursused[i][3]
+        sheet["F" + str(i+2)] = igaÕpilaseKursused[i][4]
+        sheet["G" + str(i+2)] = igaÕpilaseKursused[i][5]
+        sheet["H" + str(i+2)] = igaÕpilaseKursused[i][6]
+        sheet["I" + str(i+2)] = igaÕpilaseKursused[i][7]
+        sheet["J" + str(i+2)] = seperator.join(praksResult.setdefault(nimi, ""))#praksResult
+    workbook.save(filename="õpilasteFail.xlsx")
+    print("LÕPETATUD EDUKALT ÕPILASTE KURSUSELE LISAMISE")
+    file.write("LÕPETATUD EDUKALT ÕPILASTE KURSUSELE LISAMISE")
+
+    for i in range(0, len(klass10_PERM.keys())):
+        õpilaseNimi = list(klass10_PERM)[i]
+        kursused = klass10_PERM[õpilaseNimi]
+        print("Õpilasel " + õpilaseNimi + " on võetud praktikumid: " + ', '.join(''.join(kursused[-1]).split(";")))
+
+
     print("LÕPETATUD EDUKALT")
     file.write("LÕPETATUD EDUKALT")

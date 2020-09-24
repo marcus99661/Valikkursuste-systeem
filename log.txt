@@ -7,25 +7,31 @@ Sarah 0 ei saanud kursusele "Vaimne tervis ja selle hoidmine", sest on juba sell
 Sarah 0 vastu võetud Matemaatika ajaloo elemente ja rakendusi
 Sarah 0 vastu võetud Majandusmatemaatika elemendid
 Sarah 0 vastu võetud Projektikirjutamisõpe
-LÕPETATUD 12. KLASSI 1. VALIKJessica 2 vastu võetud Globaliseeruv maailm
-Jessica 2 vastu võetud Õpioskused
-Jessica 2 vastu võetud Küberkaitse 1
-Jessica 2 vastu võetud Loomade käitumine 4. periood
-Jessica 2 vastu võetud Millest ELU koosneb?
-Jessica 2 vastu võetud Tänavakunst
-Jessica 2 vastu võetud Mobiilirakenduste loomine (APP Inventor)
+LÕPETATUD 12. KLASSI 1. VALIKBrianna 1 vastu võetud Joonestamine 2. periood
+Brianna 1 vastu võetud Linux Raspberry Pi näitel
+Brianna 1 vastu võetud Keemilised elemendid
+Brianna 1 vastu võetud Loogika 4. periood
+Brianna 1 vastu võetud Teater Vanemuise kultuuritänavas
+Brianna 1 vastu võetud CAD joonestamine
+Lauren 4 vastu võetud Finantsmõtlemine
+Lauren 4 vastu võetud Labortöid füüsikas 10. ja 11. klassile
+Lauren 4 vastu võetud Ajakirjanduse alused
+Lauren 4 vastu võetud Statistiline maailmapilt
+Lauren 4 vastu võetud Matemaatika ajaloo elemente ja rakendusi
+Lauren 4 vastu võetud Laboratoorsed tööd bioloogias
 Hannah 3 vastu võetud Linux Raspberry Pi näitel
 Hannah 3 vastu võetud Loomade käitumine 3. periood
 Hannah 3 vastu võetud Turundus
 Hannah 3 ei saanud kursusele "Inimene ja ühiskond 4. periood", sest on juba sellel perioodil muule kursusele sisse saanud
 Hannah 3 vastu võetud Tänavakunst
 Hannah 3 vastu võetud Projektikirjutamisõpe
-Brianna 1 vastu võetud Joonestamine 2. periood
-Brianna 1 vastu võetud Linux Raspberry Pi näitel
-Brianna 1 vastu võetud Keemilised elemendid
-Brianna 1 vastu võetud Loogika 4. periood
-Brianna 1 vastu võetud Teater Vanemuise kultuuritänavas
-Brianna 1 vastu võetud CAD joonestamine
+Jessica 2 vastu võetud Globaliseeruv maailm
+Jessica 2 vastu võetud Õpioskused
+Jessica 2 vastu võetud Küberkaitse 1
+Jessica 2 vastu võetud Loomade käitumine 4. periood
+Jessica 2 vastu võetud Millest ELU koosneb?
+Jessica 2 vastu võetud Tänavakunst
+Jessica 2 vastu võetud Mobiilirakenduste loomine (APP Inventor)
 Emma 5 vastu võetud Geoinformaatika
 Emma 5 vastu võetud Inimene ja õigus
 Emma 5 vastu võetud Muusikaline kirjaoskus
@@ -33,20 +39,7 @@ Emma 5 vastu võetud Inimene ja ühiskond 3. periood
 Emma 5 vastu võetud Joonestamine 4. periood
 Emma 5 vastu võetud Teater Vanemuise kultuuritänavas
 Emma 5 vastu võetud Karjääriõpetus
-Lauren 4 vastu võetud Finantsmõtlemine
-Lauren 4 vastu võetud Labortöid füüsikas 10. ja 11. klassile
-Lauren 4 vastu võetud Ajakirjanduse alused
-Lauren 4 vastu võetud Statistiline maailmapilt
-Lauren 4 vastu võetud Matemaatika ajaloo elemente ja rakendusi
-Lauren 4 vastu võetud Laboratoorsed tööd bioloogias
-LÕPETATUD 11. JA 10. KLASSI 1. VALIKEmma 5 ei saanud kursusele "Hispaania keel 1", sest on juba sellel perioodil muule kursusele sisse saanud
-Emma 5 ei saanud kursusele "Küberkaitse 1", sest on juba sellel perioodil muule kursusele sisse saanud
-Emma 5 ei saanud kursusele "Keskkonnakeemia 3. periood", sest on juba sellel perioodil muule kursusele sisse saanud
-Emma 5 ei saanud kursusele "Köögifüüsika", sest on juba sellel perioodil muule kursusele sisse saanud
-Emma 5 ei saanud kursusele "Psühholoogia alused", sest on juba sellel perioodil muule kursusele sisse saanud
-Emma 5 vastu võetud Ettevõtlusõpe 5. periood
-Emma 5 ei saanud kursusele "Riigikaitse 2", sest on juba sellel perioodil muule kursusele sisse saanud
-Sarah 0 ei saanud kursusele "Finantsmõtlemine", sest on juba sellel perioodil muule kursusele sisse saanud
+LÕPETATUD 11. JA 10. KLASSI 1. VALIKSarah 0 ei saanud kursusele "Finantsmõtlemine", sest on juba sellel perioodil muule kursusele sisse saanud
 Sarah 0 ei saanud kursusele "Meediakursus", sest on juba sellel perioodil muule kursusele sisse saanud
 Sarah 0 ei saanud kursusele "Loomade käitumine 3. periood", sest on juba sellel perioodil muule kursusele sisse saanud
 Sarah 0 ei saanud kursusele "Turundus", sest on juba sellel perioodil muule kursusele sisse saanud
@@ -54,6 +47,21 @@ Sarah 0 ei saanud kursusele "Praktiline kommunikatsioon", sest on juba sellel pe
 Sarah 0 ei saanud kursusele "Psühholoogia alused", sest on juba sellel perioodil muule kursusele sisse saanud
 Sarah 0 ei saanud kursusele "Tänavakunst", sest on juba sellel perioodil muule kursusele sisse saanud
 Sarah 0 ei saanud kursusele "Karjääriõpetus", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 ei saanud kursusele "Hispaania keel 1", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 ei saanud kursusele "Küberkaitse 1", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 ei saanud kursusele "Keskkonnakeemia 3. periood", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 ei saanud kursusele "Köögifüüsika", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 ei saanud kursusele "Psühholoogia alused", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 vastu võetud Ettevõtlusõpe 5. periood
+Emma 5 ei saanud kursusele "Riigikaitse 2", sest on juba sellel perioodil muule kursusele sisse saanud
+Brianna 1 ei saanud kursusele "Globaliseeruv maailm", sest on juba sellel perioodil muule kursusele sisse saanud
+Brianna 1 ei saanud kursusele "Soome keel 1", sest on juba sellel perioodil muule kursusele sisse saanud
+Brianna 1 ei saanud kursusele "Natuurist joonistamine", sest on juba sellel perioodil muule kursusele sisse saanud
+Brianna 1 vastu võetud Keskkonnakeemia 3. periood
+Brianna 1 ei saanud kursusele "Loomade käitumine 4. periood", sest on juba sellel perioodil muule kursusele sisse saanud
+Brianna 1 ei saanud kursusele "Meditsiinikursus", sest on juba sellel perioodil muule kursusele sisse saanud
+Brianna 1 vastu võetud Ettevõtlusõpe 5. periood
+Brianna 1 on juba "CAD joonestamine" kursusele sisse saanud eelneval hetkel
 Jessica 2 ei saanud kursusele "Loogika 2. periood", sest on juba sellel perioodil muule kursusele sisse saanud
 Jessica 2 ei saanud kursusele "Hispaania keel 1", sest on juba sellel perioodil muule kursusele sisse saanud
 Jessica 2 ei saanud kursusele "Filosoofia 1", sest on juba sellel perioodil muule kursusele sisse saanud
@@ -68,14 +76,6 @@ Hannah 3 ei saanud kursusele "Statistiline maailmapilt", sest on juba sellel per
 Hannah 3 vastu võetud Köögifüüsika
 Hannah 3 vastu võetud Millest ELU koosneb?
 Hannah 3 ei saanud kursusele "Filosoofia 2", sest on juba sellel perioodil muule kursusele sisse saanud
-Brianna 1 ei saanud kursusele "Globaliseeruv maailm", sest on juba sellel perioodil muule kursusele sisse saanud
-Brianna 1 ei saanud kursusele "Soome keel 1", sest on juba sellel perioodil muule kursusele sisse saanud
-Brianna 1 ei saanud kursusele "Natuurist joonistamine", sest on juba sellel perioodil muule kursusele sisse saanud
-Brianna 1 vastu võetud Keskkonnakeemia 3. periood
-Brianna 1 ei saanud kursusele "Loomade käitumine 4. periood", sest on juba sellel perioodil muule kursusele sisse saanud
-Brianna 1 ei saanud kursusele "Meditsiinikursus", sest on juba sellel perioodil muule kursusele sisse saanud
-Brianna 1 vastu võetud Ettevõtlusõpe 5. periood
-Brianna 1 on juba "CAD joonestamine" kursusele sisse saanud eelneval hetkel
 Lauren 4 ei saanud kursusele "Programmeerimine keeles Python 1 hommikul", sest on juba sellel perioodil muule kursusele sisse saanud
 Lauren 4 ei saanud kursusele "Programmeerimine keeles Python 1 õhtul", sest on juba sellel perioodil muule kursusele sisse saanud
 Lauren 4 ei saanud kursusele "Loovkirjutamine", sest on juba sellel perioodil muule kursusele sisse saanud
@@ -83,14 +83,7 @@ Lauren 4 ei saanud kursusele "Veebidisain", sest on juba sellel perioodil muule 
 Lauren 4 ei saanud kursusele "Loomade käitumine 4. periood", sest on juba sellel perioodil muule kursusele sisse saanud
 Lauren 4 ei saanud kursusele "Inimene ja ühiskond 4. periood", sest on juba sellel perioodil muule kursusele sisse saanud
 Lauren 4 ei saanud kursusele "3D-modelleerimine 5. periood", sest on juba sellel perioodil muule kursusele sisse saanud
-LÕPETATUD 12., 11. ja 10. KLASSI 2. VALIKEmma 5 ei saanud kursusele "Programmeerimine keeles Python 1 hommikul", sest on juba sellel perioodil muule kursusele sisse saanud
-Emma 5 ei saanud kursusele "Meediakursus", sest on juba sellel perioodil muule kursusele sisse saanud
-Emma 5 on juba "Muusikaline kirjaoskus" kursusele sisse saanud eelneval hetkel
-Emma 5 ei saanud kursusele "Sissejuhatus ehitusinseneeriasse", sest on juba sellel perioodil muule kursusele sisse saanud
-Emma 5 ei saanud kursusele "Köögifüüsika", sest on juba sellel perioodil muule kursusele sisse saanud
-Emma 5 ei saanud kursusele "Arvutivõrkude alused", sest on juba sellel perioodil muule kursusele sisse saanud
-Emma 5 ei saanud kursusele "Programmeerimine keeles Java 2", sest on juba sellel perioodil muule kursusele sisse saanud
-Brianna 1 on juba "Keskkonnakeemia 2. periood" kursuse alternatiivile sisse eelneval hetkel
+LÕPETATUD 12., 11. ja 10. KLASSI 2. VALIKBrianna 1 on juba "Keskkonnakeemia 2. periood" kursuse alternatiivile sisse eelneval hetkel
 Brianna 1 ei saanud kursusele "Õpioskused", sest on juba sellel perioodil muule kursusele sisse saanud
 Brianna 1 ei saanud kursusele "Küberkaitse 1", sest on juba sellel perioodil muule kursusele sisse saanud
 Brianna 1 on juba "Keskkonnakeemia 3. periood" kursusele sisse saanud eelneval hetkel
@@ -98,6 +91,27 @@ Brianna 1 ei saanud kursusele "Loomade käitumine 4. periood", sest on juba selle
 Brianna 1 ei saanud kursusele "Arvutivõrkude alused", sest on juba sellel perioodil muule kursusele sisse saanud
 Brianna 1 on juba "Ettevõtlusõpe 5. periood" kursusele sisse saanud eelneval hetkel
 Brianna 1 ei saanud kursusele "Ajakirjanduse praktika", sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 3 vastu võetud Geoinformaatika
+Hannah 3 ei saanud kursusele "Soome keel 1", sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 3 ei saanud kursusele "Astrofüüsika 3. periood", sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 3 ei saanud kursusele "Vaimne tervis ja selle hoidmine", sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 3 ei saanud kursusele "Matemaatika ajaloo elemente ja rakendusi", sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 3 ei saanud kursusele "Arvutivõrkude alused", sest on juba sellel perioodil muule kursusele sisse saanud
+Hannah 3 ei saanud kursusele "Filosoofia 2", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 ei saanud kursusele "Programmeerimine keeles Python 1 hommikul", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 ei saanud kursusele "Meediakursus", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 on juba "Muusikaline kirjaoskus" kursusele sisse saanud eelneval hetkel
+Emma 5 ei saanud kursusele "Sissejuhatus ehitusinseneeriasse", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 ei saanud kursusele "Köögifüüsika", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 ei saanud kursusele "Arvutivõrkude alused", sest on juba sellel perioodil muule kursusele sisse saanud
+Emma 5 ei saanud kursusele "Programmeerimine keeles Java 2", sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 0 ei saanud kursusele "Prantsuse keel 1", sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 0 ei saanud kursusele "Programmeerimine keeles Java 1", sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 0 ei saanud kursusele "Vaimne tervis ja selle hoidmine", sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 0 ei saanud kursusele "Praktiline kommunikatsioon", sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 0 ei saanud kursusele "Millest ELU koosneb?", sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 0 ei saanud kursusele "Tänavakunst", sest on juba sellel perioodil muule kursusele sisse saanud
+Sarah 0 ei saanud kursusele "CAD joonestamine", sest on juba sellel perioodil muule kursusele sisse saanud
 Jessica 2 ei saanud kursusele "Värvus ja kompositsioon", sest on juba sellel perioodil muule kursusele sisse saanud
 Jessica 2 ei saanud kursusele "Astronoomia", sest on juba sellel perioodil muule kursusele sisse saanud
 Jessica 2 ei saanud kursusele "3D-modelleerimine 3. periood", sest on juba sellel perioodil muule kursusele sisse saanud
@@ -106,13 +120,6 @@ Jessica 2 ei saanud kursusele "Köögifüüsika", sest on juba sellel perioodil muul
 Jessica 2 ei saanud kursusele "Meditsiinikursus", sest on juba sellel perioodil muule kursusele sisse saanud
 Jessica 2 ei saanud kursusele "Raamatukunst", sest on juba sellel perioodil muule kursusele sisse saanud
 Jessica 2 ei saanud kursusele "Riigikaitse 2", sest on juba sellel perioodil muule kursusele sisse saanud
-Hannah 3 vastu võetud Geoinformaatika
-Hannah 3 ei saanud kursusele "Soome keel 1", sest on juba sellel perioodil muule kursusele sisse saanud
-Hannah 3 ei saanud kursusele "Astrofüüsika 3. periood", sest on juba sellel perioodil muule kursusele sisse saanud
-Hannah 3 ei saanud kursusele "Vaimne tervis ja selle hoidmine", sest on juba sellel perioodil muule kursusele sisse saanud
-Hannah 3 ei saanud kursusele "Matemaatika ajaloo elemente ja rakendusi", sest on juba sellel perioodil muule kursusele sisse saanud
-Hannah 3 ei saanud kursusele "Arvutivõrkude alused", sest on juba sellel perioodil muule kursusele sisse saanud
-Hannah 3 ei saanud kursusele "Filosoofia 2", sest on juba sellel perioodil muule kursusele sisse saanud
 Lauren 4 ei saanud kursusele "Keskkonnakeemia 2. periood", sest on juba sellel perioodil muule kursusele sisse saanud
 Lauren 4 ei saanud kursusele "Astronoomia", sest on juba sellel perioodil muule kursusele sisse saanud
 Lauren 4 ei saanud kursusele "Loomade käitumine 3. periood", sest on juba sellel perioodil muule kursusele sisse saanud
@@ -121,11 +128,4 @@ Lauren 4 ei saanud kursusele "Loominguline joonistamine 2", sest on juba sellel 
 Lauren 4 vastu võetud Majandusõpe
 Lauren 4 ei saanud kursusele "Tänavakunst", sest on juba sellel perioodil muule kursusele sisse saanud
 Lauren 4 vastu võetud Mobiilirakenduste loomine (APP Inventor)
-Sarah 0 ei saanud kursusele "Prantsuse keel 1", sest on juba sellel perioodil muule kursusele sisse saanud
-Sarah 0 ei saanud kursusele "Programmeerimine keeles Java 1", sest on juba sellel perioodil muule kursusele sisse saanud
-Sarah 0 ei saanud kursusele "Vaimne tervis ja selle hoidmine", sest on juba sellel perioodil muule kursusele sisse saanud
-Sarah 0 ei saanud kursusele "Praktiline kommunikatsioon", sest on juba sellel perioodil muule kursusele sisse saanud
-Sarah 0 ei saanud kursusele "Millest ELU koosneb?", sest on juba sellel perioodil muule kursusele sisse saanud
-Sarah 0 ei saanud kursusele "Tänavakunst", sest on juba sellel perioodil muule kursusele sisse saanud
-Sarah 0 ei saanud kursusele "CAD joonestamine", sest on juba sellel perioodil muule kursusele sisse saanud
 LÕPETATUD 12., 11. ja 10. KLASSI 3. VALIKLÕPETATUD EDUKALT ÕPILASTE KURSUSELE LISAMISELÕPETATUD EDUKALT
