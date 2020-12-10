@@ -1,9 +1,10 @@
 #        VAJA PARANDADA
 ###################################
-# OSAD KURSUSED EI OLE KÕIGILE KLASSILE
+# OSAD KURSUSED EI OLE KÕIGILE KLASSIDELE
 # EELMINE AASTA ON VÕETUD EELDUSAINE
 # VAJA LISADA PRAKTIKUMID/TUNNIVÄLISED (ühe valiku all, valid nii palju kui tahad)
-# ÕPILASTEL KURSUSTE ÜMBERTÕSTMINE???
+# 5 KURSUST IGALE ÕPILASELE MIINIMUM
+# ÕPILASTEL KURSUSTE ÜMBERTÕSTMINE
 # VAJA LUUA ÕPILASTELE OUTPUT FILE  -  TEHTUD
 # VAJA LUUA ÕPETAJATELE OUTPUT FILE  -  TEHTUD
 # LISADA KOMMENTAARE
@@ -12,12 +13,17 @@
 ###################################
 
 import random
+from datetime import datetime
 from csv import reader
 from collections import OrderedDict
 import copy
 from openpyxl import Workbook
 
 #{'Marcus': {'Ajatempel': '2020/07/04 10:41:27 PM GMT +3', 'Kasutajanimi': 'marcus99661@gmail.com', 'Nimi': 'Marcus', 'Klass': '10', '2. periood hommik 1. valik': 'Aine 1', '2. periood hommik 2. valik': 'Aine 2', '2. periood hommik 3. valik': 'Ei taha', '2. periood Ãµhtu 1. valik': 'Ei taha', 'EI VASTA': ''}}
+
+def kirjuta(tekst):
+    print(datetime.now().strftime("[%H:%M:%S.%f]") + " " + tekst)
+    file.write(datetime.now().strftime("[%H:%M:%S.%f]") + " " + tekst + "\n")
 
 def grupeerimine():
     klass10 = {}
@@ -59,7 +65,7 @@ def grupeerimine():
                         temp1[formating[i]] = row[i]
                     klass10[row[2]] = temp1
                 else:
-                    print("TEKKIS VIGA ÕPILASE ÕIGESSE SÕNASTIKKU PANEMISEL")
+                    kirjuta("TEKKIS VIGA ÕPILASE ÕIGESSE SÕNASTIKKU PANEMISEL")
                 temp1 = {}
     return klass10, klass11, klass12, õpilaseNimed
 
@@ -164,7 +170,7 @@ with open("log.txt", "w") as file:
                 temp2 = resultList.get(õpilaseNimi, [])
                 resultList[õpilaseNimi] = temp2
                 if hetkeneKursus == "Ei taha":
-                    print(õpilaseNimi + " ei tahtnud see periood midagi")
+                    kirjuta(õpilaseNimi + " ei tahtnud see periood midagi")
                 elif ained[hetkeneKursus]['kohtiVõetud'] <  int(ained[hetkeneKursus]['kohad']):  # 1. kui mahub 2. ei ole juba sellel kursusel 3. ei ole see periood veel midagi võetud 4. eeldusained on võetud (eelmine periood või eelmine aasta) 5. üks sama eeldusaine on võetud
                     if hetkeneKursus not in resultList[õpilaseNimi]: #### õpilasel on see kursus juba võetud
                         if ained[hetkeneKursus]['alternatiiv'] not in resultList[õpilaseNimi]: #### õpilasel on selle kursuse alternatiiv võetud
@@ -172,8 +178,7 @@ with open("log.txt", "w") as file:
                                 #### TULEB LISADA EELMISE AASTA EELDUSAINED JUURDE
                                 if ained[hetkeneKursus]['eeldusaine'] == '' or all(elem in resultList[õpilaseNimi] for elem in ained[hetkeneKursus]['eeldusaine'].split(",")): ##### kontrollib kas õpilane on see aasta võtnud eeldusained
                                     if ained[hetkeneKursus]['üksEeldusaine'] == '' or võrdlemine(ained[hetkeneKursus]['üksEeldusaine'].split(","), resultList[õpilaseNimi]):
-                                        print(õpilaseNimi + " vastu võetud " + hetkeneKursus)
-                                        file.write(õpilaseNimi + " vastu võetud " + hetkeneKursus + "\n")
+                                        kirjuta(õpilaseNimi + " registreeritud kursusele " + hetkeneKursus)
                                         ained[hetkeneKursus]['kohtiVõetud'] += 1
                                         ained[hetkeneKursus]['vastuVõetud'].append(õpilaseNimi)
                                         ########
@@ -189,8 +194,7 @@ with open("log.txt", "w") as file:
                                         ########
                                         if ained[hetkeneKursus]['lisad'] != '':
                                             for j in range(0, len(ained[hetkeneKursus]['lisad'].split(","))):
-                                                print(õpilaseNimi + " vastu võetud " + ained[hetkeneKursus]['lisad'].split(",")[j])
-                                                file.write(õpilaseNimi + " vastu võetud " + ained[hetkeneKursus]['lisad'].split(",")[j] + "\n")
+                                                kirjuta(õpilaseNimi + " vastu võetud " + ained[hetkeneKursus]['lisad'].split(",")[j])
                                                 ained[ained[hetkeneKursus]['lisad'].split(",")[j]]['vastuVõetud'].append(õpilaseNimi) ## Kui õigesti mäletan siis see rida lisab kursuse "vastuVõetud" listi õpilase nime juurde
                                                 #####
                                                 temp2 = resultList.get(õpilaseNimi, [])
@@ -203,24 +207,18 @@ with open("log.txt", "w") as file:
                                                 #print(result)
                                                 #####
                                 else:
-                                    print(õpilaseNimi + ' ei saanud "' + hetkeneKursus + '", sest ei ole võtnud eeldusainet ' + ained[hetkeneKursus]['eeldusaine'])
-                                    file.write(õpilaseNimi + ' ei saanud "' + hetkeneKursus + '", sest ei ole võtnud eeldusainet ' + ained[hetkeneKursus]['eeldusaine'] + "\n")
+                                    kirjuta(õpilaseNimi + ' ei saanud "' + hetkeneKursus + '", sest ei ole võtnud eeldusainet ' + ained[hetkeneKursus]['eeldusaine'])
                             else:
-                                print(õpilaseNimi + ' ei saanud kursusele "' + hetkeneKursus + '", sest on juba sellel perioodil muule kursusele sisse saanud')
-                                file.write(õpilaseNimi + ' ei saanud kursusele "' + hetkeneKursus + '", sest on juba sellel perioodil muule kursusele sisse saanud' + "\n")
+                                kirjuta(õpilaseNimi + ' ei saanud kursusele "' + hetkeneKursus + '", sest on juba sellel perioodil muule kursusele sisse saanud')
                         else:
-                            print(õpilaseNimi + ' on juba "' + hetkeneKursus + '" kursuse alternatiivile sisse eelneval hetkel')
-                            file.write(õpilaseNimi + ' on juba "' + hetkeneKursus + '" kursuse alternatiivile sisse eelneval hetkel' + "\n")
+                            kirjuta(õpilaseNimi + ' on juba "' + hetkeneKursus + '" kursuse alternatiivile sisse eelneval hetkel')
                     else:
-                        print(õpilaseNimi + ' on juba "' + hetkeneKursus + '" kursusele sisse saanud eelneval hetkel')
-                        file.write(õpilaseNimi + ' on juba "' + hetkeneKursus + '" kursusele sisse saanud eelneval hetkel' + "\n")
+                        kirjuta(õpilaseNimi + ' on juba "' + hetkeneKursus + '" kursusele sisse saanud eelneval hetkel')
                 else:
-                    print(õpilaseNimi + ' ei saanud kursusele "' + hetkeneKursus + '", sest see oli juba täis')
-                    file.write(õpilaseNimi + ' ei saanud kursusele "' + hetkeneKursus + '", sest see oli juba täis' + "\n")
+                    kirjuta(õpilaseNimi + ' ei saanud kursusele "' + hetkeneKursus + '", sest see oli juba täis')
                     if len(ained[hetkeneKursus]["järjekord"]) < 10:
                         ained[hetkeneKursus]["järjekord"].append(õpilaseNimi)
-                        print(õpilaseNimi + ' lisati "' + hetkeneKursus + '" järjekorda')
-                        file.write(õpilaseNimi + ' lisati "' + hetkeneKursus + '" järjekorda' + "\n")
+                        kirjuta(õpilaseNimi + ' lisati "' + hetkeneKursus + '" järjekorda')
 
         #print(result)
         return result
@@ -390,9 +388,22 @@ with open("log.txt", "w") as file:
     praks = praks_seadistamine()
     print(praks)
     
+    def praksSamalAjal(õpilaseNimi, suvalinepraks, praks):
+        for i in range(len(praks.keys())):
+            asd = praks[list(praks.keys())[i]]
+            praksNimi = list(praks.keys())[i]
+            if suvalinepraks in asd["samalAjal"] and praksNimi in praksResult[õpilaseNimi]:
+                return False
+        return True
+
     ### PRAKS REGISTREERIMINE
 
     def praks_registreerimine(õpilaseNimi, suvalinePraks, result): ########## Kõik kontrollid ja järjekorda lisamine, uute testandmete loomine
+        if praks[suvalinePraks]["kohtiVõetud"] != praks[suvalinePraks]["kohad"]: #### kontrollib kas praks on täis
+            if praksSamalAjal(õpilaseNimi, suvalinePraks, praks): #### kontrollib kas praks toimub samal ajal kui õpilasel mingi teine kursus
+                pass
+
+
         praks[suvalinePraks]["kohtiVõetud"] += 1
         praks[suvalinePraks]["vastuVõetud"].append(õpilaseNimi)
         
@@ -401,14 +412,6 @@ with open("log.txt", "w") as file:
         else:
             result[õpilaseNimi] = []
             result[õpilaseNimi].append(suvalinePraks)
-        '''
-        if result[õpilaseNimi] == "":
-            result[õpilaseNimi] = []
-            result[õpilaseNimi].append(suvalinePraks)
-        else:
-            result[õpilaseNimi].append(suvalinePraks)
-        '''
-        
         #result[õpilaseNimi] = suvalinePraks
         return result
     
@@ -432,6 +435,8 @@ with open("log.txt", "w") as file:
         kokku12ja11ja10_segamini[õpilaseNimi] = õpilasePraksid
     
     print(praksResult)
+    
+    print(praks) ### prakside kohta info
 
     #################################### ÕPETAJA FAILI KIRJUTAMINE
     kursusedFailiJaoks = []
@@ -503,17 +508,6 @@ with open("log.txt", "w") as file:
     seperator = ", "
     #print(igaÕpilaseKursused)
     for i in range(0, len(igaÕpilaseKursused)):
-        '''
-        print(i)
-        print(õpilaseNimed[i])
-        print(igaÕpilaseKursused[i])
-        sheet.cell(row=i+2, column=1).value = õpilaseNimed[i]
-        sheet.cell(row=i+2, column=4).value = seperator.join(igaÕpilaseKursused[i])
-        '''
-        #print(igaÕpilaseKursused[i][6])
-        #print(igaÕpilaseKursused[i])
-
-        #sheet["A" + str(i+2)] = õpilaseNimed[i]
         nimi = list(resultKeys)[i]
         sheet["A" + str(i+2)] = nimi
         sheet["B" + str(i+2)] = igaÕpilaseKursused[i][0]
@@ -528,12 +522,12 @@ with open("log.txt", "w") as file:
     workbook.save(filename="õpilasteFail.xlsx")
     print("LÕPETATUD EDUKALT ÕPILASTE KURSUSELE LISAMISE")
     file.write("LÕPETATUD EDUKALT ÕPILASTE KURSUSELE LISAMISE")
-
+    '''
     for i in range(0, len(klass10_PERM.keys())):
         õpilaseNimi = list(klass10_PERM)[i]
         kursused = klass10_PERM[õpilaseNimi]
         print("Õpilasel " + õpilaseNimi + " on võetud praktikumid: " + ', '.join(''.join(kursused[-1]).split(";")))
-
+    '''
 
     print("LÕPETATUD EDUKALT")
     file.write("LÕPETATUD EDUKALT")

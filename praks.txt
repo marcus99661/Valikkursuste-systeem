@@ -1,13 +1,14 @@
-Bioloogia 1;10;;;;Bioloogia 2
-Bioloogia 2;10;;;;Bioloogia 1
-Geograafia;10;;;Bioloogia 1;
-Kirjandus;10;;;Inglise keel;
-Inglise keel;10;;;Kirjandus;
-Ökoloogia;10;;Bioloogia 1, Bioloogia 2; Geograafia;
-Koorilaul;10;;;;
-Rahvatants;10;;;;
-Akvaristika;10;;;;
-Näitering;10;;;;
-Mehhatroonika ja robootika;10;;;;
-Digitehnoloogiaga sõbraks;10;;;;
-Keskkonnaseire ja digilahendused;10;;;;
+Drooniring;10;;;;;;
+Bioloogia 1;10;;;;;;Bioloogia 2
+Bioloogia 2;10;;;;;;Bioloogia 1
+Geograafia;10;;;;;Bioloogia 1;
+Kirjandus;10;;;;;Inglise keel;
+Inglise keel;10;;;;;Kirjandus;
+Ökoloogia;10;;;;Bioloogia 1, Bioloogia 2; Geograafia;
+Koorilaul;10;;;;;;
+Rahvatants;10;;;;;;
+Akvaristika;10;;;;;;
+Näitering;10;;;;;;
+Mehhatroonika ja robootika;10;;;;;;
+Digitehnoloogiaga sõbraks;10;;;;;;
+Keskkonnaseire ja digilahendused;10;;;;;;

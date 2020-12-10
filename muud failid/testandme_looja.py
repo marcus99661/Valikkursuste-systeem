@@ -3,7 +3,7 @@ from selenium import webdriver
 import random
 import string
 
-algus_aeg = time.clock()
+#algus_aeg = time.clock()
 x = 1
 nimed = ["Emily","Madison","Emma","Hannah","Abigail","Olivia","Ashley","Samantha","Alexis","Sarah","Elizabeth","Isabella","Alyssa","Grace","Lauren","Taylor","Jessica","Brianna","Kayla"]
 
@@ -113,8 +113,7 @@ for i in range(525):
     vabadPraks = [1, 2, 3, 4, 5, 6, 7, 8]
     #driver.find_element_by_xpath("/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[1]/label/div/div[1]").click()
     randomprotsent = random.randint(0, 10)
-    '''
-    while randomprotsent <= 3:
+    while randomprotsent <= 2:
        randomprotsent = random.randint(0, 10)
        koht = random.choice(vabadPraks)
        #koht = random.choice([1, 2, 3, 4, 5, 6, 7, 8])
@@ -122,8 +121,9 @@ for i in range(525):
        driver.find_element_by_xpath("/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[" + str(koht) + "]/label/div/div[1]").click()
        print("tehtud korra " + str(koht))
        #time.sleep(1)
-    '''
-    time.sleep(7)
+
+
+    #time.sleep(7)
     '''
     driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[1]/label/div/div[1]")
     driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[2]/div/div[2]/div[28]/div/div/div[2]/div[1]/div[2]/label/div/div[1]")
